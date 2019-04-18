@@ -20,7 +20,7 @@ extra:
 #   - 'stylesheets/extra.css'
 plugins:
   - search
-pages:
+nav:
   - Home: 'index.md'
   - API: 
     - Sobre: API/sobre.md
