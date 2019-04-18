@@ -23,7 +23,7 @@ plugins:
 pages:
   - Home: 'index.md'
   - API: 
-    - About: API/about.md
+    - Sobre: API/sobre.md
     - Associados: API/associados.md
     - Atendimento: API/atendimento.md
     - Contas Gerenciais: API/contas_gerenciais.md
