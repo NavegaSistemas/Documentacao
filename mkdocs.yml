@@ -1,20 +1,23 @@
-site_name: Guia Bolso
-site_description: Repositório da disciplina de Requisitos 2019.1
-repo_url: https://github.com/rafaelmakaha/2019.1-Guia-Bolso
+site_name: Navega Consultoria
+site_description: Documentação da Navega Consultoria
+repo_url: https://github.com/alanrslima
 site_dir: site
-copyright: Copyright &copy; 2019, <a href="https://fga-disciplinas.github.io/2019.1-Guia-Bolso/">Requisitos 2019.1</a>.
+copyright: Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega COnsultoria</a>.
 dev_addr: ‘0.0.0.0:8000
 theme:
   name: 'material'
   logo: 'favicon.png'
   favicon: 'favicon.png'
+  palette:
+    primary: 'orange'
+  language: 'pt'
 
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/fga-disciplinas/2019.1-Guia-Bolso'
-extra_css:
-  - 'stylesheets/extra.css'
+      link: 'http://navegaconsultoria.com.br/'
+# extra_css:
+#   - 'stylesheets/extra.css'
 plugins:
   - search
 pages:
