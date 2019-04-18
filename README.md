@@ -1,6 +1,6 @@
-# Guia Bolso
-Repositório para a disciplina de Requisitos de Software sobre **Guia Bolso** com intuito de centralizar os requisitos do aplicativo.
-Desenvolvido pelos discentes da Universidade de Brasília. 
+# Navega Consultoria
+Repositório para a Navega Consultoria com intuito de centralizar a documentação da empresa.
+Desenvolvido pelos developers da Navega.
 
 ## Usando o mkdocs:
 
