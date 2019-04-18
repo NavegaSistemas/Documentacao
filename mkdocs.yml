@@ -22,3 +22,12 @@ plugins:
   - search
 pages:
   - Home: 'index.md'
+  - API: 
+    - About: API/about.md
+    - Associados: API/associados.md
+    - Atendimento: API/atendimento.md
+    - Contas Gerenciais: API/contas_gerenciais.md
+    - Metas: API/metas.md
+    - Níveis de Saldo: API/niveis_saldo.md
+    - Notificações: API/notificacoes.md
+    - Usuários: API/usuarios.md
