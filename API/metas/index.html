@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#detalhes-de-metas" tabindex="1" class="md-skip">
+      <a href="#cadastro-de-metas" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -348,16 +348,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#detalhes-de-metas" title="Detalhes de metas" class="md-nav__link">
-    Detalhes de metas
+  <a href="#cadastro-de-metas" title="Cadastro de metas" class="md-nav__link">
+    Cadastro de metas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#itens-de-metas" title="Itens de metas" class="md-nav__link">
-    Itens de metas
+  <a href="#acompanhamento-da-realizacao-das-metas" title="Acompanhamento da realização das metas" class="md-nav__link">
+    Acompanhamento da realização das metas
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metarealizada" title="&gt; MetaRealizada" class="md-nav__link">
+    &gt; MetaRealizada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metarealizadahistorico" title="&gt; MetaRealizadaHistorico" class="md-nav__link">
+    &gt; MetaRealizadaHistorico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metarealizadaitem" title="&gt; MetaRealizadaItem" class="md-nav__link">
+    &gt; MetaRealizadaItem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -492,16 +519,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#detalhes-de-metas" title="Detalhes de metas" class="md-nav__link">
-    Detalhes de metas
+  <a href="#cadastro-de-metas" title="Cadastro de metas" class="md-nav__link">
+    Cadastro de metas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#itens-de-metas" title="Itens de metas" class="md-nav__link">
-    Itens de metas
+  <a href="#acompanhamento-da-realizacao-das-metas" title="Acompanhamento da realização das metas" class="md-nav__link">
+    Acompanhamento da realização das metas
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metarealizada" title="&gt; MetaRealizada" class="md-nav__link">
+    &gt; MetaRealizada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metarealizadahistorico" title="&gt; MetaRealizadaHistorico" class="md-nav__link">
+    &gt; MetaRealizadaHistorico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metarealizadaitem" title="&gt; MetaRealizadaItem" class="md-nav__link">
+    &gt; MetaRealizadaItem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -526,7 +580,8 @@
                 
                   <h1>Metas</h1>
                 
-                <blockquote>
+                <h2 id="cadastro-de-metas">Cadastro de metas</h2>
+<blockquote>
 <p><code>[ GET ]</code> Busca metas</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSituacao}
@@ -549,11 +604,14 @@
 </tbody>
 </table>
 <hr />
-<h2 id="detalhes-de-metas">Detalhes de metas</h2>
+<h2 id="acompanhamento-da-realizacao-das-metas">Acompanhamento da realização das metas</h2>
+<hr />
+<h3 id="metarealizada">&gt; MetaRealizada</h3>
 <blockquote>
-<p><code>[ GET ]</code> Busca os itens diários de uma meta em nível consolidado</p>
+<p><code>[ GET ]</code> Consulta todos os itens de uma determinada meta em uma determinada data.</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaConsolidado/{idMeta}
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizada?nivelsaldo={nivelsaldo}&amp;periodicidade={periodicidade}&amp;idMeta={idMeta}&amp;identificador={identificador}&amp;dataReferencia={dd/mm/yyy}
+
 </code></pre>
 
 <table>
@@ -562,21 +620,55 @@
 <th>Parâmetro</th>
 <th>Tipo</th>
 <th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>nivelSaldo</td>
+<td>String</td>
+<td>nível do saldo da meta</td>
+<td>S</td>
+<td>Valores possíveis: <em>consolidado, unidade, gerente, regional</em></td>
+</tr>
+<tr>
+<td>periodicidade</td>
+<td>String</td>
+<td>periodicidade de acompanhamento da meta</td>
+<td>S</td>
+<td>Valores possíveis: <em>mensal, diaria</em></td>
+</tr>
+<tr>
 <td>idMeta</td>
 <td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
+<td>id da meta</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>identificador</td>
+<td>Int</td>
+<td>relacionado ao nível de saldo informado.</td>
+<td>S*</td>
+<td>Ex.: se o nível de saldo for <em>unidade</em>, o identificador é o código da unidade. <strong>&lt; Requerido se nível de saldo diferente de consolidado &gt;</strong></td>
+</tr>
+<tr>
+<td>dataReferencia</td>
+<td>Date</td>
+<td>data de referência da meta no formato <em>DD/MM/YYYY</em></td>
+<td>N</td>
+<td>Caso seja mensal, o dia será sempre <strong>01</strong>. Se não informado será considerada a última data disponível.</td>
 </tr>
 </tbody>
 </table>
 <hr />
+<h3 id="metarealizadahistorico">&gt; MetaRealizadaHistorico</h3>
 <blockquote>
-<p><code>[ GET ]</code> Busca os itens diários de uma meta em nível de unidade</p>
+<p><code>[ GET ]</code> Consulta o histórico de um item de uma meta.</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaUnidade/{idMeta}/{idUnidade}
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizadaHistorico?nivelsaldo={nivelsaldo}&amp;periodicidade={periodicidade}&amp;idMeta={idMeta}&amp;identificador={identificador}&amp;idItem={idItem}
+
 </code></pre>
 
 <table>
@@ -585,162 +677,55 @@
 <th>Parâmetro</th>
 <th>Tipo</th>
 <th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
+<td>nivelSaldo</td>
+<td>String</td>
+<td>nível do saldo da meta</td>
+<td>S</td>
+<td><em>Valores possíveis:</em> consolidado, unidade, gerente, regional</td>
 </tr>
 <tr>
-<td>idUnidade</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da unidade selecionada</td>
+<td>periodicidade</td>
+<td>String</td>
+<td>periodicidade de acompanhamento da meta</td>
+<td>S</td>
+<td>mensal, diaria</td>
 </tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca os itens diários de uma meta em nível de gerente</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaGerente/{idMeta}/{idGerente}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td>idMeta</td>
 <td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
+<td>id da meta</td>
+<td>S</td>
+<td></td>
 </tr>
 <tr>
-<td>idGerente</td>
+<td>identificador</td>
 <td>Int</td>
-<td><strong>Required</strong> - Id do gerente selecionado</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca os itens mensais de uma meta em nível consolidado</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalConsolidado/{idMeta}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code>  Busca os itens mensais de uma meta em nível de unidade</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalUnidade/{idMeta}/{idUnidade}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
-</tr>
-<tr>
-<td>idUnidade</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da unidade selecionada</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca os itens mensais de uma meta em nível de gerente</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalGerente/{idMeta}/{idGerente}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
-</tr>
-<tr>
-<td>idGerente</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do gerente selecionado</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="itens-de-metas">Itens de metas</h2>
-<blockquote>
-<p><code>[ GET ]</code> Busca a participação mensal de gerentes em um item de uma meta</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalItemGerentes/{idMeta}/{idItem}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
+<td>relacionado ao nível de saldo informado.</td>
+<td>S*</td>
+<td>Ex.: se o nível de saldo for <em>unidade</em>, o identificador é o código da unidade. <strong>&lt; Requerido se nível de saldo diferente de consolidado &gt;</strong></td>
 </tr>
 <tr>
 <td>idItem</td>
 <td>Int</td>
-<td><strong>Required</strong> - Id do item de uma meta</td>
+<td>id do item da meta</td>
+<td>S</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <hr />
+<h3 id="metarealizadaitem">&gt; MetaRealizadaItem</h3>
 <blockquote>
-<p><code>[ GET ]</code> Busca a participação mensal de unidades em um item de uma meta</p>
+<p><code>[ GET ]</code>  Consulta a realização de um item de uma meta para todas as unidades, gerentes ou regionais, em uma data específica.</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalItemUnidades/{idMeta}/{idItem}
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizadaItem?nivelsaldo={nivelsaldo}&amp;periodicidade={periodicidade}&amp;idMeta={idMeta}&amp;identificador={identificador}&amp;idItem={idItem}&amp;dataReferencia={dd/mm/yyy}
+
 </code></pre>
 
 <table>
@@ -749,130 +734,52 @@
 <th>Parâmetro</th>
 <th>Tipo</th>
 <th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>nivelSaldo</td>
+<td>String</td>
+<td>nível do saldo da meta</td>
+<td>S</td>
+<td><em>Valores possíveis:</em> consolidado, unidade, gerente, regional</td>
+</tr>
+<tr>
+<td>periodicidade</td>
+<td>String</td>
+<td>periodicidade de acompanhamento da meta</td>
+<td>S</td>
+<td>mensal, diaria</td>
+</tr>
+<tr>
 <td>idMeta</td>
 <td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
+<td>id da meta</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>identificador</td>
+<td>Int</td>
+<td>relacionado ao nível de saldo informado.</td>
+<td>S*</td>
+<td>Ex.: se o nível de saldo for <em>unidade</em>, o identificador é o código da unidade. <strong>&lt; Requerido se nível de saldo diferente de consolidado &gt;</strong></td>
 </tr>
 <tr>
 <td>idItem</td>
 <td>Int</td>
-<td><strong>Required</strong> - Id do item de uma meta</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca a participação mensal de regionais em um item de uma meta</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalItemRegionais/{idMeta}/{idItem}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
+<td>id do item da meta</td>
+<td>S</td>
+<td></td>
 </tr>
 <tr>
-<td>idItem</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do item de uma meta</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca a participação diário de gerentes em um item de uma meta</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaItemGerentes/{idMeta}/{idItem}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
-</tr>
-<tr>
-<td>idItem</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do item de uma meta</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca a participação diário de unidades em um item de uma meta</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaItemUnidades/{idMeta}/{idItem}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
-</tr>
-<tr>
-<td>idItem</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do item de uma meta</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca a participação diário de regionais em um item de uma meta</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaItemRegional/{idMeta}/{idItem}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idMeta</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da meta</td>
-</tr>
-<tr>
-<td>idItem</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do item de uma meta</td>
+<td>dataReferencia</td>
+<td>Date</td>
+<td>data de referência da meta no formato <em>DD/MM/YYYY</em></td>
+<td>N</td>
+<td>Caso seja mensal, o dia será sempre <strong>01</strong>. Se não informado será considerada a última data disponível.</td>
 </tr>
 </tbody>
 </table>
