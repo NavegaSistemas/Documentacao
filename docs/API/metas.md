@@ -1,3 +1,4 @@
+## Cadastro de metas
 > `[ GET ]` Busca metas
 
 ```
@@ -10,158 +11,60 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSitu
 
 ---
 
-## Detalhes de metas
-
-> `[ GET ]` Busca os itens diários de uma meta em nível consolidado
- 
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaConsolidado/{idMeta}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
+## Acompanhamento da realização das metas
 
 ---
 
-> `[ GET ]` Busca os itens diários de uma meta em nível de unidade
+### > MetaRealizada
+
+> `[ GET ]` Consulta todos os itens de uma determinada meta em uma determinada data.
 
 ```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaUnidade/{idMeta}/{idUnidade}
-```
+http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizada?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&identificador={identificador}&dataReferencia={dd/mm/yyy}
 
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idUnidade|Int|**Required** - Id da unidade selecionada|
+```
+|Parâmetro|Tipo|Descrição|Requerido|Observações
+|----|------|--------|--------|--------|
+|nivelSaldo|String| nível do saldo da meta| S | Valores possíveis: *consolidado, unidade, gerente, regional*|
+|periodicidade|String|periodicidade de acompanhamento da meta| S | Valores possíveis: *mensal, diaria*|
+|idMeta|Int|id da meta| S | |
+|identificador|Int| relacionado ao nível de saldo informado.| S* | Ex.: se o nível de saldo for *unidade*, o identificador é o código da unidade. **< Requerido se nível de saldo diferente de consolidado >**|
+|dataReferencia|Date| data de referência da meta no formato *DD/MM/YYYY* | N | Caso seja mensal, o dia será sempre **01**. Se não informado será considerada a última data disponível.
 
 ---
 
-> `[ GET ]` Busca os itens diários de uma meta em nível de gerente
-  
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaGerente/{idMeta}/{idGerente}
-```
+### > MetaRealizadaHistorico
 
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idGerente|Int|**Required** - Id do gerente selecionado|
+> `[ GET ]` Consulta o histórico de um item de uma meta.
+
+```
+http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizadaHistorico?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&identificador={identificador}&idItem={idItem}
+
+```
+|Parâmetro|Tipo|Descrição|Requerido|Observações
+|----|------|--------|--------|--------|
+|nivelSaldo|String| nível do saldo da meta| S | *Valores possíveis:* consolidado, unidade, gerente, regional|
+|periodicidade|String|periodicidade de acompanhamento da meta| S | mensal, diaria|
+|idMeta|Int|id da meta| S | |
+|identificador|Int| relacionado ao nível de saldo informado.| S* | Ex.: se o nível de saldo for *unidade*, o identificador é o código da unidade. **< Requerido se nível de saldo diferente de consolidado >**|
+|idItem|Int| id do item da meta | S |
+
 
 ---
 
-> `[ GET ]` Busca os itens mensais de uma meta em nível consolidado
-  
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalConsolidado/{idMeta}
-```
+### > MetaRealizadaItem
 
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-
----
-
-> `[ GET ]`  Busca os itens mensais de uma meta em nível de unidade
-  
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalUnidade/{idMeta}/{idUnidade}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idUnidade|Int|**Required** - Id da unidade selecionada|
-
----
-
-> `[ GET ]` Busca os itens mensais de uma meta em nível de gerente
+> `[ GET ]`  Consulta a realização de um item de uma meta para todas as unidades, gerentes ou regionais, em uma data específica.
 
 ```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalGerente/{idMeta}/{idGerente}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idGerente|Int|**Required** - Id do gerente selecionado|
-
----
-
-## Itens de metas
-
-> `[ GET ]` Busca a participação mensal de gerentes em um item de uma meta
- 
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalItemGerentes/{idMeta}/{idItem}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idItem|Int|**Required** - Id do item de uma meta|
-
----
-
-> `[ GET ]` Busca a participação mensal de unidades em um item de uma meta
+http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizadaItem?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&identificador={identificador}&idItem={idItem}&dataReferencia={dd/mm/yyy}
 
 ```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalItemUnidades/{idMeta}/{idItem}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idItem|Int|**Required** - Id do item de uma meta|
-
----
-
-> `[ GET ]` Busca a participação mensal de regionais em um item de uma meta
- 
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaMensalItemRegionais/{idMeta}/{idItem}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idItem|Int|**Required** - Id do item de uma meta|
-
----
-
-> `[ GET ]` Busca a participação diário de gerentes em um item de uma meta
-
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaItemGerentes/{idMeta}/{idItem}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idItem|Int|**Required** - Id do item de uma meta|
-
----
-
-> `[ GET ]` Busca a participação diário de unidades em um item de uma meta
- 
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaItemUnidades/{idMeta}/{idItem}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idItem|Int|**Required** - Id do item de uma meta|
-
----
-
-> `[ GET ]` Busca a participação diário de regionais em um item de uma meta
- 
-```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaDiariaItemRegional/{idMeta}/{idItem}
-```
-
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idMeta|Int|**Required** - Id da meta|
-|idItem|Int|**Required** - Id do item de uma meta|
+|Parâmetro|Tipo|Descrição|Requerido|Observações
+|----|------|--------|--------|--------|
+|nivelSaldo|String| nível do saldo da meta| S | *Valores possíveis:* consolidado, unidade, gerente, regional|
+|periodicidade|String|periodicidade de acompanhamento da meta| S | mensal, diaria|
+|idMeta|Int|id da meta| S | |
+|identificador|Int| relacionado ao nível de saldo informado.| S* | Ex.: se o nível de saldo for *unidade*, o identificador é o código da unidade. **< Requerido se nível de saldo diferente de consolidado >**|
+|idItem|Int| id do item da meta | S |
+|dataReferencia|Date| data de referência da meta no formato *DD/MM/YYYY* | N | Caso seja mensal, o dia será sempre **01**. Se não informado será considerada a última data disponível.
