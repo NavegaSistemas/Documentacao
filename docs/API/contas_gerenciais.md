@@ -52,3 +52,27 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheA
 |Parâmetro|Tipo|Descrição
 |----|------|--------|
 |idConta|Int|**Required** - Id reduzido da conta a ser consultada|
+
+
+### > Acompanhe
+
+> `[ GET ]`  Consulta a lista de todas as contas de acompanhamento da cooperativa ( consolidada ou de uma unidade ou de um gerente ).
+
+```
+http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/Acompanhe?nivelSaldo={nivelSaldo}
+```
+|Parâmetro|Tipo|Descrição|Requerido|Observações
+|----|------|--------|--------|--------|
+|nivelSaldo|String| nível do saldo do acompanhamento | S | *Valores possíveis:* consolidado, unidade, gerente|
+
+
+### > AcompanheItem
+
+> `[ GET ]`  Consulta as unidades classificadas em ranking de um determinado item de acompanhamento.
+
+```
+http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/AcompanheItem?idAcompanhe{idAcompanhe}
+```
+|Parâmetro|Tipo|Descrição|Requerido|Observações
+|----|------|--------|--------|--------|
+|idAcompanhe|Int| Código do tipo de acompanhamento | S | |
