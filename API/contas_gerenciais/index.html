@@ -340,6 +340,26 @@
     Acompanhamento de contas
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acompanhe" title="&gt; Acompanhe" class="md-nav__link">
+    &gt; Acompanhe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acompanheitem" title="&gt; AcompanheItem" class="md-nav__link">
+    &gt; AcompanheItem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -489,6 +509,26 @@
     Acompanhamento de contas
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acompanhe" title="&gt; Acompanhe" class="md-nav__link">
+    &gt; Acompanhe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acompanheitem" title="&gt; AcompanheItem" class="md-nav__link">
+    &gt; AcompanheItem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -608,6 +648,60 @@
 <td>idConta</td>
 <td>Int</td>
 <td><strong>Required</strong> - Id reduzido da conta a ser consultada</td>
+</tr>
+</tbody>
+</table>
+<h3 id="acompanhe">&gt; Acompanhe</h3>
+<blockquote>
+<p><code>[ GET ]</code>  Consulta a lista de todas as contas de acompanhamento da cooperativa ( consolidada ou de uma unidade ou de um gerente ).</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/Acompanhe?nivelSaldo={nivelSaldo}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nivelSaldo</td>
+<td>String</td>
+<td>nível do saldo do acompanhamento</td>
+<td>S</td>
+<td><em>Valores possíveis:</em> consolidado, unidade, gerente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="acompanheitem">&gt; AcompanheItem</h3>
+<blockquote>
+<p><code>[ GET ]</code>  Consulta as unidades classificadas em ranking de um determinado item de acompanhamento.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/AcompanheItem?idAcompanhe{idAcompanhe}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idAcompanhe</td>
+<td>Int</td>
+<td>Código do tipo de acompanhamento</td>
+<td>S</td>
+<td></td>
 </tr>
 </tbody>
 </table>
