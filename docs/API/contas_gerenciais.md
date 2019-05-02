@@ -59,11 +59,13 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheA
 > `[ GET ]`  Consulta a lista de todas as contas de acompanhamento da cooperativa ( consolidada ou de uma unidade ou de um gerente ).
 
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/Acompanhe?nivelSaldo={nivelSaldo}
+http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/Acompanhe?nivelSaldo={nivelSaldo}&identificador={identificador}
 ```
 |Parâmetro|Tipo|Descrição|Requerido|Observações
 |----|------|--------|--------|--------|
 |nivelSaldo|String| nível do saldo do acompanhamento | S | *Valores possíveis:* consolidado, unidade, gerente|
+|identificador|Int| relacionado ao nível de saldo informado.| S* | Ex.: se o nível de saldo for *unidade*, o identificador é o código da unidade. **< Requerido se nível de saldo diferente de consolidado >**|
+
 
 
 ### > AcompanheItem
