@@ -655,7 +655,7 @@
 <blockquote>
 <p><code>[ GET ]</code>  Consulta a lista de todas as contas de acompanhamento da cooperativa ( consolidada ou de uma unidade ou de um gerente ).</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/Acompanhe?nivelSaldo={nivelSaldo}
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TContasGerenciais/Acompanhe?nivelSaldo={nivelSaldo}&amp;identificador={identificador}
 </code></pre>
 
 <table>
@@ -675,6 +675,13 @@
 <td>nível do saldo do acompanhamento</td>
 <td>S</td>
 <td><em>Valores possíveis:</em> consolidado, unidade, gerente</td>
+</tr>
+<tr>
+<td>identificador</td>
+<td>Int</td>
+<td>relacionado ao nível de saldo informado.</td>
+<td>S*</td>
+<td>Ex.: se o nível de saldo for <em>unidade</em>, o identificador é o código da unidade. <strong>&lt; Requerido se nível de saldo diferente de consolidado &gt;</strong></td>
 </tr>
 </tbody>
 </table>
