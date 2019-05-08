@@ -31,6 +31,5 @@ nav:
     - Níveis de Saldo: API/niveis_saldo.md
     - Notificações: API/notificacoes.md
     - Usuários: API/usuarios.md
-  - UI: 
-    - Mobile:
-      - Temas: UI/Mobile/temas.md
+  - Mobile: 
+    - Dependências: Mobile/dependencias.md
