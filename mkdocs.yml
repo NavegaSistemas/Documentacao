@@ -23,7 +23,6 @@ plugins:
 nav:
   - Home: 'index.md'
   - API: 
-    - Sobre: API/sobre.md
     - Associados: API/associados.md
     - Atendimento: API/atendimento.md
     - Contas Gerenciais: API/contas_gerenciais.md
@@ -32,4 +31,10 @@ nav:
     - Notificações: API/notificacoes.md
     - Usuários: API/usuarios.md
   - Mobile: 
-    - Dependências: Mobile/dependencias.md
+    - CheckList: Mobile/check_list.md
+    - Dúvidas: Mobile/doubts.md
+
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
