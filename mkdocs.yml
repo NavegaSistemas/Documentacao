@@ -33,8 +33,3 @@ nav:
   - Mobile: 
     - CheckList: Mobile/check_list.md
     - Dúvidas: Mobile/doubts.md
-
-
-markdown_extensions:
-  - pymdownx.tasklist:
-      custom_checkbox: true
