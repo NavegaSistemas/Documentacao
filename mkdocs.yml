@@ -30,6 +30,7 @@ nav:
     - Níveis de Saldo: API/niveis_saldo.md
     - Notificações: API/notificacoes.md
     - Usuários: API/usuarios.md
+    - Agendas de Visitas: API/agendas_visitas.md
   - Mobile: 
     - CheckList: Mobile/check_list.md
     - Dúvidas: Mobile/doubts.md
