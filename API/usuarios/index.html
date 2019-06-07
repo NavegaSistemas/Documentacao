@@ -33,7 +33,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../favicon.png">
+      <link rel="shortcut icon" href="../../images/icon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
@@ -49,7 +49,7 @@
       
         
         
-        <meta name="theme-color" content="#fb8c00">
+        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -70,7 +70,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="">
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -101,6 +101,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#busca-de-usuarios" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -108,7 +112,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="Navega Consultoria" class="md-header-nav__button md-logo">
           
-            <img src="../../favicon.png" width="24" height="24">
+            <img src="../../images/icon.png" width="24" height="24">
           
         </a>
       </div>
@@ -204,7 +208,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../.." title="Navega Consultoria" class="md-nav__button md-logo">
       
-        <img src="../../favicon.png" width="48" height="48">
+        <img src="../../images/icon.png" width="48" height="48">
       
     </a>
     Navega Consultoria
@@ -266,6 +270,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../agendas_visitas/" title="Agendas de Visitas" class="md-nav__link">
+      Agendas de Visitas
+    </a>
+  </li>
+
         
           
           
@@ -351,22 +367,37 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Usuários
+      </label>
+    
     <a href="./" title="Usuários" class="md-nav__link md-nav__link--active">
       Usuários
     </a>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../agendas_visitas/" title="Agendas de Visitas" class="md-nav__link">
-      Agendas de Visitas
-    </a>
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#busca-de-usuarios" title="Busca de usuários" class="md-nav__link">
+    Busca de usuários
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -430,6 +461,35 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#busca-de-usuarios" title="Busca de usuários" class="md-nav__link">
+    Busca de usuários
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -440,10 +500,11 @@
                 
                   <h1>Usuários</h1>
                 
-                <blockquote>
-<p><code>[ GET ]</code> Busca de usuários</p>
+                <h3 id="busca-de-usuarios">Busca de usuários</h3>
+<blockquote>
+<p><code>[ GET ]</code>  Busca dados dos usuários do sistema</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TAcessos/Usuarios/{idLogin}
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TAcessos/Usuarios/{idLogin}
 </code></pre>
 
 <table>
@@ -452,21 +513,23 @@
 <th>Parâmetro</th>
 <th>Tipo</th>
 <th>Descrição</th>
+<th>Requerido</th>
+<th>Valores válidos</th>
+<th>Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>idLogin</td>
-<td>String</td>
-<td><strong>Required</strong> - Login do usuário, caso o parâmetro nõ seja usado, irá retornar todos os usuários</td>
-</tr>
-<tr>
-<td>idItem</td>
 <td>Int</td>
-<td><strong>Required</strong> - Id do item de uma meta</td>
+<td>Login do usuário</td>
+<td>N</td>
+<td>Caractéres</td>
+<td>Caso não seja informado irá retornar todos os usuários da instituição do usuário logado</td>
 </tr>
 </tbody>
 </table>
+<hr />
                 
                   
                 
@@ -502,13 +565,13 @@
           </a>
         
         
-          <a href="../agendas_visitas/" title="Agendas de Visitas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Mobile/check_list/" title="CheckList" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                Agendas de Visitas
+                CheckList
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -524,7 +587,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega COnsultoria</a>.
+            Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega Consultoria</a>.
           </div>
         
         powered by

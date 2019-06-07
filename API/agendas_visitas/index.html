@@ -33,7 +33,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../favicon.png">
+      <link rel="shortcut icon" href="../../images/icon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
@@ -49,7 +49,7 @@
       
         
         
-        <meta name="theme-color" content="#fb8c00">
+        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -70,7 +70,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="">
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -112,7 +112,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="Navega Consultoria" class="md-header-nav__button md-logo">
           
-            <img src="../../favicon.png" width="24" height="24">
+            <img src="../../images/icon.png" width="24" height="24">
           
         </a>
       </div>
@@ -208,7 +208,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../.." title="Navega Consultoria" class="md-nav__button md-logo">
       
-        <img src="../../favicon.png" width="48" height="48">
+        <img src="../../images/icon.png" width="48" height="48">
       
     </a>
     Navega Consultoria
@@ -270,6 +270,59 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Agendas de Visitas
+      </label>
+    
+    <a href="./" title="Agendas de Visitas" class="md-nav__link md-nav__link--active">
+      Agendas de Visitas
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-in-e-check-out" title="&gt; Check-in e Check-out" class="md-nav__link">
+    &gt; Check-in e Check-out
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-in-e-check-out_1" title="Check-in e Check-out" class="md-nav__link">
+    Check-in e Check-out
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
         
           
           
@@ -355,52 +408,6 @@
   </li>
 
         
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Agendas de Visitas
-      </label>
-    
-    <a href="./" title="Agendas de Visitas" class="md-nav__link md-nav__link--active">
-      Agendas de Visitas
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Índice</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#check-in-e-check-out" title="&gt; Check-in e Check-out" class="md-nav__link">
-    &gt; Check-in e Check-out
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -479,6 +486,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#check-in-e-check-out_1" title="Check-in e Check-out" class="md-nav__link">
+    Check-in e Check-out
+  </a>
+  
+</li>
+      
       
       
       
@@ -549,6 +563,36 @@
 </tr>
 </tbody>
 </table>
+<h3 id="check-in-e-check-out_1">Check-in e Check-out</h3>
+<blockquote>
+<p><code>[ PUT ]</code>  Grava o check-in ou check-out de uma agenda de visitas.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TAgendaVisita/Check
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Valores válidos</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idLogin</td>
+<td>Int</td>
+<td>Login do usuário</td>
+<td>N</td>
+<td>Caractéres</td>
+<td>Caso não seja informado irá retornar todos os usuários da instituição do usuário logado</td>
+</tr>
+</tbody>
+</table>
+<hr />
                 
                   
                 
@@ -569,7 +613,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../usuarios/" title="Usuários" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -578,19 +622,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Usuários
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../../Mobile/check_list/" title="CheckList" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../associados/" title="Associados" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                CheckList
+                Associados
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -606,7 +650,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega COnsultoria</a>.
+            Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega Consultoria</a>.
           </div>
         
         powered by
