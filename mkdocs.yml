@@ -2,14 +2,14 @@ site_name: Navega Consultoria
 site_description: Documentação da Navega Consultoria
 repo_url: https://github.com/alanrslima
 site_dir: site
-copyright: Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega COnsultoria</a>.
+copyright: Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega Consultoria</a>.
 dev_addr: ‘0.0.0.0:8000
 theme:
   name: 'material'
-  logo: 'favicon.png'
-  favicon: 'favicon.png'
+  logo: 'images/icon.png'
+  favicon: 'images/icon.png'
   palette:
-    primary: 'orange'
+    primary: 'blue'
   language: 'pt'
 
 extra:
@@ -23,6 +23,7 @@ plugins:
 nav:
   - Home: 'index.md'
   - API: 
+    - Agendas de Visitas: API/agendas_visitas.md
     - Associados: API/associados.md
     - Atendimento: API/atendimento.md
     - Contas Gerenciais: API/contas_gerenciais.md
@@ -30,7 +31,6 @@ nav:
     - Níveis de Saldo: API/niveis_saldo.md
     - Notificações: API/notificacoes.md
     - Usuários: API/usuarios.md
-    - Agendas de Visitas: API/agendas_visitas.md
   - Mobile: 
     - CheckList: Mobile/check_list.md
     - Backlog: Mobile/backlog.md

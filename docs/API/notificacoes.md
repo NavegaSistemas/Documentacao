@@ -1,4 +1,4 @@
-#### Busca notificações
+### Busca notificações
 > `[ GET ]`  O método de buscar notificações é utilizado para obter as notificações direcionadas à um usuário logado. Estas notificações podem ser filtradas por intervalo de datas, status e paginação.
 
 ```
@@ -14,11 +14,11 @@ http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications
 
 ---
 
-#### Apaga uma notificação 
+### Apaga uma notificação 
 > `[ DELETE ]`  Marca uma notificação como apagada
  
 ```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications?&idnotificacao={}
+http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications?&idnotificacao={}
 ```
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
@@ -27,11 +27,11 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications
 
 ---
 
-#### Notificação como lida
+### Notificação como lida
 > `[ POST ]` Muda o status de uma notificação para lida. Este método é utilizado quando o usuário abre uma notificação que estava com o status de não lida anteriormente.
  
 ```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/lida?&idnotificacao={}
+http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/lida?&idnotificacao={}
 ```
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
