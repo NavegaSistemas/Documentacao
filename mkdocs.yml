@@ -32,5 +32,4 @@ nav:
     - Notificações: API/notificacoes.md
     - Usuários: API/usuarios.md
   - Mobile: 
-    - CheckList: Mobile/check_list.md
     - Backlog: Mobile/backlog.md
