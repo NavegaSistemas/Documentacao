@@ -236,19 +236,68 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 
 ## EP07 - Painel gerencial
 
-#### US15 - Sinalizar caso não existam metas
+#### US16 - Visualizar contas gerenciais
 
-| **US15** | **Sinalizar caso não existam metas**|
+| **US16** | **Visualizar contas gerenciais**|
 |--|--|
 | **Versão**| Atual: 1.0 (07/06) <br> Anterior: --|
-| **Eu, como** | Desenvolvedor |
-|**Desejo** | Sinalizar caso não existam metas |
-| **Para que eu possa** | Fornecer um feedback visual para o usuário de quando não existirem metas cadastradas  |
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar contas gerenciais |
+| **Para que eu possa** | Fornecer principais contas de acompanhamento  |
 | **Pontos** | 2 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve possuir uma imagem ilustrativa; <br> > Deve verificar se há metas. |
+| **Critérios de aceitação** | > Deve mostrar contas básicas |
+
+#### US17 - Adicionar contas manualmente
+
+| **US17** | **Adicionar contas manualmente**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Adicionar contas manualmente |
+| **Para que eu possa** | Definir contas de meu interesse para visualização  |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve mostrar contas gerenciais <br> > Deve filtrar lista de contas <br> > Deve persistir contas adicionadas <br> > Deve possuir pesquisa por nome |
+
+#### US18 - Mostrar gráficos de uma conta
+
+| **US18** | **Mostrar gráficos de uma conta**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Desenvolvedor |
+|**Desejo** | Mostrar graficos de uma conta |
+| **Para que eu possa** | Informar os dados relacionados a uma conta em nível consolidado e gerentes de maneira fácil e simples |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve contar gráfico para uma conta em nivel consolidado <br> > Deve mostrar participação de unidades e gerentes <br> > Deve possuir cores |
+
+#### US19 - Deletar contas manualmente
+
+| **US19** | **Deletar contas manualmente**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Deletar contas manualmente |
+| **Para que eu possa** | Ter controle de quais contas gostaria que fossem padrão  |
+| **Pontos** | 3 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve apagar uma conta da lista do painel gerencial <br> Deve persistir os dados de contas em um banco local <br> Pedir confirmação de deleção  |
 
 ## EP08 - Agenda
+
+#### US20 - Definir permissões de acesso
+
+| **US20** | **Definir permissões de acesso**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Desenvolvedor |
+|**Desejo** | Definir permissões de acesso |
+| **Para que eu possa** | Apenas usuários com permissão acessem as agendas gerenciais  |
+| **Pontos** | 3 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve dar acesso total as  |
+
 
 ## EP09 - Fotos de associados
 
