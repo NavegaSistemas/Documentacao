@@ -41,15 +41,15 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 |**Desejo** | Elaborar testes de usabilidade com os usuários |
 | **Para que eu possa** | Para avaliar maiores dúvidas de usabilidade |
 | **Pontos** | 5 |
-| **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve disponibilizar Documentação; <br> > Deve mostrar dúvidas frequentes; <br> > Deve informar usuário de como funciona o aplicativo; <br> > Deve criar cenários e tarefas; <br> Deve usar alguma escala para medição da dificuldade de uma tarefa |
+| **Prioridade** | Could |
+| **Critérios de aceitação** | > Deve disponibilizar Documentação; <br> > Deve mostrar dúvidas frequentes; <br> > Deve informar usuário de como funciona o aplicativo; <br> > Deve criar cenários e tarefas; <br> > Deve usar alguma escala para medição da dificuldade de uma tarefa |
 
 #### US03 Documentar e agrupar dúvidas dos usuários
 
 | **US03** | **Documentar e agrupar dúvidas dos usuários**|
 |--|--|
 | **Versão**| Atual: 1.0 (07/06) <br> Anterior: --|
-| **Eu, como** | Desenvolvedor |
+| **Eu, como** | Desenvolvedor |  
 |**Desejo** | Documentar e agrupar dúvidas dos usuários |
 | **Para que eu possa** | Disponibilizar respostas de forma simples e objetiva |
 | **Pontos** | 3 |
@@ -92,7 +92,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Dar sugestões de como gostaria que o app fosse, para que futuramente sejam atendidas |
 | **Pontos** | 3 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve enviar informações relevantes; <br> > Deve filtrar boas propostas de melhoria <br> Analisar possibilidade de mplementação; <br> > Enviar feedback para o usuário. |
+| **Critérios de aceitação** | > Deve enviar informações relevantes; <br> > Deve filtrar boas propostas de melhoria <br> > Analisar possibilidade de mplementação; <br> > Enviar feedback para o usuário. |
 
 ## EP03 - Cadastro
 
@@ -222,18 +222,6 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Prioridade** | Must |
 | **Critérios de aceitação** | > Deve filtrar por periodo; <br> > Deve filtrar por nível de saldo; <br> > Deve fornecer lista de unidades; <br> > Deve fornecer lista de gerentes. |
 
-#### US15 - Sinalizar caso não existam metas
-
-| **US15** | **Sinalizar caso não existam metas**|
-|--|--|
-| **Versão**| Atual: 1.0 (07/06) <br> Anterior: --|
-| **Eu, como** | Desenvolvedor |
-|**Desejo** | Sinalizar caso não existam metas |
-| **Para que eu possa** | Fornecer um feedback visual para o usuário de quando não existirem metas cadastradas  |
-| **Pontos** | 2 |
-| **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve possuir uma imagem ilustrativa; <br> > Deve verificar se há metas. |
-
 ## EP07 - Painel gerencial
 
 #### US16 - Visualizar contas gerenciais
@@ -286,34 +274,223 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 
 ## EP08 - Agenda
 
-#### US20 - Definir permissões de acesso
+#### US20 - Definir permissões de acesso de agendas
 
-| **US20** | **Definir permissões de acesso**|
+| **US20** | **Definir permissões de acesso de agendas**|
 |--|--|
 | **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
 | **Eu, como** | Desenvolvedor |
-|**Desejo** | Definir permissões de acesso |
+|**Desejo** | Definir permissões de acesso de agendas |
 | **Para que eu possa** | Apenas usuários com permissão acessem as agendas gerenciais  |
 | **Pontos** | 3 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve dar acesso total as  |
+| **Critérios de aceitação** | > Deve retornar feedback para o usuário <br> > Deve mostrar agendas de acordo com a função do usuário |
 
+#### US21 - Visualizar e editar agendas
+
+| **US21** | **Visualizar e editar agendas**|
+|--|--|
+| **Versão**| Atual: 1.0 (12/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar e editar agendas |
+| **Para que eu possa** | Interagir com as agendas gerenciais  |
+| **Pontos** | 10 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve mostrar as agendas de um gerente <br> > Deve mostrar detalhes de uma agenda <br> > Deve cancelar agenda <br> > Deve reagendar uma agenda <br> > Deve encerrar uma agenda <br> > Deve fazer check-in e checkout <br> > Deve cancelar check-in <br> > Deve ligar para o associado |
+
+#### US22 - Criar novas agendas gerenciais
+
+| **US22** | **Criar novas agendas gerenciais**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Criar novas agendas gerenciais |
+| **Para que eu possa** | Criar agendas de forma simples e fácil |
+| **Pontos** | 3 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve criar agenda com descrição <br> > Deve criar agenda de forma simples e fácil |
 
 ## EP09 - Fotos de associados
 
+#### US23 - Visualizar fotos de associados
+
+| **US23** | **Visualizar fotos de associados**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar fotos de associados|
+| **Para que eu possa** | Acompanhar e organizar fotos de associados |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve separar fotos por categorias <br> > Deve mostrar um feed de fotos para cada usuário <br> > Deve mostrar descrição de cada foto <br> > Deve possuir data de cada foto <br> > Deve sinalizar se a foto foi tirada da camêra ou da galeria |
+
+#### US24 - Adicionar fotos de associados
+
+| **US24** | **Adicionar fotos de associados**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Adicionar fotos de associados |
+| **Para que eu possa** | Adicionar fotos para acompanhamento de associados  |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve possibilitar buscar fotos da galeria ou camêra <br> > Deve solicitar descrição da foto <br> > Deve relacionar cada foto a um associado <br> > Deve separar por categorias <br> > Deve criar novas categorias <br> Deve apagar categorias |
+
+#### US25 - Apagar fotos de associados
+
+| **US25** | **Apagar fotos de associados**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Apagar fotos de associados |
+| **Para que eu possa** | Apagar uma foto caso seja enviada errôneamente |
+| **Pontos** | 3 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve pedir confirmação do usuário <br> > Deve fornecer feedback sinalizando exclusão da foto |
+
+#### US26 - Visualizar associados que possuem fotos
+
+| **US26** | **Visualizar associados que possuem fotos**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar associados que possuem fotos|
+| **Para que eu possa** | Acessar diretamente fotos de um associado em especifico |
+| **Pontos** | 3 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve filtrar usuários <br> > Deve indicar dados do asssociado e do gerente |
+
 ## EP10 - Perfil do usuário
+
+#### US27 - Editar foto de perfil
+
+| **US27** | **Editar foto de perfil**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Editar foto de perfil |
+| **Para que eu possa** | Adicionar novas fotos de perfil |
+| **Pontos** | 3 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve permitir usar foto da câmeta ou galeria <br> > Deve cortar foto em um quadrado <br> Deve persistir apenas uma foto de perfil por usuário |
 
 ## EP11 - Ajustes de consultas de contas
 
+#### US28 - Configurar periodos de saldos e tipos de contas
+
+| **US28** | **Configurar periodos de saldos e tipos de contas**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Configurar periodos de saldos e tipos de contas |
+| **Para que eu possa** | Controlar tipos de preferencias para consultas de contas gerenciais |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve configurar contas de usos e fontes <br> > Deve configurar contas de receitas e despesas <br> Deve configurar períodos de saldos de consulta |
+
 ## EP12 - Temas
+
+#### US29 - Criar diferentes temas
+
+| **US29** | **Criar diferentes temas**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Desenvolvedor |
+|**Desejo** | Criar diferentes temas |
+| **Para que eu possa** | Disponibilizar temas que agradem diferentes perfis de usuários |
+| **Pontos** | 10 |
+| **Prioridade** | Could |
+| **Critérios de aceitação** | > Deve disponibilizar temas claros e escuros <br> > Deve persistir último tema escolhido <br> > Deve criar esquema de cores <br> Deve criar corpo do tema |
 
 ## EP13 - Atendimento
 
+#### US30 - Visualizar dados de atendimento
+
+| **US30** | **Visualizar dados de atendimento**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar dados de atendimento |
+| **Para que eu possa** | Visualizar dados de atendimento de forma consolidada e por unidades |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve mostrar quantidade de pessoas na fila <br> > Deve mostrar quantidade de atendimentos já realizados <br> > Deve mostrar temp médio de atendimento <br> Deve mostrar tempo médio de espera na fila <br> > Deve atualizar informações automaticamente de x em x min |
+
 ## EP14 - Notícias
+
+#### US31 - Visualizar notícias
+
+| **US31** | **Visualizar notícias**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar notícias |
+| **Para que eu possa** | Acessar as noticiais da minha cooperativa |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve filtrar notícias por não lidas <br> > Deve filtrar notícias por lidas <br> Deve filtrar notícias por todas <br> Deve filtrar notícias por período <br> Deve ilustrar notícias |
+
+#### US32 - Apagar notícias
+
+| **US32** | **Apagar notícias**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Apagar notícias |
+| **Para que eu possa** | Apagar notícias que não desejo mais ver |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve pedir confirmação do usuário |
+
+#### US33 - Encaminhar notícia
+
+| **US33** | **Encaminhar notícia**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Encaminhar notícia |
+| **Para que eu possa** | Compartilhar uma notícias com outros usuários do app |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve filtrar usuários <br> > Deve permitir enviar para mais um usuário por vez |
 
 ## EP15 - Chat
 
+#### US35 - Visualizar conversas
 
+| **US35** | **Visualizar conversas**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar conversas |
+| **Para que eu possa** | Acessar conversas com outros usuários |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve mostrar em ordem de mais recentes <br> > Deve sinalizar conversas nao lidas <br> Deve mostrar horário e remetente da mensagem <br> Deve filtrar conversas por nome do remetente |
+
+#### US36 - Visualizar contatos
+
+| **US36** | **Visualizar contatos**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Visualizar contatos |
+| **Para que eu possa** | Selecionar contato para iniciar uma conversa |
+| **Pontos** | 5 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve listar todos os usuários disponíveis <br> Deve filtrar contatos por nome |
+
+#### US37 - Apagar conversas
+
+| **US37** | **Apagar conversas**|
+|--|--|
+| **Versão**| Atual: 1.0 (10/06) <br> Anterior: --|
+| **Eu, como** | Usuário |
+|**Desejo** | Apagar conversas |
+| **Para que eu possa** | Desabilitar mensagens que não desejo ver |
+| **Pontos** | 2 |
+| **Prioridade** | Must |
+| **Critérios de aceitação** | > Deve pedir confirmação do usuário |
 
 
 
