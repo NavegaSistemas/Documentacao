@@ -16,7 +16,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 ## Índices de US's
 |Tema|Épico|ID & Nome|
 |--|--|--|
-|T1 - Informações|[EP01 - Documentos](#ep01-documentos)|[US01 - Disponibilizar política de privacidade & termos de uso](#us01-disponibilizar-política-de-privacidade-&-termos-de-uso)|
+|T1 - Informações|[EP01 - Documentos](#ep01-documentos)|[US01 - Disponibilizar política de privacidade e termos de uso](#us01-disponibilizar-politica-de-privacidade-e-termos-de-uso)|
 |T1 - Informações|[EP01 - Documentos](#ep01-documentos)|[US02 - Elaborar testes de usabilidade](#us02-elaborar-testes-de-usabilidade)|
 |T1 - Informações|[EP01 - Documentos](#ep01-documentos)|[US03 - Documentar e agrupar dúvidas dos usuários](#us03-documentar-e-agrupar-duvidas-dos-usuarios)|
 |T1 - Informações|[EP01 - Documentos](#ep01-documentos)|[US04 - Medir eficiência da resposta para uma pergunta](#us04-medir-eficiencia-da-resposta-para-uma-pergunta)|
@@ -59,7 +59,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 
 ### EP01 - Documentos 
 
-#### US01 - Disponibilizar política de privacidade & termos de uso
+#### US01 - Disponibilizar política de privacidade e termos de uso
 
 |US01|Disponibilizar politica de privacidade & termos de uso|
 |--|--|
