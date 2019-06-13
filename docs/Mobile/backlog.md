@@ -46,7 +46,13 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 |T4 - Configurações|[EP10 - Perfil do usuário](#ep10-perfil-do-usuario)|[US28 - Editar foto de perfil](#us28-editar-foto-de-perfil)|
 |T4 - Configurações|[EP11 - Ajustes de consultas de contas](#ep11-ajustes-de-consultas-de-contas)|[US29 - Configurar periodos de saldos e tipos de contas](#us29-configurar-periodos-de-saldos-e-tipos-de-contas)|
 |T4 - Configurações|[EP12 - Temas](#ep12-temas)|[US30 - Criar diferentes temas](#us30-criar-diferentes-temas)|
-
+|T5 - Notícias|[EP13 - Atendimento](#ep13-atendimento)|[US31 - Visualizar dados de atendimento](#us31-visualizar-dados-de-atendimento)|
+|T5 - Notícias|[EP14 - Notícias](#ep14-noticias)|[US32 - Visualizar notícias](#us32-visualizar-noticias)|
+|T5 - Notícias|[EP14 - Notícias](#ep14-noticias)|[US33 - Apagar notícias](#us33-apagar-noticias)|
+|T5 - Notícias|[EP14 - Notícias](#ep14-noticias)|[US34 - Encaminhar notícia](#us34-encaminhar-noticia)|
+|T6 - Comunicação|[EP15 - Chat](#ep15-chat)|[US35 - Visualizar conversas](#us35-visualizar-conversas)|
+|T6 - Comunicação|[EP15 - Chat](#ep15-chat)|[US36 - Visualizar contatos](#us36-visualizar-contatos)|
+|T6 - Comunicação|[EP15 - Chat](#ep15-chat)|[US37 - Apagar conversas](#us37-apagar-conversas)|
 
 
 ## T1 - Informações
@@ -307,7 +313,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Ter controle de quais contas gostaria que fossem padrão  |
 | **Pontos** | 3 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve apagar uma conta da lista do painel gerencial <br> Deve persistir os dados de contas em um banco local <br> Pedir confirmação de deleção  |
+| **Critérios de aceitação** | > Deve apagar uma conta da lista do painel gerencial <br> > Deve persistir os dados de contas em um banco local <br> > Pedir confirmação de deleção  |
 
 ### EP08 - Agenda
 
@@ -411,7 +417,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Adicionar novas fotos de perfil |
 | **Pontos** | 3 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve permitir usar foto da câmeta ou galeria <br> > Deve cortar foto em um quadrado <br> Deve persistir apenas uma foto de perfil por usuário |
+| **Critérios de aceitação** | > Deve permitir usar foto da câmeta ou galeria <br> > Deve cortar foto em um quadrado <br> > Deve persistir apenas uma foto de perfil por usuário |
 
 ### EP11 - Ajustes de consultas de contas
 
@@ -425,7 +431,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Controlar tipos de preferencias para consultas de contas gerenciais |
 | **Pontos** | 5 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve configurar contas de usos e fontes <br> > Deve configurar contas de receitas e despesas <br> Deve configurar períodos de saldos de consulta |
+| **Critérios de aceitação** | > Deve configurar contas de usos e fontes <br> > Deve configurar contas de receitas e despesas <br> > Deve configurar períodos de saldos de consulta |
 
 ### EP12 - Temas
 
@@ -439,7 +445,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Disponibilizar temas que agradem diferentes perfis de usuários |
 | **Pontos** | 10 |
 | **Prioridade** | Could |
-| **Critérios de aceitação** | > Deve disponibilizar temas claros e escuros <br> > Deve persistir último tema escolhido <br> > Deve criar esquema de cores <br> Deve criar corpo do tema |
+| **Critérios de aceitação** | > Deve disponibilizar temas claros e escuros <br> > Deve persistir último tema escolhido <br> > Deve criar esquema de cores <br> > Deve criar corpo do tema |
 
 ## T5 - Notícias
 
@@ -455,7 +461,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Visualizar dados de atendimento de forma consolidada e por unidades |
 | **Pontos** | 5 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve mostrar quantidade de pessoas na fila <br> > Deve mostrar quantidade de atendimentos já realizados <br> > Deve mostrar temp médio de atendimento <br> Deve mostrar tempo médio de espera na fila <br> > Deve atualizar informações automaticamente de x em x min |
+| **Critérios de aceitação** | > Deve mostrar quantidade de pessoas na fila <br> > Deve mostrar quantidade de atendimentos já realizados <br> > Deve mostrar temp médio de atendimento <br> > Deve mostrar tempo médio de espera na fila <br> > Deve atualizar informações automaticamente de x em x min |
 
 ### EP14 - Notícias
 
@@ -469,7 +475,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Acessar as noticiais da minha cooperativa |
 | **Pontos** | 5 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve filtrar notícias por não lidas <br> > Deve filtrar notícias por lidas <br> Deve filtrar notícias por todas <br> Deve filtrar notícias por período <br> Deve ilustrar notícias |
+| **Critérios de aceitação** | > Deve filtrar notícias por não lidas <br> > Deve filtrar notícias por lidas <br> > Deve filtrar notícias por todas <br> > Deve filtrar notícias por período <br> > Deve ilustrar notícias |
 
 #### US33 - Apagar notícias
 
@@ -493,8 +499,7 @@ Em termos gerais, o Product BackLog é uma listagem de todos os afazeres pendent
 | **Para que eu possa** | Compartilhar uma notícias com outros usuários do app |
 | **Pontos** | 5 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve filtrar usuários <br> > Deve permitir enviar para mais um usuário 
-por vez |
+| **Critérios de aceitação** | > Deve filtrar usuários <br> > Deve permitir enviar para mais um usuário por vez |
 
 ## T6 - Comunicação
 
@@ -510,7 +515,7 @@ por vez |
 | **Para que eu possa** | Acessar conversas com outros usuários |
 | **Pontos** | 5 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve mostrar em ordem de mais recentes <br> > Deve sinalizar conversas nao lidas <br> Deve mostrar horário e remetente da mensagem <br> Deve filtrar conversas por nome do remetente |
+| **Critérios de aceitação** | > Deve mostrar em ordem de mais recentes <br> > Deve sinalizar conversas nao lidas <br> > Deve mostrar horário e remetente da mensagem <br> > Deve filtrar conversas por nome do remetente |
 
 #### US36 - Visualizar contatos
 
@@ -522,7 +527,7 @@ por vez |
 | **Para que eu possa** | Selecionar contato para iniciar uma conversa |
 | **Pontos** | 5 |
 | **Prioridade** | Must |
-| **Critérios de aceitação** | > Deve listar todos os usuários disponíveis <br> Deve filtrar contatos por nome |
+| **Critérios de aceitação** | > Deve listar todos os usuários disponíveis <br> > Deve filtrar contatos por nome |
 
 #### US37 - Apagar conversas
 
