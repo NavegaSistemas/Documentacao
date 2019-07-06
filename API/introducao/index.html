@@ -38,7 +38,7 @@
     
     
       
-        <title>Sobre a Navega - Navega Consultoria</title>
+        <title>Introdução - Navega Consultoria</title>
       
     
     
@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#sobre-a-navega" tabindex="1" class="md-skip">
+      <a href="#sobre-a-api" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -127,7 +127,7 @@
                 Navega Consultoria
               </span>
               <span class="md-header-nav__topic">
-                Sobre a Navega
+                Introdução
               </span>
             
           
@@ -172,7 +172,7 @@
   
 
 
-  <a href="https://github.com/alanrslima/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  <a href="https://github.com/NavegaSistemas/" title="Ir ao repositório" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -221,7 +221,7 @@
   
 
 
-  <a href="https://github.com/alanrslima/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  <a href="https://github.com/NavegaSistemas/" title="Ir ao repositório" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -254,10 +254,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       API
@@ -268,6 +270,27 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Introdução" class="md-nav__link md-nav__link--active">
+      Introdução
+    </a>
+    
+  </li>
+
         
           
           
@@ -433,11 +456,21 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/alanrslima/edit/master/docs/API/sobre.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/NavegaSistemas/edit/master/docs/API/introducao.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="sobre-a-navega">Sobre a Navega</h1>
-<p>Informações sobre a Navega</p>
+                <h1 id="sobre-a-api">Sobre a API</h1>
+<p>A API da Navega Sistemas é de uso restrito. Para ter acesso ao seus recursos é necessário se autenticar. Para isso envie no header de cada requisição uma identificação de usuário no formato de Basic Auth.</p>
+<blockquote>
+<p>Exemplo em JavaScript</p>
+</blockquote>
+<pre><code>&quot;headers&quot;: {
+  'Content-Type': 'application/json',
+  'Authorization': &quot;Basic &quot; + base64.encode(`${username}:${password}`)
+}
+</code></pre>
+
+<p>(<em>É importante mencionar que os dados que serão retornados serão os relacionados a instituição do usuário logado.</em>)</p>
                 
                   
                 
@@ -454,6 +487,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../agendas_visitas/" title="Agendas de Visitas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Próximo
+                </span>
+                Agendas de Visitas
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
