@@ -1,6 +1,6 @@
 site_name: Navega Consultoria
 site_description: Documentação da Navega Consultoria
-repo_url: https://github.com/alanrslima
+repo_url: https://github.com/NavegaSistemas
 site_dir: site
 copyright: Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega Consultoria</a>.
 dev_addr: ‘0.0.0.0:8000
@@ -23,6 +23,7 @@ plugins:
 nav:
   - Home: 'index.md'
   - API: 
+    - Introdução: API/introducao.md
     - Agendas de Visitas: API/agendas_visitas.md
     - Associados: API/associados.md
     - Atendimento: API/atendimento.md
