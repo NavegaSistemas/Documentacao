@@ -22,15 +22,21 @@ plugins:
   - search
 nav:
   - Home: 'index.md'
-  - API: 
-    - Introdução: API/introducao.md
-    - Agendas de Visitas: API/agendas_visitas.md
-    - Associados: API/associados.md
-    - Atendimento: API/atendimento.md
-    - Contas Gerenciais: API/contas_gerenciais.md
-    - Metas: API/metas.md
-    - Níveis de Saldo: API/niveis_saldo.md
-    - Notificações: API/notificacoes.md
-    - Usuários: API/usuarios.md
-  - Mobile: 
-    - Backlog: Mobile/backlog.md
+  - Navega:
+    - API: 
+      - Introdução: Navega/API/introducao.md
+      - Agendas de Visitas: Navega/API/agendas_visitas.md
+      - Associados: Navega/API/associados.md
+      - Atendimento: Navega/API/atendimento.md
+      - Contas Gerenciais: Navega/API/contas_gerenciais.md
+      - Metas: Navega/API/metas.md
+      - Níveis de Saldo: Navega/API/niveis_saldo.md
+      - Notificações: Navega/API/notificacoes.md
+      - Usuários: Navega/API/usuarios.md
+    - Mobile:  
+      - Backlog: Navega/Mobile/Consultoria/backlog.md
+  - Atende Bem:
+    - API: 
+      - Introdução: Atende_bem/API/introducao.md
+      - Cadastro: Atende_bem/API/cadastro.md
+    - Requisitos: Atende_bem/requisitos.md
