@@ -48,16 +48,6 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
 
 ---
 
-## Alterar dados do usuário
-
-> `[ POST ]`  Altera os dados de um usuário. 
-
-```
-http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
-```
-
----
-
 ## Dados de um usuário
 
 > `[GET]` Usado para realizar o login de um usuário, a identificação do usuário é feita atraves da autenticação feita em Basic Auth.
@@ -67,6 +57,5 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
 ```
 
 ---
-
 
 
