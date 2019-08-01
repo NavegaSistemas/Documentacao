@@ -545,6 +545,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dados-de-um-usuario" title="Dados de um usuário" class="md-nav__link">
+    Dados de um usuário
+  </a>
+  
+</li>
+      
       
       
       
@@ -553,6 +560,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unidades/" title="Unidades" class="md-nav__link">
+      Unidades
+    </a>
   </li>
 
         
@@ -617,6 +636,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dados-de-um-usuario" title="Dados de um usuário" class="md-nav__link">
+    Dados de um usuário
+  </a>
+  
+</li>
+      
       
       
       
@@ -638,14 +664,15 @@
                 
                   <h1>Cadastro</h1>
                 
-                <h3 id="verifica-associado">Verifica associado</h3>
+                <h2 id="verifica-associado">Verifica associado</h2>
 <blockquote>
 <p><code>[ GET ]</code>  Verifica se uma pessoa ja é associada em alguma ou algumas cooperativas SICOOB. Caso seja associado, retornará dados da cooperativa.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Cliente?cpf={cpf}
 </code></pre>
 
-<h3 id="cadastro">Cadastro</h3>
+<hr />
+<h2 id="cadastro">Cadastro</h2>
 <blockquote>
 <p><code>[ PUT ]</code>  Cadastro de um novo usuário no Atende Bem</p>
 </blockquote>
@@ -653,7 +680,7 @@
 </code></pre>
 
 <ul>
-<li>Exemplo do body da requisição abaixo:</li>
+<li>Exemplo do body da requisição abaixo no formato JSON:</li>
 </ul>
 <pre><code>{
   result: [
@@ -735,12 +762,23 @@
 </tr>
 </tbody>
 </table>
-<h3 id="alterar-dados-do-usuario">Alterar dados do usuário</h3>
+<hr />
+<h2 id="alterar-dados-do-usuario">Alterar dados do usuário</h2>
 <blockquote>
-<p><code>[ POST ]</code>  Verifica se uma pessoa ja é associada em alguma ou algumas cooperativas SICOOB. Caso seja associado, retornará dados da cooperativa.</p>
+<p><code>[ POST ]</code>  Altera os dados de um usuário. </p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Cliente?cpf={cpf}
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
 </code></pre>
+
+<hr />
+<h2 id="dados-de-um-usuario">Dados de um usuário</h2>
+<blockquote>
+<p><code>[GET]</code> Usado para realizar o login de um usuário, a identificação do usuário é feita atraves da autenticação feita em Basic Auth.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
+</code></pre>
+
+<hr />
                 
                   
                 
@@ -776,13 +814,13 @@
           </a>
         
         
-          <a href="../../requisitos/" title="Requisitos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../unidades/" title="Unidades" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                Requisitos
+                Unidades
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
