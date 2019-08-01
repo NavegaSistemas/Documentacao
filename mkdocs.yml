@@ -39,4 +39,5 @@ nav:
     - API: 
       - Introdução: Atende_bem/API/introducao.md
       - Cadastro: Atende_bem/API/cadastro.md
+      - Unidades: Atende_bem/API/unidades.md
     - Requisitos: Atende_bem/requisitos.md
