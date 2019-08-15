@@ -502,6 +502,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../ajuda/" title="Ajuda" class="md-nav__link">
+      Ajuda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../cadastro/" title="Cadastro" class="md-nav__link">
       Cadastro
     </a>
@@ -526,8 +538,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../recuperacao/" title="Recuperação de Senha" class="md-nav__link">
-      Recuperação de Senha
+    <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-nav__link">
+      Senhas de atendimento
     </a>
   </li>
 
@@ -570,6 +582,20 @@
         <li class="md-nav__item">
   <a href="#alterar-dados-do-usuario" title="Alterar dados do usuário" class="md-nav__link">
     Alterar dados do usuário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solicita-codigo-por-e-mail" title="Solicita código por e-mail" class="md-nav__link">
+    Solicita código por e-mail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solicita-nova-senha" title="Solicita nova senha" class="md-nav__link">
+    Solicita nova senha
   </a>
   
 </li>
@@ -639,6 +665,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#solicita-codigo-por-e-mail" title="Solicita código por e-mail" class="md-nav__link">
+    Solicita código por e-mail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solicita-nova-senha" title="Solicita nova senha" class="md-nav__link">
+    Solicita nova senha
+  </a>
+  
+</li>
+      
       
       
       
@@ -662,14 +702,12 @@
                 
                 <h2 id="trocar-senha">Trocar senha</h2>
 <blockquote>
-<p><code>[POST]</code> Método utilizado para um usuário trocar a sua senha. O usuário precisa estar logado para realizar esta operação.</p>
+<p><code>[POST]</code> Método utilizado para um usuário trocar a sua senha. O usuário precisa estar logado para realizar esta operação e informar a senha antiga e a nova senha.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/NovaSenha
 </code></pre>
 
-<ul>
-<li>Exemplo do body da requisição abaixo no formato JSON:</li>
-</ul>
+<p><strong>Exemplo do body da requisição no formato JSON</strong></p>
 <pre><code>{
   &quot;login&quot;: &quot;00000000000&quot;,
   &quot;senhaAtual&quot;: &quot;password1&quot;,
@@ -717,12 +755,157 @@
 <hr />
 <h2 id="alterar-dados-do-usuario">Alterar dados do usuário</h2>
 <blockquote>
-<p><code>[ POST ]</code>  Altera os dados de um usuário. </p>
+<p><code>[ POST ]</code>  Altera os dados de um usuário que esteja logado no aplicativo. </p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
 </code></pre>
 
+<p><strong>Exemplo de body da requisição no formaro JSON</strong></p>
+<pre><code>{
+    &quot;result&quot;: [
+    {
+      &quot;cpf&quot;: &quot;00000000000&quot;,
+      &quot;email&quot;: &quot;seuemail@gmail.com&quot;,
+      &quot;nome&quot;: &quot;Alan Lima&quot;,
+      &quot;telefone&quot;: &quot;99999999999&quot;,
+      &quot;senha&quot;: &quot;&quot;,
+      &quot;idInstituicao&quot;: 0,
+      &quot;dataNascimento&quot;: &quot;10/03/1997&quot;
+      }
+  ]
+}
+</code></pre>
+
+<p><strong>Dicionário de dados</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpf</td>
+<td>String</td>
+<td>Identificador de cada pessoa</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>nome</td>
+<td>String</td>
+<td>Nome completo do usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>E-mail principal do novo usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>String</td>
+<td>Telefone principal do usuário</td>
+<td>N</td>
+<td>O DDD deve estar incluso no número de telefone</td>
+</tr>
+<tr>
+<td>senha</td>
+<td>String</td>
+<td>Senha de acesso do novo usuário</td>
+<td>N</td>
+<td>A senha deve ser informada como um campo vazio para a alteração de dados de um usuário</td>
+</tr>
+<tr>
+<td>idInstituicao</td>
+<td>Int</td>
+<td>Identificador da cooperativa que é usuário já é associado, caso seja.</td>
+<td>S</td>
+<td>Caso o usuário não seja associado à nenhuma cooperativa, este campo será informado como 0, caso seja a mais de uma, o usuário deve escolher uma de sua preferência</td>
+</tr>
+<tr>
+<td>dataNascimento</td>
+<td>String</td>
+<td>Data de nascimento do novo usuário</td>
+<td>S</td>
+<td>Data deve ser informada no formado dd/mm/yyyy</td>
+</tr>
+</tbody>
+</table>
 <hr />
+<h2 id="solicita-codigo-por-e-mail">Solicita código por e-mail</h2>
+<blockquote>
+<p><code>[POST]</code> Envia um e-mail para o usuário que esqueceu sua senha. Este e-mail irá conter um código de verificação. Este endpoint é usado para recuperação de senha de acesso. <strong>Os dados de autenticação para acessar este endpoint são o usuário e senha padrão da Navega.</strong></p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/EsqueciMinhaSenha?email={email}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;message&quot;: &quot;Código de verificação enviado para e-mail registrado no cadastro do usuário.&quot;
+}
+</code></pre>
+
+<hr />
+<h2 id="solicita-nova-senha">Solicita nova senha</h2>
+<blockquote>
+<p><code>[POST]</code> Para finalizar a recuperação da senha de acesso, deve ser informado a nova senha juntamente com o codigo que foi enviado para o e-mail do usuário. <strong>Os dados de autenticação para acessar este endpoint são o usuário e senha padrão da Navega.</strong> </p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/RecuperaSenha
+</code></pre>
+
+<p><strong>Exemplo do body da requisição no formato JSON</strong></p>
+<pre><code>{
+  &quot;email&quot;: &quot;seuemail@email.com&quot;,
+  &quot;codigoVerificacao&quot;: 00000,
+  &quot;novaSenha&quot;: &quot;password&quot;,
+}
+</code></pre>
+
+<ul>
+<li>Dicionário de dados</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>E-mail que o usuário usou para cadastrar no app</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>codigoVerificacao</td>
+<td>Int</td>
+<td>Código que é enviado por e-mail para recuperação de senha</td>
+<td>S</td>
+<td>Este código sempre terá 5 números</td>
+</tr>
+<tr>
+<td>novaSenha</td>
+<td>String</td>
+<td>Nova senha informada pelo usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -743,7 +926,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../recuperacao/" title="Recuperação de Senha" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -752,7 +935,7 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Recuperação de Senha
+                Senhas de atendimento
               </span>
             </div>
           </a>

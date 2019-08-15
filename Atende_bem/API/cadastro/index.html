@@ -500,6 +500,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../ajuda/" title="Ajuda" class="md-nav__link">
+      Ajuda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -545,6 +557,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usuario-existe" title="Usuário existe" class="md-nav__link">
+    Usuário existe
+  </a>
+  
+</li>
+      
       
       
       
@@ -574,8 +593,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../recuperacao/" title="Recuperação de Senha" class="md-nav__link">
-      Recuperação de Senha
+    <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-nav__link">
+      Senhas de atendimento
     </a>
   </li>
 
@@ -653,6 +672,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usuario-existe" title="Usuário existe" class="md-nav__link">
+    Usuário existe
+  </a>
+  
+</li>
+      
       
       
       
@@ -676,22 +702,33 @@
                 
                 <h2 id="verifica-associado">Verifica associado</h2>
 <blockquote>
-<p><code>[ GET ]</code>  Verifica se uma pessoa ja é associada em alguma ou algumas cooperativas SICOOB. Caso seja associado, retornará dados da cooperativa.</p>
+<p><code>[ GET ]</code>  Verifica se uma pessoa ja é associada em alguma ou algumas cooperativas SICOOB. Caso seja associado, retornará dados da cooperativa, caso não seja, retornará um objeto vazio.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Cliente?cpf={cpf}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;nomePessoa&quot;: &quot;ADENISIO PEREIRA DE LIMA&quot;,
+  &quot;cooperativas&quot;: [
+    {
+      &quot;idInstituicao&quot;: 475,
+      &quot;numCooperativa&quot;: 4133,
+      &quot;siglaInstituicao&quot;: &quot;SICOOB SERTÃO&quot;
+    },
+  ]
+}
 </code></pre>
 
 <hr />
 <h2 id="cadastro">Cadastro</h2>
 <blockquote>
-<p><code>[ PUT ]</code>  Cadastro de um novo usuário no Atende Bem</p>
+<p><code>[ PUT ]</code>  Cadastro de um novo usuário no Atende Bem.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
 </code></pre>
 
-<ul>
-<li>Exemplo do body da requisição abaixo no formato JSON:</li>
-</ul>
+<p><strong>Exemplo do body da requisição no formato JSON</strong></p>
 <pre><code>{
   result: [
     {
@@ -707,9 +744,7 @@
 }
 </code></pre>
 
-<ul>
-<li>Dicionário de dados</li>
-</ul>
+<p><strong>Dicionário de dados</strong></p>
 <table>
 <thead>
 <tr>
@@ -775,12 +810,45 @@
 <hr />
 <h2 id="dados-de-um-usuario">Dados de um usuário</h2>
 <blockquote>
-<p><code>[GET]</code> Usado para realizar o login de um usuário, a identificação do usuário é feita atraves da autenticação feita em Basic Auth.</p>
+<p><code>[GET]</code> Usado para realizar o login de um usuário, a identificação do usuário é feita atraves da autenticação feita em Basic Auth. A chave "cooperativas" retornará uma lista de cooperativas que o usuário é associado.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
 </code></pre>
 
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;result&quot;: [
+    {
+      &quot;login&quot;: &quot;00000000000&quot;,
+      &quot;nome&quot;: &quot;Alan lima&quot;,
+      &quot;email&quot;: &quot;Alanronison.lima@gmail.com&quot;,
+      &quot;dataNascimento&quot;: &quot;30/09/1997&quot;,
+      &quot;telefone&quot;: &quot;89767555399&quot;,
+      &quot;cooperativas&quot;: [
+        {
+          &quot;idInstituicao&quot;: 475,
+          &quot;numCooperativa&quot;: 4133,
+          &quot;siglaInstituicao&quot;: &quot;SICOOB SERTÃO&quot;
+        },
+      ]
+    }
+  ]
+}
+</code></pre>
+
 <hr />
+<h2 id="usuario-existe">Usuário existe</h2>
+<blockquote>
+<p><code>[GET]</code> Verifica se um determinado usuário já foi cadastrado no aplicativo usando como base o seu cpf.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/UsuarioExiste?cpf={cpf}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;existe&quot;: true
+}
+</code></pre>
                 
                   
                 
@@ -801,7 +869,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../introducao/" title="Introdução" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ajuda/" title="Ajuda" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -810,7 +878,7 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Introdução
+                Ajuda
               </span>
             </div>
           </a>

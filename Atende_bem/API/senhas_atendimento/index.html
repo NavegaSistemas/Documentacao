@@ -38,7 +38,7 @@
     
     
       
-        <title>Unidades - Navega Consultoria</title>
+        <title>Senhas de atendimento - Navega Consultoria</title>
       
     
     
@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#busca-unidades" tabindex="1" class="md-skip">
+      <a href="#cooperativas-com-senha" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -127,7 +127,7 @@
                 Navega Consultoria
               </span>
               <span class="md-header-nav__topic">
-                Unidades
+                Senhas de atendimento
               </span>
             
           
@@ -524,6 +524,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../unidades/" title="Unidades" class="md-nav__link">
+      Unidades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -533,11 +545,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Unidades
+        Senhas de atendimento
       </label>
     
-    <a href="./" title="Unidades" class="md-nav__link md-nav__link--active">
-      Unidades
+    <a href="./" title="Senhas de atendimento" class="md-nav__link md-nav__link--active">
+      Senhas de atendimento
     </a>
     
       
@@ -549,22 +561,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#busca-unidades" title="Busca unidades" class="md-nav__link">
-    Busca unidades
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#busca-dados-de-uma-unidade" title="Busca dados de uma unidade" class="md-nav__link">
-    Busca dados de uma unidade
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dados-de-localizacao" title="Dados de localização" class="md-nav__link">
-    Dados de localização
+  <a href="#cooperativas-com-senha" title="Cooperativas com senha" class="md-nav__link">
+    Cooperativas com senha
   </a>
   
 </li>
@@ -577,18 +575,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-nav__link">
-      Senhas de atendimento
-    </a>
   </li>
 
         
@@ -645,22 +631,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#busca-unidades" title="Busca unidades" class="md-nav__link">
-    Busca unidades
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#busca-dados-de-uma-unidade" title="Busca dados de uma unidade" class="md-nav__link">
-    Busca dados de uma unidade
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dados-de-localizacao" title="Dados de localização" class="md-nav__link">
-    Dados de localização
+  <a href="#cooperativas-com-senha" title="Cooperativas com senha" class="md-nav__link">
+    Cooperativas com senha
   </a>
   
 </li>
@@ -681,207 +653,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/NavegaSistemas/edit/master/docs/Atende_bem/API/unidades.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/NavegaSistemas/edit/master/docs/Atende_bem/API/senhas_atendimento.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Unidades</h1>
+                  <h1>Senhas de atendimento</h1>
                 
-                <h2 id="busca-unidades">Busca unidades</h2>
-<blockquote>
-<p><code>[ GET ]</code> Busca dados de todos os pontos de atendimento disponíveis em um determinado raio de distância da localização do usuário. O raio de busca determinado foi de 100km.</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesProximasRaio?latitude={latitude}&amp;longitude={longitude}
-</code></pre>
-
-<p><strong>Exemplo de resposta</strong></p>
-<pre><code>{
-  &quot;result&quot;: [
-    {
-      &quot;idInstituicao&quot;: 343,
-      &quot;idCooperativa&quot;: 4001,
-      &quot;siglaInstituicao&quot;: &quot;SICOOB EXECUTIVO&quot;,
-      &quot;idUnidadeInst&quot;: 0,
-      &quot;nomeUnidade&quot;: &quot;UNIDADE 0&quot;,
-      &quot;descEndereco&quot;: &quot;RUA LOCAL TESTE&quot;,
-      &quot;latitude&quot;: -15.836719,
-      &quot;longitude&quot;: -48.017172,
-      &quot;distancia&quot;: 0.587188801155316,
-      &quot;usuarioAssociado&quot;: false,
-      &quot;Horarios&quot;: [
-        {
-          &quot;diaSemana&quot;: &quot;Seg&quot;,
-          &quot;label&quot;: &quot;Segunda-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;16:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Ter&quot;,
-          &quot;label&quot;: &quot;Terça-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Qua&quot;,
-          &quot;label&quot;: &quot;Quarta-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Qui&quot;,
-          &quot;label&quot;: &quot;Quinta-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Sex&quot;,
-          &quot;label&quot;: &quot;Sexta-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        }
-      ],
-      &quot;Fotos&quot;: [
-        {
-          &quot;idImagem&quot;: &quot;4d40833d0d6655726bd7176b2144a7fc-aniversario,jpg.jpg&quot;,
-          &quot;linkImagemMaior&quot;: &quot;https://navega-uploads.s3.amazonaws.com/4d40833d0d6655726bd7176b2144a7fc-aniversario%2Cjpg.jpg&quot;,
-          &quot;linkImagemMenor&quot;: &quot;&quot;
-        }
-      ]
-    },
-  ]
-}
-</code></pre>
-
-<hr />
-<h2 id="busca-dados-de-uma-unidade">Busca dados de uma unidade</h2>
-<blockquote>
-<p><code>[ GET ]</code> Busca dados específicos de uma unidade de atendimento, inclusive dados relativos aos destinos e filas de atendimentos disponíveis naquele local.</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadeDetalhe?idInstituicao={idInstituicao}&amp;idUnidadeInst={idUnidadeInst}
-</code></pre>
-
-<p><strong>Exemplo de resposta</strong></p>
-<pre><code>{
-  &quot;result&quot;: [
-    {
-      &quot;idInstituicao&quot;: 475,
-      &quot;idCooperativa&quot;: 4133,
-      &quot;siglaInstituicao&quot;: &quot;SICOOB SERTÃO&quot;,
-      &quot;linkServidorSenhas&quot;: &quot;http://192.168.15.9:8080&quot;,
-      &quot;idUnidadeInst&quot;: 0,
-      &quot;nomeUnidade&quot;: &quot;SEDE PIRAPORA&quot;,
-      &quot;idadeEspecial&quot;: 0,
-      &quot;descEndereco&quot;: &quot;RUA ANTONIO NASCIMENTO&quot;,
-      &quot;descNumEndereco&quot;: &quot;179&quot;,
-      &quot;descComplementoEndereco&quot;: &quot;&quot;,
-      &quot;nomeBairro&quot;: &quot;CENTRO&quot;,
-      &quot;nomeCidade&quot;: &quot;PIRAPORA&quot;,
-      &quot;siglaUF&quot;: &quot;MG&quot;,
-      &quot;numCEP&quot;: &quot;39270000&quot;,
-      &quot;numTelefone&quot;: &quot;&quot;,
-      &quot;latitude&quot;: -15.833448,
-      &quot;longitude&quot;: -47.955211,
-      &quot;usuarioAssociado&quot;: false,
-      &quot;horarios&quot;: [
-        {
-          &quot;diaSemana&quot;: &quot;Seg&quot;,
-          &quot;label&quot;: &quot;Segunda-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;16:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Ter&quot;,
-          &quot;label&quot;: &quot;Terça-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Qua&quot;,
-          &quot;label&quot;: &quot;Quarta-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Qui&quot;,
-          &quot;label&quot;: &quot;Quinta-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        },
-        {
-          &quot;diaSemana&quot;: &quot;Sex&quot;,
-          &quot;label&quot;: &quot;Sexta-feira&quot;,
-          &quot;horaInicial&quot;: &quot;10:00:00&quot;,
-          &quot;horaFinal&quot;: &quot;15:00:00&quot;
-        }
-      ],
-      &quot;fotos&quot;: [
-        {
-          &quot;idImagem&quot;: &quot;128e2cc6bf5bc6c6ad20fa66e665a44d-imagem1.jpg&quot;,
-          &quot;linkImagemMaior&quot;: &quot;https://navega-uploads.s3.amazonaws.com/128e2cc6bf5bc6c6ad20fa66e665a44d-imagem1.jpg&quot;,
-          &quot;linkImagemMenor&quot;: &quot;&quot;
-        }
-      ],
-      &quot;destinos&quot;: [
-        {
-          &quot;idDestino&quot;: 1,
-          &quot;descricao&quot;: &quot;Caixa&quot;,
-          &quot;letraSenha&quot;: &quot;C&quot;,
-          &quot;textoSenha&quot;: &quot;Vai no caixa? Evite ficar na fila e ainda ganhe R$ 0,31 por boleto pago no aplicativo Sicoobnet.&quot;
-        },
-        {
-          &quot;idDestino&quot;: 2,
-          &quot;descricao&quot;: &quot;Atendimento&quot;,
-          &quot;letraSenha&quot;: &quot;A&quot;,
-          &quot;textoSenha&quot;: &quot;Já pensou em se aposentar com tranquilidade?\r\n Faça o Sicoob Previ\r\nMaiores informações no atendimento\r\n&quot;
-        },
-        {
-          &quot;idDestino&quot;: 3,
-          &quot;descricao&quot;: &quot;Consignados&quot;,
-          &quot;letraSenha&quot;: &quot;E&quot;,
-          &quot;textoSenha&quot;: &quot;Você esta fazendo uma excelente escolha, no Sicoob Sertão Minas você encontra as melhores taxas do mercado.&quot;
-        },
-        {
-          &quot;idDestino&quot;: 4,
-          &quot;descricao&quot;: &quot;Gerência&quot;,
-          &quot;letraSenha&quot;: &quot;G&quot;,
-          &quot;textoSenha&quot;: &quot;&quot;
-        }
-      ],
-      &quot;parametros&quot;: [
-        {
-          &quot;idParametro&quot;: 36,
-          &quot;descricao&quot;: &quot;Calcula atendimento preferencial automaticamente para Associados com base na idade ?&quot;,
-          &quot;valor&quot;: true
-        }
-      ]
-    }
-  ]
-}
-</code></pre>
-
-<hr />
-<h2 id="dados-de-localizacao">Dados de localização</h2>
-<blockquote>
-<p><code>[GET]</code> Consulta os dados de localização de uma unidade</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadeLocalizacao?idInstituicao={idInstituicao}&amp;idUnidadeInst={idUnidadeInst}
-</code></pre>
-
-<p><strong>Exemplo de resposta</strong></p>
-<pre><code>{
-  &quot;result&quot;: [
-    {
-      &quot;idInstituicao&quot;: 475,
-      &quot;siglaInstituicao&quot;: &quot;SICOOB SERTÃO&quot;,
-      &quot;idUnidadeInst&quot;: 0,
-      &quot;nomeUnidade&quot;: &quot;SEDE PIRAPORA&quot;,
-      &quot;latitude&quot;: -15.833448,
-      &quot;longitude&quot;: -47.955211
-    }
-  ]
-}
-</code></pre>
-
-<hr />
+                <h2 id="cooperativas-com-senha">Cooperativas com senha</h2>
+<blockquote></blockquote>
                 
                   
                 
@@ -902,7 +680,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../cadastro/" title="Cadastro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../unidades/" title="Unidades" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -911,19 +689,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Cadastro
+                Unidades
               </span>
             </div>
           </a>
         
         
-          <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../usuario/" title="Usuário" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                Senhas de atendimento
+                Usuário
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
