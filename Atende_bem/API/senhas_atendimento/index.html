@@ -526,6 +526,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../feedback/" title="Feedback" class="md-nav__link">
+      Feedback
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../unidades/" title="Unidades" class="md-nav__link">
       Unidades
     </a>
@@ -659,7 +671,26 @@
                   <h1>Senhas de atendimento</h1>
                 
                 <h2 id="cooperativas-com-senha">Cooperativas com senha</h2>
-<blockquote></blockquote>
+<blockquote>
+<p><code>[ GET ]</code>  Consulta todas as cooperativas que o usuário logado requisitou alguma senha. É utilizado para ter acesso aos links de cada servidor para uma posterior consulta das senhas de atendimento geradas.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesSenhas
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;result&quot;: [
+    {
+      &quot;idInstituicao&quot;: 343,
+      &quot;siglaInstituicao&quot;: &quot;SICOOB EXECUTIVO&quot;,
+      &quot;idUnidadeInst&quot;: 1,
+      &quot;nomeUnidade&quot;: &quot;UNIDADE alterado&quot;,
+      &quot;linkServidorSenhas&quot;: &quot;http://cpro29096.publiccloud.com.br:8085&quot;,
+      &quot;dataHoraEmissao&quot;: &quot;12/08/2019 15:23:42&quot;
+    }
+  ]
+}
+</code></pre>
                 
                   
                 
