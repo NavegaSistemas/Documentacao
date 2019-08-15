@@ -38,8 +38,9 @@ nav:
   - Atende Bem:
     - API: 
       - Introdução: Atende_bem/API/introducao.md
+      - Ajuda: Atende_bem/API/ajuda.md
       - Cadastro: Atende_bem/API/cadastro.md
       - Unidades: Atende_bem/API/unidades.md
-      - Recuperação de Senha: Atende_bem/API/recuperacao.md
+      - Senhas de atendimento: Atende_bem/API/senhas_atendimento.md
       - Usuário: Atende_bem/API/usuario.md
     - Requisitos: Atende_bem/requisitos.md

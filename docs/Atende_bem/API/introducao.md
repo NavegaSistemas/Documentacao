@@ -9,6 +9,6 @@ Os endpoints que estão relacionados ao cadastro de novos usuários possuem um u
 ```
 "headers": {
   'Content-Type': 'application/json',
-  'Authorization': "Basic " + base64.encode(`${username}:${password}`)
+  'Authorization': "Basic " + base64.encode(`${cpf}:${password}`)
 }
 ```
