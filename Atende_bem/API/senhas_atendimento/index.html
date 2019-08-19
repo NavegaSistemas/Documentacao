@@ -514,8 +514,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../cadastro/" title="Cadastro" class="md-nav__link">
-      Cadastro
+    <a href="../cadastro_usuario/" title="Cadastro/Usuário" class="md-nav__link">
+      Cadastro/Usuário
     </a>
   </li>
 
@@ -579,6 +579,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pedir-senha" title="Pedir senha" class="md-nav__link">
+    Pedir senha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pessoas-na-fila" title="Pessoas na fila" class="md-nav__link">
+    Pessoas na fila
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busca-senhas" title="Busca senhas" class="md-nav__link">
+    Busca senhas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancela-uma-senha" title="Cancela uma senha" class="md-nav__link">
+    Cancela uma senha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-filas" title="Tipos de filas" class="md-nav__link">
+    Tipos de filas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-identificacao" title="Tipos de identificação" class="md-nav__link">
+    Tipos de identificação
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -587,18 +642,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../usuario/" title="Usuário" class="md-nav__link">
-      Usuário
-    </a>
   </li>
 
         
@@ -649,6 +692,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pedir-senha" title="Pedir senha" class="md-nav__link">
+    Pedir senha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pessoas-na-fila" title="Pessoas na fila" class="md-nav__link">
+    Pessoas na fila
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busca-senhas" title="Busca senhas" class="md-nav__link">
+    Busca senhas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancela-uma-senha" title="Cancela uma senha" class="md-nav__link">
+    Cancela uma senha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-filas" title="Tipos de filas" class="md-nav__link">
+    Tipos de filas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-identificacao" title="Tipos de identificação" class="md-nav__link">
+    Tipos de identificação
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -674,7 +772,7 @@
 <blockquote>
 <p><code>[ GET ]</code>  Consulta todas as cooperativas que o usuário logado requisitou alguma senha. É utilizado para ter acesso aos links de cada servidor para uma posterior consulta das senhas de atendimento geradas.</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesSenhas
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesSenhas?dataInicial={dd/mm/yyyy}&amp;dataFinal={dd/mm/yyyy}
 </code></pre>
 
 <p><strong>Exemplo de resposta</strong></p>
@@ -691,6 +789,248 @@
   ]
 }
 </code></pre>
+
+<hr />
+<h2 id="pedir-senha">Pedir senha</h2>
+<blockquote>
+<p><code>[PUT]</code> Realiza a requisição de uma senha de atendimento em um determinado ponto de atendimento.Este endpoint será disponibilizado no servidor de cada cooperativa, de forma com que seu IP será usado na url em "linkCooperativa". Os dados de acessos serão os usuários e senhas de autenticação da Navega Consultoria em cada cooperativa.</p>
+</blockquote>
+<pre><code>{linkCooperativa}/navega/api/TEmissaoSenha/SenhaApp
+</code></pre>
+
+<p><strong>Exemplo de body da requisição no formaro JSON</strong></p>
+<pre><code>{
+  &quot;IDInstituicao&quot;: 234,
+  &quot;IDUnidadeInst&quot;: 2,
+  &quot;IDFila&quot;: 2,
+  &quot;IDDestino&quot;: 1,
+  &quot;IDTipoIdentificacao&quot;: 2,
+  &quot;NumDocumento&quot;: &quot;00000000000&quot;,
+  &quot;IDFilaPrincipal&quot;: 2,
+  &quot;IDDeviceToken&quot;: &quot;32423SDFEW353T4GJPI34N43T43T&quot;
+}
+</code></pre>
+
+<p><strong>Dicionário de dados</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IDInstituicao</td>
+<td>Int</td>
+<td>Identificador de cada instituição</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>IDUnidadeInst</td>
+<td>Int</td>
+<td>Identificador de cada unidade de atendimento</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>IDFila</td>
+<td>Int</td>
+<td>Identificador de cada tipo de fila de atendimento</td>
+<td>S</td>
+<td>Diz respeito a fila escolhida pelo usuário no ato de solicitação de uma senha. Clique <a href="#tipos-de-filas">AQUI</a> para visualizar os tipos de filas disponíveis</td>
+</tr>
+<tr>
+<td>IDDestino</td>
+<td>Int</td>
+<td>Identificador de cada destino de atendimento</td>
+<td>S</td>
+<td>Os dados dos destinos de cada unidade estão disponiveis <a href="../unidades/#busca-dados-de-uma-unidade">AQUI</a>.</td>
+</tr>
+<tr>
+<td>IDTipoIdentificacao</td>
+<td>Int</td>
+<td>Identifica a origem da senha de atendimento</td>
+<td>S</td>
+<td>Diz respeito a identificação da origem da senha. Clique <a href="#tipos-de-identificacao">AQUI</a> para visualizar os tipos de identificação disponíveis.</td>
+</tr>
+<tr>
+<td>NumDocumento</td>
+<td>String</td>
+<td>Número de CPF do usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>IDFilaPrincipal</td>
+<td>Int</td>
+<td>Identificador do tipo de usuário</td>
+<td>S</td>
+<td>Objetivo de saber se o usuário que solicitou a senha é associado ou não da cooperativa. Seja, <strong>2</strong> para ASSOCIADO e <strong>3</strong> para NÃO ASSOCIADO.</td>
+</tr>
+<tr>
+<td>IDDeviceToken</td>
+<td>String</td>
+<td>Token do celular do usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pessoas-na-fila">Pessoas na fila</h2>
+<blockquote>
+<p><code>[ GET ]</code>  Consultas quantas pessoas estão na frente de determinada senha de atendimento em um ponto de atendimento específico. Este endpoint será disponibilizado no servidor de cada cooperativa, de forma com que seu IP será usado na url em "linkCooperativa". Os dados de acessos serão os usuários e senhas de autenticação da Navega Consultoria em cada cooperativa.</p>
+</blockquote>
+<pre><code>{linkCooperativa}/navega/api/TEmissaoSenha/PessoasNaFrente?idInstituicao={idInstituicao}&amp;idAtendimento={idAtendimento}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;IDAtendimento&quot;: 175398,
+  &quot;PessoasNaFrente&quot;: 0
+}
+</code></pre>
+
+<hr />
+<h2 id="busca-senhas">Busca senhas</h2>
+<blockquote>
+<p><code>[ GET ]</code>  Busca senhas de atendimento que foram solicitadas pelo usuário logado em determinado ponto de atendimento. Este endpoint será disponibilizado no servidor de cada cooperativa, de forma com que seu IP será usado na url em "linkCooperativa". Os dados de acessos serão os usuários e senhas de autenticação da Navega Consultoria em cada cooperativa.</p>
+</blockquote>
+<pre><code>{linkcooperativa}/navega/api/TEmissaoSenha/SenhasAplicativo?idInstituicao={idInstituicao}&amp;cpf={cpf}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;Result&quot;: [
+    {
+      &quot;IDInstituicao&quot;: 343,
+      &quot;IDCooperativa&quot;: 4001,
+      &quot;SiglaInstituicao&quot;: &quot;SICOOB EXECUTIVO&quot;,
+      &quot;IDUnidadeInst&quot;: 0,
+      &quot;NomeUnidade&quot;: &quot;UNIDADE 0&quot;,
+      &quot;IDAtendimento&quot;: 175398,
+      &quot;SenhaFormatada&quot;: &quot;PC0002&quot;,
+      &quot;DataEmissao&quot;: &quot;14/08/2019 16:50:15&quot;,
+      &quot;IDStatus&quot;: 1,
+      &quot;DescStatus&quot;: &quot;Aguardando&quot;,
+      &quot;IDDestino&quot;: 1,
+      &quot;DescDestino&quot;: &quot;Caixa Teste&quot;,
+      &quot;TextoSenha&quot;: &quot;Ei, vai no caixa ? Se utilizar o Sicoobnet, atm, ganhar� R$ 0,30 por cada boleto - convenio pago&quot;,
+      &quot;IDFila&quot;: 1,
+      &quot;NomeFila&quot;: &quot;Preferencial&quot;,
+      &quot;IDCanalEmissao&quot;: 2,
+      &quot;DescCanal&quot;: &quot;Aplicativo&quot;,
+      &quot;LinkServidorSenhas&quot;: &quot;http://cpro29096.publiccloud.com.br:8085&quot;
+    },
+  ]
+}
+</code></pre>
+
+<hr />
+<h2 id="cancela-uma-senha">Cancela uma senha</h2>
+<blockquote>
+<p><code>[ DELETE ]</code>  O usuário poderá cancelar uma senha caso esteja como status "aguardando". Este endpoint será disponibilizado no servidor de cada cooperativa, de forma com que seu IP será usado na url em "linkCooperativa". Os dados de acessos serão os usuários e senhas de autenticação da Navega Consultoria em cada cooperativa.</p>
+</blockquote>
+<pre><code>{linkcooperativa}/navega/api/TEmissaoSenha/SenhaAplicativo?idInstituicao=343&amp;idAtendimento=99999
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;Result&quot;: [
+    {
+      &quot;IDInstituicao&quot;: 343,
+      &quot;IDCooperativa&quot;: 4001,
+      &quot;SiglaInstituicao&quot;: &quot;SICOOB EXECUTIVO&quot;,
+      &quot;IDUnidadeInst&quot;: 0,
+      &quot;NomeUnidade&quot;: &quot;UNIDADE 0&quot;,
+      &quot;IDAtendimento&quot;: 175398,
+      &quot;SenhaFormatada&quot;: &quot;PC0002&quot;,
+      &quot;DataEmissao&quot;: &quot;14/08/2019 16:50:15&quot;,
+      &quot;IDStatus&quot;: 1,
+      &quot;DescStatus&quot;: &quot;Aguardando&quot;,
+      &quot;IDDestino&quot;: 1,
+      &quot;DescDestino&quot;: &quot;Caixa Teste&quot;,
+      &quot;TextoSenha&quot;: &quot;Ei, vai no caixa ? Se utilizar o Sicoobnet, atm, ganhar� R$ 0,30 por cada boleto - convenio pago&quot;,
+      &quot;IDFila&quot;: 1,
+      &quot;NomeFila&quot;: &quot;Preferencial&quot;,
+      &quot;IDCanalEmissao&quot;: 2,
+      &quot;DescCanal&quot;: &quot;Aplicativo&quot;,
+      &quot;LinkServidorSenhas&quot;: &quot;http://cpro29096.publiccloud.com.br:8085&quot;
+    },
+  ]
+}
+</code></pre>
+
+<hr />
+<h2 id="informacoes-adicionais">Informações adicionais</h2>
+<h3 id="tipos-de-filas">Tipos de filas</h3>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Fila</th>
+<th>Letra Senha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Preferencial</td>
+<td>P</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Associados</td>
+<td>A</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Não associados</td>
+<td>N</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Preferencial especial</td>
+<td>E</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipos-de-identificacao">Tipos de identificação</h3>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Tipo de identificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Nenhum</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Conta corrente</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CPF / CNPJ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Biometria</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cód. Associado</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -726,13 +1066,13 @@
           </a>
         
         
-          <a href="../usuario/" title="Usuário" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../requisitos/" title="Requisitos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                Usuário
+                Requisitos
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

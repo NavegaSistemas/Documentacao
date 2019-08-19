@@ -38,7 +38,7 @@
     
     
       
-        <title>Usuário - Navega Consultoria</title>
+        <title>Cadastro/Usuário - Navega Consultoria</title>
       
     
     
@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#trocar-senha" tabindex="1" class="md-skip">
+      <a href="#verifica-associado" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -127,7 +127,7 @@
                 Navega Consultoria
               </span>
               <span class="md-header-nav__topic">
-                Usuário
+                Cadastro/Usuário
               </span>
             
           
@@ -512,54 +512,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../cadastro/" title="Cadastro" class="md-nav__link">
-      Cadastro
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../feedback/" title="Feedback" class="md-nav__link">
-      Feedback
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../unidades/" title="Unidades" class="md-nav__link">
-      Unidades
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-nav__link">
-      Senhas de atendimento
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -569,11 +521,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Usuário
+        Cadastro/Usuário
       </label>
     
-    <a href="./" title="Usuário" class="md-nav__link md-nav__link--active">
-      Usuário
+    <a href="./" title="Cadastro/Usuário" class="md-nav__link md-nav__link--active">
+      Cadastro/Usuário
     </a>
     
       
@@ -583,6 +535,34 @@
   
     <label class="md-nav__title" for="__toc">Índice</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verifica-associado" title="Verifica associado" class="md-nav__link">
+    Verifica associado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cadastro" title="Cadastro" class="md-nav__link">
+    Cadastro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dados-de-um-usuario" title="Dados de um usuário" class="md-nav__link">
+    Dados de um usuário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-existe" title="Usuário existe" class="md-nav__link">
+    Usuário existe
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#trocar-senha" title="Trocar senha" class="md-nav__link">
@@ -620,6 +600,42 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feedback/" title="Feedback" class="md-nav__link">
+      Feedback
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unidades/" title="Unidades" class="md-nav__link">
+      Unidades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-nav__link">
+      Senhas de atendimento
+    </a>
   </li>
 
         
@@ -662,6 +678,34 @@
   
     <label class="md-nav__title" for="__toc">Índice</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verifica-associado" title="Verifica associado" class="md-nav__link">
+    Verifica associado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cadastro" title="Cadastro" class="md-nav__link">
+    Cadastro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dados-de-um-usuario" title="Dados de um usuário" class="md-nav__link">
+    Dados de um usuário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-existe" title="Usuário existe" class="md-nav__link">
+    Usuário existe
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#trocar-senha" title="Trocar senha" class="md-nav__link">
@@ -707,12 +751,163 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/NavegaSistemas/edit/master/docs/Atende_bem/API/usuario.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/NavegaSistemas/edit/master/docs/Atende_bem/API/cadastro_usuario.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Usuário</h1>
+                  <h1>Cadastro/Usuário</h1>
                 
-                <h2 id="trocar-senha">Trocar senha</h2>
+                <h2 id="verifica-associado">Verifica associado</h2>
+<blockquote>
+<p><code>[ GET ]</code>  Verifica se uma pessoa ja é associada em alguma ou algumas cooperativas SICOOB. Caso seja associado, retornará dados da cooperativa, caso não seja, retornará um objeto vazio.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Cliente?cpf={cpf}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;nomePessoa&quot;: &quot;ADENISIO PEREIRA DE LIMA&quot;,
+  &quot;cooperativas&quot;: [
+    {
+      &quot;idInstituicao&quot;: 475,
+      &quot;numCooperativa&quot;: 4133,
+      &quot;siglaInstituicao&quot;: &quot;SICOOB SERTÃO&quot;
+    },
+  ]
+}
+</code></pre>
+
+<hr />
+<h2 id="cadastro">Cadastro</h2>
+<blockquote>
+<p><code>[ PUT ]</code>  Cadastro de um novo usuário no Atende Bem.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
+</code></pre>
+
+<p><strong>Exemplo do body da requisição no formato JSON</strong></p>
+<pre><code>{
+  result: [
+    {
+      &quot;cpf&quot;: &quot;00000000000&quot;,
+      &quot;nome&quot;: &quot;Seu nome&quot;,
+      &quot;email&quot;: &quot;seuemail@email.com&quot;,
+      &quot;telefone&quot;: &quot;00000000000&quot;,
+      &quot;senha&quot;: &quot;123456&quot;,
+      &quot;idInstituicao&quot;: 143,
+      &quot;dataNascimento&quot;: &quot;30/09/1997&quot;,
+    }
+  ]
+}
+</code></pre>
+
+<p><strong>Dicionário de dados</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpf</td>
+<td>String</td>
+<td>Identificador de cada pessoa</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>nome</td>
+<td>String</td>
+<td>Nome completo do usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>E-mail principal do novo usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>String</td>
+<td>Telefone principal do usuário</td>
+<td>N</td>
+<td>O DDD deve estar incluso no número de telefone</td>
+</tr>
+<tr>
+<td>senha</td>
+<td>String</td>
+<td>Senha de acesso do novo usuário</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>idInstituicao</td>
+<td>Int</td>
+<td>Identificador da cooperativa que é usuário já é associado, caso seja.</td>
+<td>S</td>
+<td>Caso o usuário não seja associado à nenhuma cooperativa, este campo será informado como 0, caso seja a mais de uma, o usuário deve escolher uma de sua preferência</td>
+</tr>
+<tr>
+<td>dataNascimento</td>
+<td>String</td>
+<td>Data de nascimento do novo usuário</td>
+<td>S</td>
+<td>Data deve ser informada no formado dd/mm/yyyy</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dados-de-um-usuario">Dados de um usuário</h2>
+<blockquote>
+<p><code>[GET]</code> Usado para realizar o login de um usuário, a identificação do usuário é feita atraves da autenticação feita em Basic Auth. A chave "cooperativas" retornará uma lista de cooperativas que o usuário é associado.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/Usuario
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;result&quot;: [
+    {
+      &quot;login&quot;: &quot;00000000000&quot;,
+      &quot;nome&quot;: &quot;Alan lima&quot;,
+      &quot;email&quot;: &quot;Alanronison.lima@gmail.com&quot;,
+      &quot;dataNascimento&quot;: &quot;30/09/1997&quot;,
+      &quot;telefone&quot;: &quot;89767555399&quot;,
+      &quot;cooperativas&quot;: [
+        {
+          &quot;idInstituicao&quot;: 475,
+          &quot;numCooperativa&quot;: 4133,
+          &quot;siglaInstituicao&quot;: &quot;SICOOB SERTÃO&quot;
+        },
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<hr />
+<h2 id="usuario-existe">Usuário existe</h2>
+<blockquote>
+<p><code>[GET]</code> Verifica se um determinado usuário já foi cadastrado no aplicativo usando como base o seu cpf.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/UsuarioExiste?cpf={cpf}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;existe&quot;: true
+}
+</code></pre>
+
+<hr />
+<h2 id="trocar-senha">Trocar senha</h2>
 <blockquote>
 <p><code>[POST]</code> Método utilizado para um usuário trocar a sua senha. O usuário precisa estar logado para realizar esta operação e informar a senha antiga e a nova senha.</p>
 </blockquote>
@@ -938,7 +1133,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../senhas_atendimento/" title="Senhas de atendimento" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ajuda/" title="Ajuda" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -947,19 +1142,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Senhas de atendimento
+                Ajuda
               </span>
             </div>
           </a>
         
         
-          <a href="../../requisitos/" title="Requisitos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../feedback/" title="Feedback" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                Requisitos
+                Feedback
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
