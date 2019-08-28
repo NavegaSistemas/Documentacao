@@ -59,7 +59,7 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesSenhas?dat
 |IDTipoIdentificacao|Int| Identifica a origem da senha de atendimento |S| Diz respeito a identificação da origem da senha. Clique [AQUI](#tipos-de-identificacao) para visualizar os tipos de identificação disponíveis. |
 |NumDocumento|String| Número de CPF do usuário |S| |
 |IDFilaPrincipal|Int|Identificador do tipo de usuário|S| Objetivo de saber se o usuário que solicitou a senha é associado ou não da cooperativa. Seja, **2** para ASSOCIADO e **3** para NÃO ASSOCIADO. |
-|IDDeviceToken|String| Token do celular do usuário |S| |
+|IDDeviceToken|String| Token do celular do usuário |S| |busca
 
 
 ---
@@ -90,6 +90,18 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesSenhas?dat
 ```
 {linkcooperativa}/navega/api/TEmissaoSenha/SenhasAplicativo?idInstituicao={idInstituicao}&cpf={cpf}
 ```
+
+* Parâmetros disponíveis
+
+|Parametro|Descrição|Requerido|Valores possíveis|
+|--|--|--|--|
+|idInstituicao| Identificador da cooperativa |S||
+|cpf| Cpf do usuário logado |S||
+|status| Tipos de status de uma senha, caso não informado retornará senhas de todos os status |N| "aguardando", "atendendo", "atendida", "cancelada" |
+|dataInicial| Data de início para busca de senhas | Requerido se não for informado o "idAtendimento" | data no formato "dd/mm/yyyy"|
+|dataFinal| Data de termino para busca de senhas | Requerido se não for informado o "idAtendimento" |data no formato "dd/mm/yyyy"|
+|idAtendimento| Identificador de uma senha | N | | 
+
 
 **Exemplo de resposta**
 
