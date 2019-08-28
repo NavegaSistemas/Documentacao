@@ -904,6 +904,57 @@
 <pre><code>{linkcooperativa}/navega/api/TEmissaoSenha/SenhasAplicativo?idInstituicao={idInstituicao}&amp;cpf={cpf}
 </code></pre>
 
+<ul>
+<li>Parâmetros disponíveis</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Valores possíveis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idInstituicao</td>
+<td>Identificador da cooperativa</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>cpf</td>
+<td>Cpf do usuário logado</td>
+<td>S</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>Tipos de status de uma senha, caso não informado retornará senhas de todos os status</td>
+<td>N</td>
+<td>"aguardando", "atendendo", "atendida", "cancelada"</td>
+</tr>
+<tr>
+<td>dataInicial</td>
+<td>Data de início para busca de senhas</td>
+<td>Requerido se não for informado o "idAtendimento"</td>
+<td>data no formato "dd/mm/yyyy"</td>
+</tr>
+<tr>
+<td>dataFinal</td>
+<td>Data de termino para busca de senhas</td>
+<td>Requerido se não for informado o "idAtendimento"</td>
+<td>data no formato "dd/mm/yyyy"</td>
+</tr>
+<tr>
+<td>idAtendimento</td>
+<td>Identificador de uma senha</td>
+<td>N</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Exemplo de resposta</strong></p>
 <pre><code>{
   &quot;Result&quot;: [
