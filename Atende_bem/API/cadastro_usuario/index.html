@@ -592,6 +592,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#associa-um-token-ao-usuario" title="Associa um token ao usuário" class="md-nav__link">
+    Associa um token ao usuário
+  </a>
+  
+</li>
+      
       
       
       
@@ -731,6 +738,13 @@
         <li class="md-nav__item">
   <a href="#solicita-nova-senha" title="Solicita nova senha" class="md-nav__link">
     Solicita nova senha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#associa-um-token-ao-usuario" title="Associa um token ao usuário" class="md-nav__link">
+    Associa um token ao usuário
   </a>
   
 </li>
@@ -1113,6 +1127,21 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="associa-um-token-ao-usuario">Associa um token ao usuário</h2>
+<blockquote>
+<p><code>[POST]</code> Associa o token do celular de um usuário ao seus dados.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8084/navega/api/TokenDevice
+</code></pre>
+
+<p><strong>Exemplo do body da requisição no formato JSON</strong></p>
+<pre><code>{
+  &quot;login&quot;:&quot;02697411607&quot;,
+  &quot;token&quot;: &quot;AKJÇAKJFLKÇAS3165A4F65A4SFAS&quot;,
+  &quot;os&quot;: &quot;Android&quot;
+}
+</code></pre>
                 
                   
                 
