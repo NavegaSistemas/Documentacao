@@ -225,3 +225,24 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/RecuperaSenha
 |email|String| E-mail que o usuário usou para cadastrar no app | S | |
 |codigoVerificacao|Int|Código que é enviado por e-mail para recuperação de senha| S | Este código sempre terá 5 números |
 |novaSenha|String| Nova senha informada pelo usuário | S | |
+
+---
+
+## Associa um token ao usuário
+
+> `[POST]` Associa o token do celular de um usuário ao seus dados.
+
+```
+http://cpro29096.publiccloud.com.br:8084/navega/api/TokenDevice
+```
+
+**Exemplo do body da requisição no formato JSON**
+
+```
+{
+  "login":"02697411607",
+  "token": "AKJÇAKJFLKÇAS3165A4F65A4SFAS",
+  "os": "Android"
+}
+```
+
