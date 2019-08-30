@@ -233,7 +233,7 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/RecuperaSenha
 > `[POST]` Associa o token do celular de um usuário ao seus dados.
 
 ```
-http://cpro29096.publiccloud.com.br:8084/navega/api/TokenDevice
+http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/TokenDevice
 ```
 
 **Exemplo do body da requisição no formato JSON**
