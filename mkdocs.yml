@@ -16,10 +16,13 @@ extra:
   social:
     - type: 'github'
       link: 'http://navegaconsultoria.com.br/'
-# extra_css:
-#   - 'stylesheets/extra.css'
+
 plugins:
   - search
+
+extra_css:
+  - assets/css/extra.css
+
 nav:
   - Home: 'index.md'
   - Navega:
