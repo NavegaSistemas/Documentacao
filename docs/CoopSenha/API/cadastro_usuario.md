@@ -246,3 +246,20 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TCadastro/TokenDevice
 }
 ```
 
+---
+
+## Altera preferências de push notifications
+
+> `[POST]` Sinaliza com quantas pessoas na frente na fila de atendimento o usuário deseja receber um push notification de aviso.
+
+```
+http://cpro29096.publiccloud.com.br:8084/navega/api/Preferencias
+```
+
+**Exemplo do body da requisição no formato JSON**
+
+```
+{
+  "numPosicaoNotificacao": 3,
+}
+```

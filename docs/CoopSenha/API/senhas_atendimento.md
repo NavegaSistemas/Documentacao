@@ -44,7 +44,10 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesSenhas?dat
   "IDTipoIdentificacao": 2,
   "NumDocumento": "00000000000",
   "IDFilaPrincipal": 2,
-  "IDDeviceToken": "32423SDFEW353T4GJPI34N43T43T"
+  "IDDeviceToken": "32423SDFEW353T4GJPI34N43T43T",
+  "NumPosicaoNotificacao: "2",
+  "latitude": 0.0000,
+  "longitude": 0.0000,
 }
 ```
 
@@ -59,8 +62,10 @@ http://cpro29096.publiccloud.com.br:8084/navega/api/TUnidades/UnidadesSenhas?dat
 |IDTipoIdentificacao|Int| Identifica a origem da senha de atendimento |S| Diz respeito a identificação da origem da senha. Clique [AQUI](#tipos-de-identificacao) para visualizar os tipos de identificação disponíveis. |
 |NumDocumento|String| Número de CPF do usuário |S| |
 |IDFilaPrincipal|Int|Identificador do tipo de usuário|S| Objetivo de saber se o usuário que solicitou a senha é associado ou não da cooperativa. Seja, **2** para ASSOCIADO e **3** para NÃO ASSOCIADO. |
-|IDDeviceToken|String| Token do celular do usuário |S| |busca
-
+|IDDeviceToken|String| Token do celular do usuário |S| |
+|NumPosicaoNotificacao|Int| Parâmetro para envio de push notifications referente a quantidade de pessoas na frente do usuário que emitiu uma senha de atendimento |S| |
+|latitude|Float| Latitude do usuário ao emitir uma senha de atendimento |S| |
+|longitude|Float| Longitude do usuário ao emitir uma senha de atendimento |S| |
 
 ---
 

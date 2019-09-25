@@ -38,12 +38,11 @@ nav:
       - Usuários: Navega/API/usuarios.md
     - Mobile:  
       - Backlog: Navega/Mobile/Consultoria/backlog.md
-  - Atende Bem:
+  - CoopSenha:
     - API: 
-      - Introdução: Atende_bem/API/introducao.md
-      - Ajuda: Atende_bem/API/ajuda.md
-      - Cadastro/Usuário: Atende_bem/API/cadastro_usuario.md
-      - Feedback: Atende_bem/API/feedback.md
-      - Unidades: Atende_bem/API/unidades.md
-      - Senhas de atendimento: Atende_bem/API/senhas_atendimento.md
-    - Requisitos: Atende_bem/requisitos.md
+      - Introdução: CoopSenha/API/introducao.md
+      - Ajuda: CoopSenha/API/ajuda.md
+      - Cadastro/Usuário: CoopSenha/API/cadastro_usuario.md
+      - Feedback: CoopSenha/API/feedback.md
+      - Unidades: CoopSenha/API/unidades.md
+      - Senhas de atendimento: CoopSenha/API/senhas_atendimento.md
