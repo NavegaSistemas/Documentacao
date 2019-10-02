@@ -1,70 +1,125 @@
-## Cadastro de metas
-> `[ GET ]` Busca metas
+## Metas
+> `[ GET ]` Busca todas as metas com diferentes situações de metas
 
 ```
 http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSituacao}
 ```
 
-|Parâmetro|Tipo|Descrição
-|----|------|--------|
-|idSituacao|Int|**Required** - Id da situação da meta|
+**Exemplo de resposta**
+
+```
+{
+  "Metas": [
+    {
+      "IDInstituicao": 343,
+      "IDMeta": 13,
+      "DescMeta": "Metas 2019",
+      "DataReferencia": "01/03/2017",
+      "DataInicial": "01/01/2019",
+      "DataFinal": "01/12/2019",
+      "IDSituacao": 2,
+      "DescSituacao": "Ativa"
+    },
+}
+```
+**Dicionário de dados**
+
+|Chave|Tipo|Descrição|Requerido|Observações|
+|--|--|--|--|--|
+|idSituacao|Int|Id da situação da meta| S | 2 - Em aberto |
 
 ---
 
-## Acompanhamento da realização das metas
+## Itens de uma meta
 
----
-
-### > MetaRealizada
-
-> `[ GET ]` Consulta todos os itens de uma determinada meta em uma determinada data.
+> `[ GET ]` Consulta todos os itens de uma determinada meta
 
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizada?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&identificador={identificador}&dataReferencia={dd/mm/yyy}
+http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizada?nivelsaldo={nivelSaldo}&identificador={identificador}&periodicidade={periodicidade}&idMeta={idMeta}
 
 ```
-|Parâmetro|Tipo|Descrição|Requerido|Observações
-|----|------|--------|--------|--------|
-|nivelSaldo|String| nível do saldo da meta| S | Valores possíveis: *consolidado, unidade, gerente, regional*|
-|periodicidade|String|periodicidade de acompanhamento da meta| S | Valores possíveis: *mensal, diaria*|
+
+**Exemplo de resposta**
+```
+{
+  "IDInstituicao": 343,
+  "IDMeta": 1,
+  "DescMeta": "METAS 2016",
+  "IDSituacao": 2,
+  "DescSituacao": "Ativa",
+  "Itens": [
+    {
+      "IDItem": 1,
+      "DescItem": "QUANTIDADE DE ASSOCIADOS",
+      "IDPolaridade": 1,
+      "DescPolaridade": "Maior melhor",
+      "BolConsolidado": true,
+      "BolGerente": false,
+      "BolUnidade": true,
+      "DataSaldo": "01/12/2017",
+      "ValorProjetado": 10555,
+      "ValorRealizado": 0,
+      "PercentualRealizado": 0,
+      "IDUnidadeMedida": 2,
+      "DescUnidadeMedida": "Quantitativo",
+      "Formato": "#,#0"
+    },
+  ]
+}
+```
+
+**Dicionário de dados**
+
+|Chave|Tipo|Descrição|Requerido|Observações|
+|--|--|--|--|--|
+|nivelSaldo|String| nível do saldo da meta| S | **Valores possíveis:** <br> consolidado <br> unidade <br> gerente <br> regional|
+|periodicidade|String|periodicidade de acompanhamento da meta| S | **Valores possíveis:** <br> mensal <br> diaria |
 |idMeta|Int|id da meta| S | |
 |identificador|Int| relacionado ao nível de saldo informado.| S* | Ex.: se o nível de saldo for *unidade*, o identificador é o código da unidade. **< Requerido se nível de saldo diferente de consolidado >**|
-|dataReferencia|Date| data de referência da meta no formato *DD/MM/YYYY* | N | Caso seja mensal, o dia será sempre **01**. Se não informado será considerada a última data disponível.
 
 ---
 
-### > MetaRealizadaHistorico
+## Histórico de um item de meta
 
 > `[ GET ]` Consulta o histórico de um item de uma meta.
 
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizadaHistorico?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&identificador={identificador}&idItem={idItem}
+http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizadaItem?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&idItem={idItem}
 
 ```
-|Parâmetro|Tipo|Descrição|Requerido|Observações
-|----|------|--------|--------|--------|
-|nivelSaldo|String| nível do saldo da meta| S | *Valores possíveis:* consolidado, unidade, gerente, regional|
-|periodicidade|String|periodicidade de acompanhamento da meta| S | mensal, diaria|
+
+**Exemplo de resposta**
+```
+{
+  "IDInstituicao": 343,
+  "IDMeta": 1,
+  "IDItem": 1,
+  "DescItem": "QUANTIDADE DE ASSOCIADOS",
+  "IDPolaridade": 1,
+  "DescPolaridade": "Maior melhor",
+  "BolConsolidado": true,
+  "BolGerente": false,
+  "BolUnidade": true,
+  "IDUnidadeMedida": 2,
+  "DescUnidadeMedida": "Quantitativo",
+  "Formato": "#,#0",
+  "Itens": [
+    {
+      "DataSaldo": "01/12/2017",
+      "ValorProjetado": 10555,
+      "ValorRealizado": 0,
+      "PercentualRealizado": 0
+    }
+  ]
+}
+```
+
+**Dicionário de dados**
+
+|Chave|Tipo|Descrição|Requerido|Observações|
+|--|--|--|--|--|
+|nivelSaldo|String| nível do saldo da meta| S | **Valores possíveis:** <br> consolidado <br> unidade <br> gerente <br> regional|
+|periodicidade|String|periodicidade de acompanhamento da meta| S | **Valores possíveis:** <br>mensal <br> diaria|
 |idMeta|Int|id da meta| S | |
-|identificador|Int| relacionado ao nível de saldo informado.| S* | Ex.: se o nível de saldo for *unidade*, o identificador é o código da unidade. **< Requerido se nível de saldo diferente de consolidado >**|
 |idItem|Int| id do item da meta | S |
 
-
----
-
-### > MetaRealizadaItem
-
-> `[ GET ]`  Consulta a realização de um item de uma meta para todas as unidades, gerentes ou regionais, em uma data específica.
-
-```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TMetas/MetaRealizadaItem?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&identificador={identificador}&idItem={idItem}&dataReferencia={dd/mm/yyy}
-
-```
-|Parâmetro|Tipo|Descrição|Requerido|Observações
-|----|------|--------|--------|--------|
-|nivelSaldo|String| nível do saldo da meta| S | *Valores possíveis:* consolidado, unidade, gerente, regional|
-|periodicidade|String|periodicidade de acompanhamento da meta| S | mensal, diaria|
-|idMeta|Int|id da meta| S | |
-|identificador|Int| relacionado ao nível de saldo informado.| S* | Ex.: se o nível de saldo for *unidade*, o identificador é o código da unidade. **< Requerido se nível de saldo diferente de consolidado >**|
-|idItem|Int| id do item da meta | S |
-|dataReferencia|Date| data de referência da meta no formato *DD/MM/YYYY* | N | Caso seja mensal, o dia será sempre **01**. Se não informado será considerada a última data disponível.
