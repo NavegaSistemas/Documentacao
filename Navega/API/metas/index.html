@@ -403,6 +403,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações Adicionais" class="md-nav__link">
+    Informações Adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-de-metas" title="Status de metas" class="md-nav__link">
+    Status de metas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -655,6 +675,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações Adicionais" class="md-nav__link">
+    Informações Adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-de-metas" title="Status de metas" class="md-nav__link">
+    Status de metas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -678,7 +718,7 @@
                 
                 <h2 id="metas">Metas</h2>
 <blockquote>
-<p><code>[ GET ]</code> Busca todas as metas com diferentes situações de metas</p>
+<p><code>[ GET ]</code> Busca todas as metas com diferentes situações. Estas metas geralmente são cadastradas anualmente pelas cooperativas.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSituacao}
 </code></pre>
@@ -716,14 +756,14 @@
 <td>Int</td>
 <td>Id da situação da meta</td>
 <td>S</td>
-<td>2 - Em aberto</td>
+<td>Clique <a href="#status-de-metas">AQUI</a> para visualizar os status de metas disponíveis</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="itens-de-uma-meta">Itens de uma meta</h2>
 <blockquote>
-<p><code>[ GET ]</code> Consulta todos os itens de uma determinada meta</p>
+<p><code>[ GET ]</code> Consulta todos os itens de uma determinada meta, estes itens podem ser filtrados por nivel de saldo e periodicidade</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizada?nivelsaldo={nivelSaldo}&amp;identificador={identificador}&amp;periodicidade={periodicidade}&amp;idMeta={idMeta}
 
@@ -802,7 +842,7 @@
 <hr />
 <h2 id="historico-de-um-item-de-meta">Histórico de um item de meta</h2>
 <blockquote>
-<p><code>[ GET ]</code> Consulta o histórico de um item de uma meta.</p>
+<p><code>[ GET ]</code> Consulta o histórico de um item de uma meta. Ou seja, caso o nivel de saldo informado seja unidade, irá retornar todas as unidades em relação a um item de uma meta.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizadaItem?nivelsaldo={nivelsaldo}&amp;periodicidade={periodicidade}&amp;idMeta={idMeta}&amp;idItem={idItem}
 
@@ -824,11 +864,14 @@
   &quot;Formato&quot;: &quot;#,#0&quot;,
   &quot;Itens&quot;: [
     {
+      &quot;ID&quot;: 0,
+      &quot;Nome&quot;: &quot;UNIDADE 0&quot;,
       &quot;DataSaldo&quot;: &quot;01/12/2017&quot;,
-      &quot;ValorProjetado&quot;: 10555,
+      &quot;IDUnidadeInst&quot;: 0,
+      &quot;ValorProjetado&quot;: 5387,
       &quot;ValorRealizado&quot;: 0,
       &quot;PercentualRealizado&quot;: 0
-    }
+    },
   ]
 }
 </code></pre>
@@ -850,7 +893,7 @@
 <td>String</td>
 <td>nível do saldo da meta</td>
 <td>S</td>
-<td><strong>Valores possíveis:</strong> <br> consolidado <br> unidade <br> gerente <br> regional</td>
+<td><strong>Valores possíveis:</strong> <br> unidade <br> gerente <br> regional</td>
 </tr>
 <tr>
 <td>periodicidade</td>
@@ -872,6 +915,39 @@
 <td>id do item da meta</td>
 <td>S</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="informacoes-adicionais">Informações Adicionais</h2>
+<h3 id="status-de-metas">Status de metas</h3>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Cadastro em andamento</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Encerrada</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cancelada</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Revisada</td>
 </tr>
 </tbody>
 </table>
