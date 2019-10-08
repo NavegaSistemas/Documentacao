@@ -1,5 +1,5 @@
 ## Metas
-> `[ GET ]` Busca todas as metas com diferentes situações de metas
+> `[ GET ]` Busca todas as metas com diferentes situações. Estas metas geralmente são cadastradas anualmente pelas cooperativas.
 
 ```
 http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSituacao}
@@ -26,13 +26,13 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSitu
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
-|idSituacao|Int|Id da situação da meta| S | 2 - Em aberto |
+|idSituacao|Int|Id da situação da meta| S | Clique [AQUI](#status-de-metas) para visualizar os status de metas disponíveis |
 
 ---
 
 ## Itens de uma meta
 
-> `[ GET ]` Consulta todos os itens de uma determinada meta
+> `[ GET ]` Consulta todos os itens de uma determinada meta, estes itens podem ser filtrados por nivel de saldo e periodicidade
 
 ```
 http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizada?nivelsaldo={nivelSaldo}&identificador={identificador}&periodicidade={periodicidade}&idMeta={idMeta}
@@ -81,7 +81,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizada?nivelsa
 
 ## Histórico de um item de meta
 
-> `[ GET ]` Consulta o histórico de um item de uma meta.
+> `[ GET ]` Consulta o histórico de um item de uma meta. Ou seja, caso o nivel de saldo informado seja unidade, irá retornar todas as unidades em relação a um item de uma meta.
 
 ```
 http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizadaItem?nivelsaldo={nivelsaldo}&periodicidade={periodicidade}&idMeta={idMeta}&idItem={idItem}
@@ -105,11 +105,14 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizadaItem?niv
   "Formato": "#,#0",
   "Itens": [
     {
+      "ID": 0,
+      "Nome": "UNIDADE 0",
       "DataSaldo": "01/12/2017",
-      "ValorProjetado": 10555,
+      "IDUnidadeInst": 0,
+      "ValorProjetado": 5387,
       "ValorRealizado": 0,
       "PercentualRealizado": 0
-    }
+    },
   ]
 }
 ```
@@ -118,8 +121,21 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizadaItem?niv
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
-|nivelSaldo|String| nível do saldo da meta| S | **Valores possíveis:** <br> consolidado <br> unidade <br> gerente <br> regional|
+|nivelSaldo|String| nível do saldo da meta| S | **Valores possíveis:** <br> unidade <br> gerente <br> regional|
 |periodicidade|String|periodicidade de acompanhamento da meta| S | **Valores possíveis:** <br>mensal <br> diaria|
 |idMeta|Int|id da meta| S | |
 |idItem|Int| id do item da meta | S |
 
+---
+
+## Informações Adicionais
+
+### Status de metas
+
+|Id|Status|
+|--|--|
+|1|Cadastro em andamento|
+|2|Ativa|
+|3|Encerrada|
+|4|Cancelada|
+|5|Revisada|

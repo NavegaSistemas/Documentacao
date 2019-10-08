@@ -12,3 +12,11 @@ A API da Navega Sistemas é de uso restrito. Para ter acesso ao seus recursos é
 ```
 
 (*É importante mencionar que os dados que serão retornados serão os relacionados a instituição do usuário logado.*)
+
+---
+
+**Relação de portas**
+> 8081 > Porta do servidor de testes
+> 
+> 8082 > Porta do servidor principal para mobile
+> 
