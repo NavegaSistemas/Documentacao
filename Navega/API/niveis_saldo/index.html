@@ -683,6 +683,17 @@
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Unidades
 </code></pre>
 
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;Unidades&quot;: [
+    {
+      &quot;Codigo&quot;: 0,
+      &quot;Nome&quot;: &quot;UNIDADE 0&quot;
+    },
+  ]
+}
+</code></pre>
+
 <hr />
 <h2 id="gerentes">Gerentes</h2>
 <blockquote>
@@ -691,12 +702,37 @@
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Gerentes
 </code></pre>
 
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;Gerentes&quot;: [
+    {
+      &quot;Codigo&quot;: 1260567,
+      &quot;Nome&quot;: &quot;ADRIANO SANTOS DA SILVA&quot;,
+      &quot;Tratamento&quot;: &quot;ADRIANO SANTOS&quot;,
+      &quot;Ativo&quot;: true,
+      &quot;Unidade&quot;: &quot;UNIDADE 0&quot;
+    },
+  ]
+}
+</code></pre>
+
 <hr />
 <h2 id="regionais">Regionais</h2>
 <blockquote>
 <p><code>[ GET ]</code> Busca todos os regionais de uma cooperativa</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TCorporativo/Regional
+</code></pre>
+
+<p><strong>Exemplo de reposta</strong></p>
+<pre><code>{
+  &quot;Result&quot;: [
+    {
+      &quot;Codigo&quot;: 1,
+      &quot;Nome&quot;: &quot;Regional 1 teste&quot;
+    },
+  ]
+}
 </code></pre>
                 
                   
