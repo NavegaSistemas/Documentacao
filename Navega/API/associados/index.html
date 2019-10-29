@@ -692,22 +692,56 @@
 <blockquote>
 <p><code>[ GET ]</code> Busca todos os associados filtrando por nome ou cpf</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/ClientesResumido/{nome_cpf}/true
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/ClientesResumido/{nome_cpf}/{boolean}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;Clientes&quot;: [
+    {
+      &quot;IDCliente&quot;: 1335995,
+      &quot;IDOrigem&quot;: 1,
+      &quot;DescOrigem&quot;: &quot;Sisbr&quot;,
+      &quot;Codigo&quot;: 277843,
+      &quot;Nome&quot;: &quot;ADENISIO PEREIRA DE LIMA&quot;,
+      &quot;Tratamento&quot;: &quot;&quot;,
+      &quot;CPFCNPJ&quot;: &quot;02697411607&quot;,
+      &quot;TipoPessoa&quot;: &quot;PF&quot;,
+      &quot;Associado&quot;: &quot;S&quot;,
+      &quot;IDUnidade&quot;: 0,
+      &quot;Unidade&quot;: &quot;UNIDADE 0&quot;,
+      &quot;IDGerente&quot;: 1260567,
+      &quot;NomeGerente&quot;: &quot;ADRIANO SANTOS DA SILVA&quot;,
+      &quot;NumTelefone&quot;: &quot;(61) 996861202&quot;
+    },
+  ]
+}
 </code></pre>
 
 <table>
 <thead>
 <tr>
-<th>Parâmetro</th>
+<th>Chave</th>
 <th>Tipo</th>
 <th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>nome_cpf</td>
 <td>String</td>
-<td><strong>Required</strong> - Substituir pelo nome ou cpf do associado</td>
+<td>Substituir pelo nome ou cpf do associado</td>
+<td>S</td>
+<td>Serão considerados trechos de nome que estão entre espaços. Por exemplo, caso o nome seja "Alan Lima", irá ter retorno das informações caso seja informado "Alan" ou "Lima". Uma string "Al" não será suficiente.</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>String</td>
+<td>Caso seja enviado <strong>"true"</strong> (sem aspas), irá retornar os associados de origem SisBr e Navega, caso seja enviado <strong>"false"</strong> (sem aspas) ou <strong>""</strong> (vazio), apenas os de origem SisBr serão listados.</td>
+<td>N</td>
+<td></td>
 </tr>
 </tbody>
 </table>

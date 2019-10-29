@@ -680,7 +680,29 @@
 <blockquote>
 <p><code>[ GET ]</code>  O método de buscar notificações é utilizado para obter as notificações direcionadas à um usuário logado. Estas notificações podem ser filtradas por intervalo de datas, status e paginação.</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications?&amp;page={}&amp;status={}&amp;dataInicial={}&amp;dataFinal={}
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications?&amp;page={}&amp;status={}&amp;dataInicial={}&amp;dataFinal={}
+</code></pre>
+
+<p><strong>Exemplo de reposta</strong></p>
+<pre><code>{
+  &quot;pages&quot;: 26,
+  &quot;result&quot;: [
+    {
+      &quot;IDLogin&quot;: &quot;Navega4133_00&quot;,
+      &quot;IDNotificacao&quot;: &quot;84C7A114-F048-4340-9A29-02F66D6A453F&quot;,
+      &quot;BolLida&quot;: false,
+      &quot;DataReferencia&quot;: &quot;28/10/2019&quot;,
+      &quot;DataNotificacao&quot;: &quot;28/10/2019&quot;,
+      &quot;Titulo&quot;: &quot;Os associados listados abaixo ficar�o inativos em breve&quot;,
+      &quot;Subtitulo&quot;: &quot;&quot;,
+      &quot;BolPush&quot;: true,
+      &quot;IDPush&quot;: &quot;559972f2-bb5f-4836-96c6-138c911430b8&quot;,
+      &quot;Texto&quot;: [
+        &quot;JOAO ALVES MOREIRA, &quot;
+      ]
+    },
+  ],
+}
 </code></pre>
 
 <table>
@@ -708,7 +730,7 @@
 <td>String</td>
 <td>Status das notificações</td>
 <td>S</td>
-<td>String <strong>lidas</strong> ou <strong>naolidas</strong></td>
+<td>String <strong>lidas</strong>, <strong>naolidas</strong> ou <strong>todas</strong></td>
 <td></td>
 </tr>
 <tr>
@@ -734,7 +756,7 @@
 <blockquote>
 <p><code>[ DELETE ]</code>  Marca uma notificação como apagada</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications?&amp;idnotificacao={}
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications?&amp;idnotificacao={}
 </code></pre>
 
 <table>
@@ -764,7 +786,7 @@
 <blockquote>
 <p><code>[ POST ]</code> Muda o status de uma notificação para lida. Este método é utilizado quando o usuário abre uma notificação que estava com o status de não lida anteriormente.</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/lida?&amp;idnotificacao={}
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/lida?&amp;idnotificacao={}
 </code></pre>
 
 <table>
