@@ -2,13 +2,37 @@
 > `[ GET ]`  O método de buscar notificações é utilizado para obter as notificações direcionadas à um usuário logado. Estas notificações podem ser filtradas por intervalo de datas, status e paginação.
 
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications?&page={}&status={}&dataInicial={}&dataFinal={}
+http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications?&page={}&status={}&dataInicial={}&dataFinal={}
+```
+
+**Exemplo de reposta**
+
+```
+{
+  "pages": 26,
+  "result": [
+    {
+      "IDLogin": "Navega4133_00",
+      "IDNotificacao": "84C7A114-F048-4340-9A29-02F66D6A453F",
+      "BolLida": false,
+      "DataReferencia": "28/10/2019",
+      "DataNotificacao": "28/10/2019",
+      "Titulo": "Os associados listados abaixo ficar�o inativos em breve",
+      "Subtitulo": "",
+      "BolPush": true,
+      "IDPush": "559972f2-bb5f-4836-96c6-138c911430b8",
+      "Texto": [
+        "JOAO ALVES MOREIRA, "
+      ]
+    },
+  ],
+}
 ```
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
 |--|--|--|--|--|--|
 |page|Int|Paginação do endpoint|S|Números inteiros positivos|As páginas começam pelo número 1|
-|status|String|Status das notificações|S|String **lidas** ou **naolidas**||
+|status|String|Status das notificações|S|String **lidas**, **naolidas** ou **todas**||
 |dataInicial|String|Data de início do intervalo de datas de notificações.|S|Datas no formato **DD/MM/YYYY**|
 |dataInicial|String|Data de termino do intervalo de datas de notificações.|S|Datas no formato **DD/MM/YYYY**|
 
@@ -18,7 +42,7 @@ http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications
 > `[ DELETE ]`  Marca uma notificação como apagada
  
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications?&idnotificacao={}
+http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications?&idnotificacao={}
 ```
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
@@ -31,7 +55,7 @@ http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/notifications
 > `[ POST ]` Muda o status de uma notificação para lida. Este método é utilizado quando o usuário abre uma notificação que estava com o status de não lida anteriormente.
  
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TNotifications/lida?&idnotificacao={}
+http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/lida?&idnotificacao={}
 ```
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|

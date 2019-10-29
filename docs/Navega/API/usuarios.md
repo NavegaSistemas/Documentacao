@@ -1,8 +1,8 @@
 ### Busca de usuários
-> `[ GET ]`  Busca dados dos usuários do sistema
+> `[ GET ]`  Busca dados dos usuários do sistema, caso um id seja especificado irá retornar apenas um usuário, caso contrário, todos os usuários serão exibidos.
  
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TAcessos/Usuarios/{idLogin}
+http://cpro29096.publiccloud.com.br:8082/navega/api/TAcessos/Usuarios/{idLogin}
 ```
 
 **Exemplo de resposta**
@@ -19,8 +19,8 @@ http://cpro29096.publiccloud.com.br:8080/navega/api/TAcessos/Usuarios/{idLogin}
       "IDCliente": 1260567,
       "NumCpf": "",
       "Senha": "202CB962AC59075B964B07152D234B70",
-      "NomeCompleto": "Jo�o da Silva",
-      "NomeTratamento": "Jo�o",
+      "NomeCompleto": "João da Silva",
+      "NomeTratamento": "João",
       "IDGrupoFuncao": 1,
       "DescGrupoFuncao": "Presidente",
       "BolGerente": false,

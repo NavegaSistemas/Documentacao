@@ -3,7 +3,7 @@
 > `[ PUT ]`  Grava o check-in ou check-out de uma agenda de visitas.
 
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TAgendaVisita/Check
+http://cpro29096.publiccloud.com.br:8082/navega/api/TAgendaVisita/Check
 ```
 Os parâmetros são passados no body da requisição no formato JSON.
 
@@ -18,7 +18,7 @@ Os parâmetros são passados no body da requisição no formato JSON.
 > `[ PUT ]`  Grava o check-in ou check-out de uma agenda de visitas.
  
 ```
-http://cpro29096.publiccloud.com.br:8080/navega/api/TAgendaVisita/Check
+http://cpro29096.publiccloud.com.br:8082/navega/api/TAgendaVisita/Check
 ```
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
