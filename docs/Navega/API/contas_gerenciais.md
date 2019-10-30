@@ -123,3 +123,144 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheI
 |idAcompanhe|Int|Identificador para a conta selecionada| S | |
 
 ---
+
+## Painel de contas
+
+> `[ GET ]` Busca todas as contas do painel gerencial
+
+```
+http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/PlanoContas/{id}
+```
+
+**Exemplo de resposta**
+
+```
+{
+  "Contas": [
+    {
+      "IDInstituicao": 475,
+      "IDConta": 7000100000000,
+      "IDContaReduzido": 70001,
+      "IDContaFormatado": "7.0001",
+      "IDNivel": 2,
+      "DescConta": "Diario",
+      "IDGrupo": 7,
+      "DescGrupo": "Personalizadas",
+      "IDPolaridade": 1,
+      "DescPolaridade": "Maior melhor",
+      "IDUnidadeMedida": 1,
+      "DescUnidadeMedida": "Monet�rio",
+      "DescFormato": "R$ #,#0.00",
+      "DescSimbolo": "R$",
+      "BolDiario": true,
+      "BolMensal": true,
+      "BolConsolidado": true,
+      "BolUnidade": true,
+      "BolGerente": true,
+      "BolCliente": false
+    },
+  ]
+}
+```
+
+**Dicionário de dados**
+
+|Chave|Tipo|Descrição|Requerido|Observações|
+|--|--|--|--|--|
+|id|Int|Identificador para o grupo de contas| N | Caso não seja informado, irão ser exibidas todas as contas disponíveis. Os id's com seus respesctivos grupos se encontram na [Tabela de grupos de contas](#grupos-de-contas) |
+
+---
+
+## Participação diária de unidades
+
+> `[ GET ]` Busca a participação de todas as unidades de uma cooperativa em relação a uma determinada conta gerencial usando um determinado dia como refêrencia.
+
+```
+http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaDiaUnidades/{idConta}/{idTipoSaldo}/{data}
+```
+
+## Participação diária de gerentes
+
+> `[ GET ]` Busca a participação de todas os gerentes de uma cooperativa em relação a uma determinada conta gerencial usando um determinado dia como refêrencia.
+
+```
+http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaDiaGerentes/{idConta}/{idTipoSaldo}/{data}
+```
+
+## Participação mensal de unidades
+
+> `[ GET ]` Busca a participação de todas as unidades de uma cooperativa em relação a uma determinada conta gerencial usando um determinado mês como refêrencia.
+
+```
+http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaMesUnidades/{idConta}/{idTipoSaldo}/{data}
+```
+
+## Participação mensal de gerentes
+
+> `[ GET ]` Busca a participação de todas os gerentes de uma cooperativa em relação a uma determinada conta gerencial usando um determinado mês como refêrencia.
+
+```
+http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaMesGerentes/{idConta}/{idTipoSaldo}/{data}
+```
+
+
+**Exemplo de resposta**
+
+```
+{
+  "NivelSaldo": "Unidade",
+  "IDContaReduzido": 1,
+  "IDTipoSaldo": 1,
+  "DescTipoSaldo": "Final",
+  "Valores": [
+    {
+      "ID": 1,
+      "IDClienteSisbr": 0,
+      "Nome": "UNIDADE 1",
+      "TipoPessoa": "-",
+      "IDUnidadeInst": 0,
+      "IDGerente": 0,
+      "NomeUnidade": "-",
+      "NomeGerente": "-",
+      "DataSaldo": "02/05/2017",
+      "Valor": 34994419.04
+    },
+  ]
+}
+```
+
+**Dicionário de dados**
+
+|Chave|Tipo|Descrição|Requerido|Observações|
+|--|--|--|--|--|
+|idConta|Int|Identificador para a conta gerencial | S | O ID que deve ser considerado é o "IDContaReduzido" que é obtido através do [endpoint de painel de contas](#painel-de-contas) |
+|idTipoSaldo|Int|Identificador do tipo de saldo da conta em questão| S | Os tipos de saldos patrimoniais e de resultado são definidos pelo usuário nas preferências. Caso a conta em questão seja do [grupo](#grupos-de-contas) *Fontes* ou *Usos* o [tipo de saldo](#tipos-de-saldos) será *Final* ou *Médio* (Saldo patrimônial). Caso o [grupo](#grupos-de-contas) seja *Despesas* ou *Receitas* o [tipo de saldo](#tipos-de-saldos) será *Período* ou *Acumulado* (Saldo resultado).|
+|data|String|Data de referência para a consulta de participação|S| A data deve ser informada no formato **YYYY-MM-DD**. Para consultas mensais o dia usada é sempre **01**, por exemplo *2018-03-01* para consulta do mês de março.  | 
+
+---
+
+## Informações adicionais
+
+### Grupos de contas
+
+|Id|Grupo|
+|--|--|
+|1|Fontes/Passivo|
+|2|Usos/Ativo|
+|3|Despesas|
+|4|Receitas|
+|5|Corporativo|
+|6|Índices|
+|7|Personalizadas|
+
+### Tipos de saldos
+
+|Id|Saldo|
+|--|--|
+|1|Final|
+|2|Médio|
+|3|Período|
+|4|Acumulado|
+|5|Corporativo|
+|6|Índice|
+|7|Personalizado|

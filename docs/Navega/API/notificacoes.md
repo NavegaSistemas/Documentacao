@@ -34,7 +34,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications
 |page|Int|Paginação do endpoint|S|Números inteiros positivos|As páginas começam pelo número 1|
 |status|String|Status das notificações|S|String **lidas**, **naolidas** ou **todas**||
 |dataInicial|String|Data de início do intervalo de datas de notificações.|S|Datas no formato **DD/MM/YYYY**|
-|dataInicial|String|Data de termino do intervalo de datas de notificações.|S|Datas no formato **DD/MM/YYYY**|
+|dataFinal|String|Data de termino do intervalo de datas de notificações.|S|Datas no formato **DD/MM/YYYY**|
 
 ---
 
