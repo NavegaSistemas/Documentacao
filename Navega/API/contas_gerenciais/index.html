@@ -384,6 +384,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#painel-de-contas" title="Painel de contas" class="md-nav__link">
+    Painel de contas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-diaria-de-unidades" title="Participação diária de unidades" class="md-nav__link">
+    Participação diária de unidades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-diaria-de-gerentes" title="Participação diária de gerentes" class="md-nav__link">
+    Participação diária de gerentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-mensal-de-unidades" title="Participação mensal de unidades" class="md-nav__link">
+    Participação mensal de unidades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-mensal-de-gerentes" title="Participação mensal de gerentes" class="md-nav__link">
+    Participação mensal de gerentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grupos-de-contas" title="Grupos de contas" class="md-nav__link">
+    Grupos de contas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-saldos" title="Tipos de saldos" class="md-nav__link">
+    Tipos de saldos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -641,6 +703,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#painel-de-contas" title="Painel de contas" class="md-nav__link">
+    Painel de contas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-diaria-de-unidades" title="Participação diária de unidades" class="md-nav__link">
+    Participação diária de unidades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-diaria-de-gerentes" title="Participação diária de gerentes" class="md-nav__link">
+    Participação diária de gerentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-mensal-de-unidades" title="Participação mensal de unidades" class="md-nav__link">
+    Participação mensal de unidades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participacao-mensal-de-gerentes" title="Participação mensal de gerentes" class="md-nav__link">
+    Participação mensal de gerentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grupos-de-contas" title="Grupos de contas" class="md-nav__link">
+    Grupos de contas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-saldos" title="Tipos de saldos" class="md-nav__link">
+    Tipos de saldos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -811,6 +935,230 @@
 </tbody>
 </table>
 <hr />
+<h2 id="painel-de-contas">Painel de contas</h2>
+<blockquote>
+<p><code>[ GET ]</code> Busca todas as contas do painel gerencial</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/PlanoContas/{id}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;Contas&quot;: [
+    {
+      &quot;IDInstituicao&quot;: 475,
+      &quot;IDConta&quot;: 7000100000000,
+      &quot;IDContaReduzido&quot;: 70001,
+      &quot;IDContaFormatado&quot;: &quot;7.0001&quot;,
+      &quot;IDNivel&quot;: 2,
+      &quot;DescConta&quot;: &quot;Diario&quot;,
+      &quot;IDGrupo&quot;: 7,
+      &quot;DescGrupo&quot;: &quot;Personalizadas&quot;,
+      &quot;IDPolaridade&quot;: 1,
+      &quot;DescPolaridade&quot;: &quot;Maior melhor&quot;,
+      &quot;IDUnidadeMedida&quot;: 1,
+      &quot;DescUnidadeMedida&quot;: &quot;Monet�rio&quot;,
+      &quot;DescFormato&quot;: &quot;R$ #,#0.00&quot;,
+      &quot;DescSimbolo&quot;: &quot;R$&quot;,
+      &quot;BolDiario&quot;: true,
+      &quot;BolMensal&quot;: true,
+      &quot;BolConsolidado&quot;: true,
+      &quot;BolUnidade&quot;: true,
+      &quot;BolGerente&quot;: true,
+      &quot;BolCliente&quot;: false
+    },
+  ]
+}
+</code></pre>
+
+<p><strong>Dicionário de dados</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Int</td>
+<td>Identificador para o grupo de contas</td>
+<td>N</td>
+<td>Caso não seja informado, irão ser exibidas todas as contas disponíveis. Os id's com seus respesctivos grupos se encontram na <a href="#grupos-de-contas">Tabela de grupos de contas</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="participacao-diaria-de-unidades">Participação diária de unidades</h2>
+<blockquote>
+<p><code>[ GET ]</code> Busca a participação de todas as unidades de uma cooperativa em relação a uma determinada conta gerencial usando um determinado dia como refêrencia.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaDiaUnidades/{idConta}/{idTipoSaldo}/{data}
+</code></pre>
+
+<h2 id="participacao-diaria-de-gerentes">Participação diária de gerentes</h2>
+<blockquote>
+<p><code>[ GET ]</code> Busca a participação de todas os gerentes de uma cooperativa em relação a uma determinada conta gerencial usando um determinado dia como refêrencia.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaDiaGerentes/{idConta}/{idTipoSaldo}/{data}
+</code></pre>
+
+<h2 id="participacao-mensal-de-unidades">Participação mensal de unidades</h2>
+<blockquote>
+<p><code>[ GET ]</code> Busca a participação de todas as unidades de uma cooperativa em relação a uma determinada conta gerencial usando um determinado mês como refêrencia.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaMesUnidades/{idConta}/{idTipoSaldo}/{data}
+</code></pre>
+
+<h2 id="participacao-mensal-de-gerentes">Participação mensal de gerentes</h2>
+<blockquote>
+<p><code>[ GET ]</code> Busca a participação de todas os gerentes de uma cooperativa em relação a uma determinada conta gerencial usando um determinado mês como refêrencia.</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/ParticipacaoContaMesGerentes/{idConta}/{idTipoSaldo}/{data}
+</code></pre>
+
+<p><strong>Exemplo de resposta</strong></p>
+<pre><code>{
+  &quot;NivelSaldo&quot;: &quot;Unidade&quot;,
+  &quot;IDContaReduzido&quot;: 1,
+  &quot;IDTipoSaldo&quot;: 1,
+  &quot;DescTipoSaldo&quot;: &quot;Final&quot;,
+  &quot;Valores&quot;: [
+    {
+      &quot;ID&quot;: 1,
+      &quot;IDClienteSisbr&quot;: 0,
+      &quot;Nome&quot;: &quot;UNIDADE 1&quot;,
+      &quot;TipoPessoa&quot;: &quot;-&quot;,
+      &quot;IDUnidadeInst&quot;: 0,
+      &quot;IDGerente&quot;: 0,
+      &quot;NomeUnidade&quot;: &quot;-&quot;,
+      &quot;NomeGerente&quot;: &quot;-&quot;,
+      &quot;DataSaldo&quot;: &quot;02/05/2017&quot;,
+      &quot;Valor&quot;: 34994419.04
+    },
+  ]
+}
+</code></pre>
+
+<p><strong>Dicionário de dados</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idConta</td>
+<td>Int</td>
+<td>Identificador para a conta gerencial</td>
+<td>S</td>
+<td>O ID que deve ser considerado é o "IDContaReduzido" que é obtido através do <a href="#painel-de-contas">endpoint de painel de contas</a></td>
+</tr>
+<tr>
+<td>idTipoSaldo</td>
+<td>Int</td>
+<td>Identificador do tipo de saldo da conta em questão</td>
+<td>S</td>
+<td>Os tipos de saldos patrimoniais e de resultado são definidos pelo usuário nas preferências. Caso a conta em questão seja do <a href="#grupos-de-contas">grupo</a> <em>Fontes</em> ou <em>Usos</em> o <a href="#tipos-de-saldos">tipo de saldo</a> será <em>Final</em> ou <em>Médio</em> (Saldo patrimônial). Caso o <a href="#grupos-de-contas">grupo</a> seja <em>Despesas</em> ou <em>Receitas</em> o <a href="#tipos-de-saldos">tipo de saldo</a> será <em>Período</em> ou <em>Acumulado</em> (Saldo resultado).</td>
+</tr>
+<tr>
+<td>data</td>
+<td>String</td>
+<td>Data de referência para a consulta de participação</td>
+<td>S</td>
+<td>A data deve ser informada no formato <strong>YYYY-MM-DD</strong>. Para consultas mensais o dia usada é sempre <strong>01</strong>, por exemplo <em>2018-03-01</em> para consulta do mês de março.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="informacoes-adicionais">Informações adicionais</h2>
+<h3 id="grupos-de-contas">Grupos de contas</h3>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Grupo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Fontes/Passivo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Usos/Ativo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Despesas</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Receitas</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Corporativo</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Índices</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Personalizadas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipos-de-saldos">Tipos de saldos</h3>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Saldo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Final</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Médio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Período</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Acumulado</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Corporativo</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Índice</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Personalizado</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
