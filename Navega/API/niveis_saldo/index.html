@@ -103,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#unidades" tabindex="1" class="md-skip">
+      <a href="#introducao" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -360,6 +360,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../fotos_associados/" title="Fotos de associados" class="md-nav__link">
+      Fotos de associados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../metas/" title="Metas" class="md-nav__link">
       Metas
     </a>
@@ -395,22 +407,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#unidades" title="Unidades" class="md-nav__link">
-    Unidades
+  <a href="#introducao" title="Introdução" class="md-nav__link">
+    Introdução
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gerentes" title="Gerentes" class="md-nav__link">
-    Gerentes
+  <a href="#busca-unidades" title="Busca unidades" class="md-nav__link">
+    Busca unidades
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#regionais" title="Regionais" class="md-nav__link">
-    Regionais
+  <a href="#busca-gerentes" title="Busca gerentes" class="md-nav__link">
+    Busca gerentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busca-regionais" title="Busca regionais" class="md-nav__link">
+    Busca regionais
   </a>
   
 </li>
@@ -446,42 +465,6 @@
   <li class="md-nav__item">
     <a href="../usuarios/" title="Usuários" class="md-nav__link">
       Usuários
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
-    
-    <label class="md-nav__link" for="nav-2-2">
-      Mobile
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
-        Mobile
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Mobile/Consultoria/backlog/" title="Backlog" class="md-nav__link">
-      Backlog
     </a>
   </li>
 
@@ -635,22 +618,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#unidades" title="Unidades" class="md-nav__link">
-    Unidades
+  <a href="#introducao" title="Introdução" class="md-nav__link">
+    Introdução
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gerentes" title="Gerentes" class="md-nav__link">
-    Gerentes
+  <a href="#busca-unidades" title="Busca unidades" class="md-nav__link">
+    Busca unidades
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#regionais" title="Regionais" class="md-nav__link">
-    Regionais
+  <a href="#busca-gerentes" title="Busca gerentes" class="md-nav__link">
+    Busca gerentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busca-regionais" title="Busca regionais" class="md-nav__link">
+    Busca regionais
   </a>
   
 </li>
@@ -676,9 +666,23 @@
                 
                   <h1>Níveis de Saldo</h1>
                 
-                <h2 id="unidades">Unidades</h2>
+                <h2 id="introducao">Introdução</h2>
+<p>Os Níveis de Saldo são parâmetros utilizados para diversas consultas dentro do sistema da Navega Consultoria. </p>
+<ul>
+<li>
+<p>Uma Cooperativa de crédito possui <strong>UNIDADES</strong>, que são os seus pontos de atendimento, que podem ser vários dependendo de sua magnitude. </p>
+</li>
+<li>
+<p>Possui <strong>GERENTES</strong> que são pessoas responsáveis pela gerência de cada unidade, de modo que uma unidade pode ter um ou vários gerentes e um gerente pode ser relacionado a uma ou várias unidades.</p>
+</li>
+<li>
+<p>E possui <strong>REGIONAIS</strong>, que são unidades de atendimento agrupadas a uma determinada região.</p>
+</li>
+</ul>
+<p>Todos estes níveis de saldo possuem indicativos para contas relacionadas a participação de cada um, além de várias outras tarefas dentro do sistema. Em vários ambientes dentro das aplicações da Navega estes níveis de saldo são unidos afim de criar um nível <em>CONSOLIDADO</em> para uma consulta mais geral por parte dos usuários.</p>
+<h2 id="busca-unidades">Busca unidades</h2>
 <blockquote>
-<p><code>[ GET ]</code> Busca todas as unidades de uma cooperativa</p>
+<p><code>[ GET ]</code> Busca todas as unidades de uma cooperativa. Como não é informado nenhum parâmetro, as unidades que serão disponibilizadas estão associadas a mesma cooperativa do usuário logado no momento.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Unidades
 </code></pre>
@@ -695,9 +699,9 @@
 </code></pre>
 
 <hr />
-<h2 id="gerentes">Gerentes</h2>
+<h2 id="busca-gerentes">Busca gerentes</h2>
 <blockquote>
-<p><code>[ GET ]</code> Busca todas os gerentes de uma cooperativa</p>
+<p><code>[ GET ]</code> Busca todas os gerentes de uma cooperativa. Como não é informado nenhum parâmetro, os gerentes que serão disponibilizados estão associados a mesma cooperativa do usuário logado no momento.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Gerentes
 </code></pre>
@@ -717,9 +721,9 @@
 </code></pre>
 
 <hr />
-<h2 id="regionais">Regionais</h2>
+<h2 id="busca-regionais">Busca regionais</h2>
 <blockquote>
-<p><code>[ GET ]</code> Busca todos os regionais de uma cooperativa</p>
+<p><code>[ GET ]</code> Busca todos os regionais de uma cooperativa. Como não é informado nenhum parâmetro, os regionais que serão disponibilizados estão associados a mesma cooperativa do usuário logado no momento. </p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TCorporativo/Regional
 </code></pre>

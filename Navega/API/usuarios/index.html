@@ -103,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#busca-de-usuarios" tabindex="1" class="md-skip">
+      <a href="#introducao" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -360,6 +360,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../fotos_associados/" title="Fotos de associados" class="md-nav__link">
+      Fotos de associados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../metas/" title="Metas" class="md-nav__link">
       Metas
     </a>
@@ -419,6 +431,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introducao" title="Introdução" class="md-nav__link">
+    Introdução
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-de-usuarios" title="Busca de usuários" class="md-nav__link">
     Busca de usuários
   </a>
@@ -433,42 +452,6 @@
   
 </nav>
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
-    
-    <label class="md-nav__link" for="nav-2-2">
-      Mobile
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
-        Mobile
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Mobile/Consultoria/backlog/" title="Backlog" class="md-nav__link">
-      Backlog
-    </a>
   </li>
 
         
@@ -621,6 +604,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introducao" title="Introdução" class="md-nav__link">
+    Introdução
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-de-usuarios" title="Busca de usuários" class="md-nav__link">
     Busca de usuários
   </a>
@@ -648,9 +638,11 @@
                 
                   <h1>Usuários</h1>
                 
-                <h3 id="busca-de-usuarios">Busca de usuários</h3>
+                <h2 id="introducao">Introdução</h2>
+<p>A <em>Navega Consultoria</em> possui um sistema de cadastrado de usuários que possuem permissões para acesso aos serviços da empresa. Este cadastrado é realizado através do Navega Desktop já no ambiente de produção nas cooperativas parceiras. Portanto todos os dados relacionados ao cadastro de usuários são armazenados localmente em cada instuição e periodicamente são enviados para o ambiente cloud da Navega, assim possibilitando a integração com o sistema mobile.</p>
+<h2 id="busca-de-usuarios">Busca de usuários</h2>
 <blockquote>
-<p><code>[ GET ]</code>  Busca dados dos usuários do sistema, caso um id seja especificado irá retornar apenas um usuário, caso contrário, todos os usuários serão exibidos.</p>
+<p><code>[ GET ]</code>  Busca dados dos usuários do sistema, caso um id seja especificado irá retornar apenas um usuário, caso contrário, todos os usuários serão exibidos. A autenticação é feita através deste endpoint, caso este usuário não exista, irá ser retornado um array vazio dentro da chave "Usuarios", caso contrário as informações serão disponibilizadas e será permitido o acesso para este usuário.</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TAcessos/Usuarios/{idLogin}
 </code></pre>
@@ -749,13 +741,13 @@
           </a>
         
         
-          <a href="../../Mobile/Consultoria/backlog/" title="Backlog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../CoopSenha/API/introducao/" title="Introdução" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                Backlog
+                Introdução
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -353,26 +353,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#fotos-de-associados" title="Fotos de associados" class="md-nav__link">
-    Fotos de associados
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#categorias-de-fotos" title="Categorias de fotos" class="md-nav__link">
-    Categorias de fotos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
       
       
       
@@ -404,6 +384,18 @@
   <li class="md-nav__item">
     <a href="../contas_gerenciais/" title="Contas Gerenciais" class="md-nav__link">
       Contas Gerenciais
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fotos_associados/" title="Fotos de associados" class="md-nav__link">
+      Fotos de associados
     </a>
   </li>
 
@@ -452,42 +444,6 @@
   <li class="md-nav__item">
     <a href="../usuarios/" title="Usuários" class="md-nav__link">
       Usuários
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
-    
-    <label class="md-nav__link" for="nav-2-2">
-      Mobile
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
-        Mobile
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Mobile/Consultoria/backlog/" title="Backlog" class="md-nav__link">
-      Backlog
     </a>
   </li>
 
@@ -647,26 +603,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#fotos-de-associados" title="Fotos de associados" class="md-nav__link">
-    Fotos de associados
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#categorias-de-fotos" title="Categorias de fotos" class="md-nav__link">
-    Categorias de fotos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
       
       
       
@@ -746,251 +682,6 @@
 </tbody>
 </table>
 <hr />
-<h2 id="fotos-de-associados">Fotos de associados</h2>
-<blockquote>
-<p><code>[ GET ]</code> Busca associados que ja possuem fotos associadas</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/ClientesComFotos?page={}&amp;name={}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>page</td>
-<td>Int</td>
-<td><strong>Not required</strong> - Paginação do endpoint</td>
-</tr>
-<tr>
-<td>name</td>
-<td>String</td>
-<td><strong>Not required</strong> - Nome de uma pessoa para filtro de pesquisas</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca fotos de um cliente</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/FotosCliente?idCliente={}&amp;idCategoria={}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idCliente</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do cliente</td>
-</tr>
-<tr>
-<td>idCategoria</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da categoria</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ PUT ]</code> Adiciona uma foto</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/FotoCliente
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idFoto</td>
-<td>String</td>
-<td><strong>Required</strong> - Id da foto</td>
-</tr>
-<tr>
-<td>idCliente</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do associado que foi relecionado a uma foto</td>
-</tr>
-<tr>
-<td>idOrigemPessoa</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id que representa a origem do cadastro de um associado. Caso seja 1 sua origem é do SisBr e 2 do Navega Sistemas</td>
-</tr>
-<tr>
-<td>idCategoria</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da categoria que foi relecionada a foto</td>
-</tr>
-<tr>
-<td>link</td>
-<td>String</td>
-<td><strong>Required</strong> - Link da foto após realizado seu upload em algum banco de dados</td>
-</tr>
-<tr>
-<td>descricao</td>
-<td>String</td>
-<td><strong>Required</strong> - Descrição de um foto</td>
-</tr>
-<tr>
-<td>idOrigemFoto</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id relacionado a origem da foto. Usar 1 para câmera e 2 para galeria de fotos</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="categorias-de-fotos">Categorias de fotos</h3>
-<blockquote>
-<p><code>[ GET ]</code> Busca as categorias para fotos de associados, com possibilidade de filtrar por ativas e não ativas</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/CategoriaFoto?status={}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>status</td>
-<td>String</td>
-<td><strong>Not required</strong> - Valores possíveis: 'ativo', 'inativo'. Caso o parâmetro não seja passado, todas as categorias serão retornadas</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ GET ]</code> Busca categorias relacionadas as fotos de um associado</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/CategoriasFotosCliente/{idCliente}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idCliente</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id do associado</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ PUT ]</code> Cria uma nova categoria</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/CategoriaFoto
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>Int</td>
-<td><strong>Required</strong> - Solicitado valor 0 para criação de uma nova categoria</td>
-</tr>
-<tr>
-<td>nome</td>
-<td>String</td>
-<td><strong>Required</strong> - Nome da categoria</td>
-</tr>
-<tr>
-<td>cor</td>
-<td>String</td>
-<td><strong>Required</strong> - Cor em hexadecimal que representa a categoria, por exemplo '#F4AB80'</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ POST ]</code> Edição de uma categoria</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/CategoriaFoto
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>Int</td>
-<td><strong>Required</strong> - Id da categoria editada</td>
-</tr>
-<tr>
-<td>nome</td>
-<td>String</td>
-<td><strong>Required</strong> - Nome da categoria</td>
-</tr>
-<tr>
-<td>cor</td>
-<td>String</td>
-<td><strong>Required</strong> - Cor em hexadecimal que representa a categoria, por exemplo '#F4AB80'</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<blockquote>
-<p><code>[ DELETE ]</code> Inativação/Ativação de uma categoria</p>
-</blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/CategoriaFoto/{idCategoria}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>idCategoria</td>
-<td>Int</td>
-<td><strong>Required</strong> - Substituir pelo id da categoria</td>
-</tr>
-</tbody>
-</table>
                 
                   
                 
