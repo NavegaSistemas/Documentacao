@@ -32,12 +32,11 @@ nav:
       - Associados: Navega/API/associados.md
       - Atendimento: Navega/API/atendimento.md
       - Contas Gerenciais: Navega/API/contas_gerenciais.md
+      - Fotos de associados: Navega/API/fotos_associados.md
       - Metas: Navega/API/metas.md
       - Níveis de Saldo: Navega/API/niveis_saldo.md
       - Notificações: Navega/API/notificacoes.md
       - Usuários: Navega/API/usuarios.md
-    - Mobile:  
-      - Backlog: Navega/Mobile/Consultoria/backlog.md
   - CoopSenha:
     - API: 
       - Introdução: CoopSenha/API/introducao.md

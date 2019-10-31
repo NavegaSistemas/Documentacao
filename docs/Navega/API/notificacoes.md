@@ -1,4 +1,9 @@
-### Busca notificações
+## Introdução
+
+A Notificação é um método encontrado pela Navega Consultoria para se comunicar com os usuários de maneira fácil e simples, além de fornecer dados diários que são relevantes as Cooperativas. Rotinas da empresa gerão notificações que chegam ao usuário do Navega Mobile em formato de push notifications e ficam registradas dentro do aplicativo para eventuais consultas.
+
+
+## Busca notificações
 > `[ GET ]`  O método de buscar notificações é utilizado para obter as notificações direcionadas à um usuário logado. Estas notificações podem ser filtradas por intervalo de datas, status e paginação.
 
 ```
@@ -17,7 +22,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications
       "BolLida": false,
       "DataReferencia": "28/10/2019",
       "DataNotificacao": "28/10/2019",
-      "Titulo": "Os associados listados abaixo ficar�o inativos em breve",
+      "Titulo": "Os associados listados abaixo ficarão inativos em breve",
       "Subtitulo": "",
       "BolPush": true,
       "IDPush": "559972f2-bb5f-4836-96c6-138c911430b8",
@@ -38,7 +43,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications
 
 ---
 
-### Apaga uma notificação 
+## Apaga uma notificação 
 > `[ DELETE ]`  Marca uma notificação como apagada
  
 ```
@@ -47,11 +52,11 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
 |--|--|--|--|--|--|
-|idnotificacao|Int|Id da notificação que será apagada|S|Números inteiros positivos||
+|idnotificacao|Int|Id da notificação que será apagada|S|Números inteiros positivos| Este ID é obtido através do [endpoint](#busca-notificacoes) que disponibiliza as notificações|
 
 ---
 
-### Notificação como lida
+## Notificação como lida
 > `[ POST ]` Muda o status de uma notificação para lida. Este método é utilizado quando o usuário abre uma notificação que estava com o status de não lida anteriormente.
  
 ```
@@ -60,4 +65,4 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/lida?&idnotif
 
 |Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
 |--|--|--|--|--|--|
-|idnotificacao|Int|Id da notificação que será marcada como lida|S|Números inteiros positivos||
+|idnotificacao|Int|Id da notificação que será marcada como lida|S|Números inteiros positivos| Este ID é obtido através do [endpoint](#busca-notificacoes) que disponibiliza as notificações|

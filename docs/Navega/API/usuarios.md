@@ -1,6 +1,12 @@
-### Busca de usuários
-> `[ GET ]`  Busca dados dos usuários do sistema, caso um id seja especificado irá retornar apenas um usuário, caso contrário, todos os usuários serão exibidos.
- 
+## Introdução
+
+A *Navega Consultoria* possui um sistema de cadastrado de usuários que possuem permissões para acesso aos serviços da empresa. Este cadastrado é realizado através do Navega Desktop já no ambiente de produção nas cooperativas parceiras. Portanto todos os dados relacionados ao cadastro de usuários são armazenados localmente em cada instuição e periodicamente são enviados para o ambiente cloud da Navega, assim possibilitando a integração com o sistema mobile.
+
+
+
+## Busca de usuários
+> `[ GET ]`  Busca dados dos usuários do sistema, caso um id seja especificado irá retornar apenas um usuário, caso contrário, todos os usuários serão exibidos. A autenticação é feita através deste endpoint, caso este usuário não exista, irá ser retornado um array vazio dentro da chave "Usuarios", caso contrário as informações serão disponibilizadas e será permitido o acesso para este usuário.
+
 ```
 http://cpro29096.publiccloud.com.br:8082/navega/api/TAcessos/Usuarios/{idLogin}
 ```

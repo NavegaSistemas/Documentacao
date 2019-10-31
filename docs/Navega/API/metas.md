@@ -1,4 +1,9 @@
-## Metas
+## Introdução
+
+As metas são objetivos a serem alcançados pelas Cooperativas de crédito durante um determinado período de tempo. Cada meta possui um nome para identificá-la, além de diversos itens, que seriam as metas em si.
+
+
+## Busca lista de metas
 > `[ GET ]` Busca todas as metas com diferentes situações. Estas metas geralmente são cadastradas anualmente pelas cooperativas.
 
 ```
@@ -30,7 +35,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSitu
 
 ---
 
-## Itens de uma meta
+## Busca itens de uma meta
 
 > `[ GET ]` Consulta todos os itens de uma determinada meta, estes itens podem ser filtrados por nivel de saldo e periodicidade
 
@@ -79,7 +84,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizada?nivelsa
 
 ---
 
-## Histórico de um item de meta
+## Busca histórico de um item de meta
 
 > `[ GET ]` Consulta o histórico de um item de uma meta. Ou seja, caso o nivel de saldo informado seja unidade, irá retornar todas as unidades em relação a um item de uma meta.
 

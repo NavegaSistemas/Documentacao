@@ -1,3 +1,7 @@
+## Introdução
+
+A Navega Consultoria conta com um serviço de atendimento de senhas para as Cooperativas parceiras. Portanto é possível monitorar com dados atualizados as informações relacionadas a quantidade de atendimentos realizados, de pessoas na fila, além do tempo médio de atendimento e de espera na fila. Estes dados fornecem uma visão individual dos pontos de atendimento disponíveis além de um consolidado de todos afim de realizar comparações.
+
 ## Acompanhamento de dados de atendimento
 
 > `[ GET ]`  Busca um resumo do histórico de atendimento do dia em todas as unidades de uma cooperativa
