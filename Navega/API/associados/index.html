@@ -103,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#busca-de-associados" tabindex="1" class="md-skip">
+      <a href="#introducao" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -347,9 +347,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introducao" title="Introdução" class="md-nav__link">
+    Introdução
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-disponiveis" title="Endpoints disponíveis" class="md-nav__link">
+    Endpoints disponíveis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-de-associados" title="Busca de associados" class="md-nav__link">
     Busca de associados
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-resposta" title="Exemplo de resposta" class="md-nav__link">
+    Exemplo de resposta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -597,9 +624,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introducao" title="Introdução" class="md-nav__link">
+    Introdução
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-disponiveis" title="Endpoints disponíveis" class="md-nav__link">
+    Endpoints disponíveis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-de-associados" title="Busca de associados" class="md-nav__link">
     Busca de associados
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-resposta" title="Exemplo de resposta" class="md-nav__link">
+    Exemplo de resposta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -624,14 +678,20 @@
                 
                   <h1>Associados</h1>
                 
-                <h2 id="busca-de-associados">Busca de associados</h2>
+                <h2 id="introducao">Introdução</h2>
+<p>Os associados são os clientes das Cooperativas. São eles os responsáveis pela movimentação de dinheiro e usufluem dos serviços que as Cooperativas de crédito tem a oferecer.</p>
+<h2 id="endpoints-disponiveis">Endpoints disponíveis</h2>
+<ul>
+<li><a href="#busca-de-associados">Busca associados</a></li>
+</ul>
+<h2 id="busca-de-associados">Busca de associados</h2>
 <blockquote>
 <p><code>[ GET ]</code> Busca todos os associados filtrando por nome ou cpf</p>
 </blockquote>
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/ClientesResumido/{nome_cpf}/{boolean}
 </code></pre>
 
-<p><strong>Exemplo de resposta</strong></p>
+<h3 id="exemplo-de-resposta">Exemplo de resposta</h3>
 <pre><code>{
   &quot;Clientes&quot;: [
     {

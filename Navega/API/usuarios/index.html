@@ -438,9 +438,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#endpoints-disponiveis" title="Endpoints disponíveis" class="md-nav__link">
+    Endpoints disponíveis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-de-usuarios" title="Busca de usuários" class="md-nav__link">
     Busca de usuários
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-resposta" title="Exemplo de resposta" class="md-nav__link">
+    Exemplo de resposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -611,9 +638,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#endpoints-disponiveis" title="Endpoints disponíveis" class="md-nav__link">
+    Endpoints disponíveis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-de-usuarios" title="Busca de usuários" class="md-nav__link">
     Busca de usuários
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-resposta" title="Exemplo de resposta" class="md-nav__link">
+    Exemplo de resposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -640,6 +694,10 @@
                 
                 <h2 id="introducao">Introdução</h2>
 <p>A <em>Navega Consultoria</em> possui um sistema de cadastrado de usuários que possuem permissões para acesso aos serviços da empresa. Este cadastrado é realizado através do Navega Desktop já no ambiente de produção nas cooperativas parceiras. Portanto todos os dados relacionados ao cadastro de usuários são armazenados localmente em cada instuição e periodicamente são enviados para o ambiente cloud da Navega, assim possibilitando a integração com o sistema mobile.</p>
+<h2 id="endpoints-disponiveis">Endpoints disponíveis</h2>
+<ul>
+<li><a href="#busca-de-usuarios">Busca de usuários</a></li>
+</ul>
 <h2 id="busca-de-usuarios">Busca de usuários</h2>
 <blockquote>
 <p><code>[ GET ]</code>  Busca dados dos usuários do sistema, caso um id seja especificado irá retornar apenas um usuário, caso contrário, todos os usuários serão exibidos. A autenticação é feita através deste endpoint, caso este usuário não exista, irá ser retornado um array vazio dentro da chave "Usuarios", caso contrário as informações serão disponibilizadas e será permitido o acesso para este usuário.</p>
@@ -647,7 +705,7 @@
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TAcessos/Usuarios/{idLogin}
 </code></pre>
 
-<p><strong>Exemplo de resposta</strong></p>
+<h3 id="exemplo-de-resposta">Exemplo de resposta</h3>
 <pre><code>{
   &quot;Usuarios&quot;: [
     {
@@ -684,7 +742,7 @@
 }
 </code></pre>
 
-<p><strong>Dicionário de dados</strong></p>
+<h3 id="dicionario-de-dados">Dicionário de dados</h3>
 <table>
 <thead>
 <tr>

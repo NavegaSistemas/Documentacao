@@ -426,9 +426,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#endpoints-disponiveis" title="Endpoints disponíveis" class="md-nav__link">
+    Endpoints disponíveis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-notificacoes" title="Busca notificações" class="md-nav__link">
     Busca notificações
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-reposta" title="Exemplo de reposta" class="md-nav__link">
+    Exemplo de reposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -437,12 +464,38 @@
     Apaga uma notificação
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados_1" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#notificacao-como-lida" title="Notificação como lida" class="md-nav__link">
     Notificação como lida
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados_2" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -625,9 +678,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#endpoints-disponiveis" title="Endpoints disponíveis" class="md-nav__link">
+    Endpoints disponíveis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#busca-notificacoes" title="Busca notificações" class="md-nav__link">
     Busca notificações
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-reposta" title="Exemplo de reposta" class="md-nav__link">
+    Exemplo de reposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -636,12 +716,38 @@
     Apaga uma notificação
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados_1" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#notificacao-como-lida" title="Notificação como lida" class="md-nav__link">
     Notificação como lida
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados_2" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -668,6 +774,12 @@
                 
                 <h2 id="introducao">Introdução</h2>
 <p>A Notificação é um método encontrado pela Navega Consultoria para se comunicar com os usuários de maneira fácil e simples, além de fornecer dados diários que são relevantes as Cooperativas. Rotinas da empresa gerão notificações que chegam ao usuário do Navega Mobile em formato de push notifications e ficam registradas dentro do aplicativo para eventuais consultas.</p>
+<h2 id="endpoints-disponiveis">Endpoints disponíveis</h2>
+<ul>
+<li><a href="#busca-notificacoes">Busca notificações</a></li>
+<li><a href="#apaga-uma-notificacao">Apaga uma notificação</a></li>
+<li><a href="#notificacao-como-lida">Notificação como lida</a></li>
+</ul>
 <h2 id="busca-notificacoes">Busca notificações</h2>
 <blockquote>
 <p><code>[ GET ]</code>  O método de buscar notificações é utilizado para obter as notificações direcionadas à um usuário logado. Estas notificações podem ser filtradas por intervalo de datas, status e paginação.</p>
@@ -675,7 +787,7 @@
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications?&amp;page={}&amp;status={}&amp;dataInicial={}&amp;dataFinal={}
 </code></pre>
 
-<p><strong>Exemplo de reposta</strong></p>
+<h3 id="exemplo-de-reposta">Exemplo de reposta</h3>
 <pre><code>{
   &quot;pages&quot;: 26,
   &quot;result&quot;: [
@@ -697,6 +809,7 @@
 }
 </code></pre>
 
+<h3 id="dicionario-de-dados">Dicionário de dados</h3>
 <table>
 <thead>
 <tr>
@@ -751,6 +864,7 @@
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/notifications?&amp;idnotificacao={}
 </code></pre>
 
+<h3 id="dicionario-de-dados_1">Dicionário de dados</h3>
 <table>
 <thead>
 <tr>
@@ -781,6 +895,7 @@
 <pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TNotifications/lida?&amp;idnotificacao={}
 </code></pre>
 
+<h3 id="dicionario-de-dados_2">Dicionário de dados</h3>
 <table>
 <thead>
 <tr>
