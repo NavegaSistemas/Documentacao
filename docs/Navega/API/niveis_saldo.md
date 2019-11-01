@@ -10,6 +10,13 @@ Os Níveis de Saldo são parâmetros utilizados para diversas consultas dentro d
 
 Todos estes níveis de saldo possuem indicativos para contas relacionadas a participação de cada um, além de várias outras tarefas dentro do sistema. Em vários ambientes dentro das aplicações da Navega estes níveis de saldo são unidos afim de criar um nível *CONSOLIDADO* para uma consulta mais geral por parte dos usuários.
 
+## Endpoints disponíveis
+
+- [Busca unidades](#busca-unidades)
+- [Busca gerentes](#busca-gerentes)
+- [Busca regionais](#busca-regionais)
+
+
 ## Busca unidades 
 
 > `[ GET ]` Busca todas as unidades de uma cooperativa. Como não é informado nenhum parâmetro, as unidades que serão disponibilizadas estão associadas a mesma cooperativa do usuário logado no momento.
@@ -18,7 +25,7 @@ Todos estes níveis de saldo possuem indicativos para contas relacionadas a part
 http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Unidades
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
 
 ```
 {
@@ -41,7 +48,8 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Unidades
 http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Gerentes
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
+
 ```
 {
   "Gerentes": [
@@ -66,7 +74,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/Gerentes
 http://cpro29096.publiccloud.com.br:8082/navega/api/TCorporativo/Regional
 ```
 
-**Exemplo de reposta**
+### Exemplo de reposta
 
 ```
 {

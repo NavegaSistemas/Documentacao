@@ -1,6 +1,14 @@
 ## Introdução
 
-As metas são objetivos a serem alcançados pelas Cooperativas de crédito durante um determinado período de tempo. Cada meta possui um nome para identificá-la, além de diversos itens, que seriam as metas em si.
+As metas são objetivos a serem alcançados pelas Cooperativas de crédito durante um determinado período de tempo. Cada meta 
+possui um nome para identificá-la, além de diversos itens, que seriam as metas em si.
+
+
+## Endpoints disponíveis
+
+- [Busca lista de metas](#busca-lista-de-metas)
+- [Busca itens de uma meta](#busca-itens-de-uma-meta)
+- [Busca histórico de um item de meta](#busca-historico-de-um-item-de-meta)
 
 
 ## Busca lista de metas
@@ -10,7 +18,7 @@ As metas são objetivos a serem alcançados pelas Cooperativas de crédito duran
 http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSituacao}
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
 
 ```
 {
@@ -27,7 +35,8 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetasSituacao/{idSitu
     },
 }
 ```
-**Dicionário de dados**
+
+### Dicionário de dados
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
@@ -44,7 +53,8 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizada?nivelsa
 
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
+
 ```
 {
   "IDInstituicao": 343,
@@ -73,7 +83,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizada?nivelsa
 }
 ```
 
-**Dicionário de dados**
+### Dicionário de dados
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
@@ -93,7 +103,8 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizadaItem?niv
 
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
+
 ```
 {
   "IDInstituicao": 343,
@@ -122,7 +133,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TMetas/MetaRealizadaItem?niv
 }
 ```
 
-**Dicionário de dados**
+### Dicionário de dados
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|

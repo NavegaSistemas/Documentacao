@@ -1,3 +1,11 @@
+## Introdução
+
+Os associados são os clientes das Cooperativas. São eles os responsáveis pela movimentação de dinheiro e usufluem dos serviços que as Cooperativas de crédito tem a oferecer.
+
+## Endpoints disponíveis
+
+- [Busca associados](#busca-de-associados)
+
 ## Busca de associados
 
 > `[ GET ]` Busca todos os associados filtrando por nome ou cpf
@@ -7,7 +15,7 @@
 http://cpro29096.publiccloud.com.br:8082/navega/api/TClientes/ClientesResumido/{nome_cpf}/{boolean}
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
 
 ```
 {

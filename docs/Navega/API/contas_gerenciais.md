@@ -1,3 +1,22 @@
+## Introdução
+
+As contas gerenciais são contas que todo Cooperativa de crédito possui. Existem vários grupos em que essas contas são categorizadas e organizadas e a Navega Consultoria analísa todas essas contas e extrai informações úteis para os usuários.
+
+
+## Endpoints disponíveis
+
+
+- [Introdução](#introdu%c3%a7%c3%a3o)
+- [Endpoints disponíveis](#endpoints-dispon%c3%adveis)
+- [Acompanhamento de contas](#acompanhamento-de-contas)
+- [Acompanhamento de uma conta](#acompanhamento-de-uma-conta)
+- [Painel de contas](#painel-de-contas)
+- [Participação diária de unidades](#participa%c3%a7%c3%a3o-di%c3%a1ria-de-unidades)
+- [Participação diária de gerentes](#participa%c3%a7%c3%a3o-di%c3%a1ria-de-gerentes)
+- [Participação mensal de unidades](#participa%c3%a7%c3%a3o-mensal-de-unidades)
+- [Participação mensal de gerentes](#participa%c3%a7%c3%a3o-mensal-de-gerentes)
+
+
 ## Acompanhamento de contas
 
 > `[ GET ]`  Busca acompanhamento de contas, este acompanhamento no app Navega é feito de acordo com as permissões de acesso do usuário. Estas informações são concedidas no ato de login.
@@ -6,7 +25,7 @@
 http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/Acompanhe?nivelSaldo={idNivelSaldo}&identificador={idCliente}
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
 ```
 {
   "Result": [
@@ -58,11 +77,12 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/Acompanhe?
 }
 ```
 
-**Dicionário de dados**
+### Dicionário de dados
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
 |idLogin|Int|Identificador para login do usuário| N | Caso não seja informador irá retornar informações de todos os usuários cadastrados |
+|idNivelSaldo|Int|Identificador do nível de saldo que o usuário pode acessar|S|Corresponde ao **IDNivelSaldo** presente na [listagem de um usuário](../usuarios/#busca-de-usuarios)|
 
 ---
 
@@ -74,7 +94,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/Acompanhe?
 http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheItem?idAcompanhe={idAcompanhe}
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
 
 ```
 {
@@ -116,11 +136,11 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheI
 }
 ```
 
-**Dicionário de dados**
+### Dicionário de dados
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
-|idAcompanhe|Int|Identificador para a conta selecionada| S | |
+|idAcompanhe|Int|Identificador para a conta selecionada| S | Corresponde ao **IDAcompanhe** presente na [listagem de contas](#acompanhamento-de-contas) |
 
 ---
 
@@ -132,7 +152,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheI
 http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/PlanoContas/{id}
 ```
 
-**Exemplo de resposta**
+### Exemplo de resposta
 
 ```
 {
@@ -163,7 +183,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/PlanoConta
 }
 ```
 
-**Dicionário de dados**
+### Dicionário de dados
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
@@ -204,7 +224,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/Participac
 ```
 
 
-**Exemplo de resposta**
+### Exemplo de resposta
 
 ```
 {
@@ -229,7 +249,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/Participac
 }
 ```
 
-**Dicionário de dados**
+### Dicionário de dados
 
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
