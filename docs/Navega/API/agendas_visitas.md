@@ -246,7 +246,14 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TAgendaVisita/Foto/{idAgenda
 
 ```
 {
-
+	"Result": [
+    {
+      "DataHoraRegistro": "22/03/2019 11:51:52",
+      "Descricao": "Teste",
+      "IDFoto": "64c543d0-4cb2-11e9-b44e-4733dc33782a",
+      "Link": "https://firebasestorage.googleapis.com/v0/b/navega-470d8.appspot.com/o/debug%2F343%2FAgendas%2F104%2F64c543d0-4cb2-11e9-b44e-4733dc33782a.jpg?alt=media&token=7180e6ce-d4dc-4f24-b7cb-95a882f9676d"
+    },
+  ]	
 }
 ```
 
