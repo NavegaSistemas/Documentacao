@@ -9,6 +9,8 @@ As agendas gerenciais são utilizadas pelos gerentes das Cooperativas paara orga
 - [Fazer check-in e check-out](#check-in-e-check-out)
 - [Cancela check-in](#cancela-check-in)
 - [Cancela uma agenda](#cancela-uma-agenda)
+- [Busca objetivos de agendas](#busca-objetivos-de-agendas)
+- [Cria uma agenda](#cria-uma-agenda)
 - [Reagenda uma agenda](#reagenda-uma-agenda)
 - [Encerra uma agenda](#encerra-uma-agenda)
 - [Adiciona foto](#adiciona-foto)
@@ -160,6 +162,81 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TAgendaVisita/AgendaVisita
 
 ---
 
+## Busca objetivos de agendas
+
+> `[PUT]` Ao marcar uma agenda, o gerentes geralmente possuem objetivos a serem alcançados durante a visita aos associados. Este objetivos são associados as agendas e este endpoint busca os objetivos disponíveis.
+
+```
+http://cpro29096.publiccloud.com.br:8082/navega/api/TAgendaVisita/ObjetivosVisita
+```
+
+### Exemplo de resposta
+
+```
+{
+  "Objetivos": [
+    {
+      "IDObjetivo": 1,
+      "DescObjetivo": "Crédito"
+    },
+    {
+      "IDObjetivo": 2,
+      "DescObjetivo": "Capitalização"
+    },
+  ]
+}
+```
+
+---
+
+## Cria uma agenda
+
+> `[PUT]` Cria uma agenda gerencial, os gerentes serão associados de acordo com os associados mensionados.
+
+```
+http://cpro29096.publiccloud.com.br:8082/navega/api/TAgendaVisita/AgendaVisita
+```
+
+### Exemplo de body da requisição
+
+```
+{
+  "Agendas": [
+    {
+      "IDAgenda": 0,
+      "IDOrigemPessoa": 1,
+      "IDOrigemAgenda": 1,
+      "IDCliente": 1335995,
+      "IDMensagem": "",
+      "IDAgendaAnterior": 0,
+      "DataVisita": "07/11/2019",
+      "Observacao": "observação teste",
+      "Objetivos": [
+        {"IDObjetivo": 1},
+        {"IDObjetivo": 2},
+        {"IDObjetivo": 3},
+      ]
+    }
+  ]
+}
+```
+
+### Dicionário de dados
+
+|Parâmetro|Tipo|Descrição|Requerido|Valores válidos|Observações|
+|--|--|--|--|--|--|
+|IDAgenda|Int|Identificador da agenda|S|0|Como trata-se de uma nova agenda que ainda não possui um ID, o número 0 deve ser informado|
+|IDOrigemPessoa|Int|Identificador para o tipo de pessoa|S|Número inteiro positivos|Correspondente a chave **IDOrigem** presente na [listagem de associados](../associados/#busca-de-associados)| 
+|IDOrigemAgenda|Int|Identificador para o tipo de pessoa|S|Número inteiro positivos|Verificar a [tabela de origens de agenda](#tabela-de-origens-de-agenda) para enviar o ID de acordo com a necessidade| 
+|IDCliente|Int|Identificador para o associado|S|Número inteiro positivos|Correspondente a chave **IDCliente** presente na [listagem de associados](../associados/#busca-de-associados)| 
+|IDMensagem|String|Mensagem de identificação de uma agenda|S|String|Mensagem associada a origem da agenda. Para agenda manual enviar uma string vazia| 
+|IDAgendaAnterior|Int|Identificador de agenda|S|Números inteiro positivos|No caso de encerramento de uma agenda em que há geração de outra agenda| 
+|DataVisita|String|Data agendada para a visita|S|String no formado **dd/mm/yyyy**|| 
+|Observacao|String|Observação da agenda|S|String||
+|IDObjetivo|Int|Identificador do objetivo da agenda|S|Número inteiro positivo|Uma agenda pode possuir ou um vários objetivos. Este campo corresponde ao **IDObjetivo** na [listagem de objetivos de agendas](#busca-objetivos-de-agendas) |
+
+---
+
 ## Reagenda uma agenda
 
 > `[POST]` Cancela uma agenda caso seja necessário. Os parâmetros são enviados no body da requisição
@@ -278,3 +355,12 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TAgendaVisita/Foto/{idAgenda
 |5|Check in|
 |6|Check out|
 |7|Check in cancelado|
+
+### Tabela de origens de agenda
+
+|id|origem|
+|--|--|
+|1|Manual|
+|2|SMS|
+|3|Robô|
+|4|Inteligência Artificial|
