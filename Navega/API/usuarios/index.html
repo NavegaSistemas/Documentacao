@@ -471,6 +471,87 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#preferencias-de-usuario" title="Preferências de usuário" class="md-nav__link">
+    Preferências de usuário
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-resposta_1" title="Exemplo de resposta" class="md-nav__link">
+    Exemplo de resposta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atualiza-preferencias-de-usuario" title="Atualiza prefêrencias de usuário" class="md-nav__link">
+    Atualiza prefêrencias de usuário
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-body-da-requisicao" title="Exemplo de body da requisição" class="md-nav__link">
+    Exemplo de body da requisição
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados_1" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-saldo" title="Tipos de saldo" class="md-nav__link">
+    Tipos de saldo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dias-da-semana" title="Dias da semana" class="md-nav__link">
+    Dias da semana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periodicidades" title="Periodicidades" class="md-nav__link">
+    Periodicidades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -671,6 +752,87 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#preferencias-de-usuario" title="Preferências de usuário" class="md-nav__link">
+    Preferências de usuário
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-resposta_1" title="Exemplo de resposta" class="md-nav__link">
+    Exemplo de resposta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atualiza-preferencias-de-usuario" title="Atualiza prefêrencias de usuário" class="md-nav__link">
+    Atualiza prefêrencias de usuário
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-body-da-requisicao" title="Exemplo de body da requisição" class="md-nav__link">
+    Exemplo de body da requisição
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-de-dados_1" title="Dicionário de dados" class="md-nav__link">
+    Dicionário de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-saldo" title="Tipos de saldo" class="md-nav__link">
+    Tipos de saldo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dias-da-semana" title="Dias da semana" class="md-nav__link">
+    Dias da semana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periodicidades" title="Periodicidades" class="md-nav__link">
+    Periodicidades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -697,6 +859,7 @@
 <h2 id="endpoints-disponiveis">Endpoints disponíveis</h2>
 <ul>
 <li><a href="#busca-de-usuarios">Busca de usuários</a></li>
+<li><a href="#preferencias-de-usuario">Preferências de usuário</a></li>
 </ul>
 <h2 id="busca-de-usuarios">Busca de usuários</h2>
 <blockquote>
@@ -764,6 +927,173 @@
 </tbody>
 </table>
 <hr />
+<h2 id="preferencias-de-usuario">Preferências de usuário</h2>
+<blockquote>
+<p><code>[ GET ]</code>  Busca as preferências em relação ao tipo de saldo e periodicidade escolhidos pelo usuário para realizar consultas das contas gerenciais. Os id`s para tipos de saldos estão presentes na <a href="#tipos-de-saldo">tabela de tipos de saldo</a>. O Campo <strong>IDDiaSemana</strong> corresponde a <a href="#dias-da-semana">tabela de dias da semana</a> e o <strong>IDTipoPeriodicidade</strong> a <a href="#periodicidades">tabela de periodicidades</a></p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/PreferenciasConsultas
+</code></pre>
+
+<h3 id="exemplo-de-resposta_1">Exemplo de resposta</h3>
+<pre><code>{
+  &quot;IDTipoSaldoPatrimonial&quot;: 1,
+  &quot;IDTipoSaldoResultado&quot;: 4,
+  &quot;IDDiaSemana&quot;: 3,
+  &quot;IDTipoPeriodicidade&quot;: 3,
+  &quot;QtdPeriodos&quot;: 7
+}
+</code></pre>
+
+<h2 id="atualiza-preferencias-de-usuario">Atualiza prefêrencias de usuário</h2>
+<blockquote>
+<p><code>[ GET ]</code>  Atualiza as informações de preferência de um usuário</p>
+</blockquote>
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/PreferenciasConsultas
+</code></pre>
+
+<h3 id="exemplo-de-body-da-requisicao">Exemplo de body da requisição</h3>
+<pre><code>{
+  &quot;IDTipoSaldoPatrimonial&quot;: 1,
+  &quot;IDTipoSaldoResultado&quot;: 4,
+  &quot;IDDiaSemana&quot;: 3,
+  &quot;IDTipoPeriodicidade&quot;: 3,
+  &quot;QtdPeriodos&quot;: 7
+}
+</code></pre>
+
+<h3 id="dicionario-de-dados_1">Dicionário de dados</h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Requerido</th>
+<th>Valores válidos</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IDTipoSaldoPatrimonial</td>
+<td>Int</td>
+<td>Id do tipo de saldo para contas patrimoniais</td>
+<td>S</td>
+<td>1 ou 2</td>
+<td>Corresponde aos tipos de saldos <em>Final</em> ou <em>Médio</em> presentes na <a href="#tipos-de-saldo">tabela de tipos de saldo</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="informacoes-adicionais">Informações adicionais</h2>
+<h3 id="tipos-de-saldo">Tipos de saldo</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição</th>
+<th>Sigla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Final</td>
+<td>FIN</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Médio</td>
+<td>MDU</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Período</td>
+<td>PER</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Acumulado</td>
+<td>ACU</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Corporativo</td>
+<td>COR</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Índice</td>
+<td>IND</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Personalizado</td>
+<td>PER</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dias-da-semana">Dias da semana</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Domingo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Segunda-Feira</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Terça-Feira</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Quarta-Feira</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Quinta-Feira</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Sexta-Feira</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sábado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="periodicidades">Periodicidades</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Diario</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Semanal</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mensal</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
