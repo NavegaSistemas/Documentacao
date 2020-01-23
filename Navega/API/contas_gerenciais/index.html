@@ -954,8 +954,6 @@
 <p>As contas gerenciais são contas que todo Cooperativa de crédito possui. Existem vários grupos em que essas contas são categorizadas e organizadas e a Navega Consultoria analísa todas essas contas e extrai informações úteis para os usuários.</p>
 <h2 id="endpoints-disponiveis">Endpoints disponíveis</h2>
 <ul>
-<li><a href="#introdu%c3%a7%c3%a3o">Introdução</a></li>
-<li><a href="#endpoints-dispon%c3%adveis">Endpoints disponíveis</a></li>
 <li><a href="#acompanhamento-de-contas">Acompanhamento de contas</a></li>
 <li><a href="#acompanhamento-de-uma-conta">Acompanhamento de uma conta</a></li>
 <li><a href="#painel-de-contas">Painel de contas</a></li>
@@ -1055,7 +1053,7 @@
 <blockquote>
 <p><code>[ GET ]</code> Busca os dados das unidades em relação a um item de acompanhamento de contas.</p>
 </blockquote>
-<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheItem?idAcompanhe={idAcompanhe}
+<pre><code>http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheItem?idAcompanhe={idAcompanhe}&amp;nivelsaldo={nivelsaldo}
 </code></pre>
 
 <h3 id="exemplo-de-resposta_1">Exemplo de resposta</h3>
@@ -1116,6 +1114,13 @@
 <td>Identificador para a conta selecionada</td>
 <td>S</td>
 <td>Corresponde ao <strong>IDAcompanhe</strong> presente na <a href="#acompanhamento-de-contas">listagem de contas</a></td>
+</tr>
+<tr>
+<td>nivelsaldo</td>
+<td>String</td>
+<td>Identificador para o nivel de saldo</td>
+<td>N</td>
+<td>Possível informar <em>'gerente'</em> para dados de gerentes e <em>'unidade'</em> para dados das Unidades. Caso um valor não seja informado irá retornar dados das Unidades com default</td>
 </tr>
 </tbody>
 </table>
