@@ -5,9 +5,6 @@ As contas gerenciais são contas que todo Cooperativa de crédito possui. Existe
 
 ## Endpoints disponíveis
 
-
-- [Introdução](#introdu%c3%a7%c3%a3o)
-- [Endpoints disponíveis](#endpoints-dispon%c3%adveis)
 - [Acompanhamento de contas](#acompanhamento-de-contas)
 - [Acompanhamento de uma conta](#acompanhamento-de-uma-conta)
 - [Painel de contas](#painel-de-contas)
@@ -91,7 +88,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/Acompanhe?
 > `[ GET ]` Busca os dados das unidades em relação a um item de acompanhamento de contas.
 
 ```
-http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheItem?idAcompanhe={idAcompanhe}
+http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheItem?idAcompanhe={idAcompanhe}&nivelsaldo={nivelsaldo}
 ```
 
 ### Exemplo de resposta
@@ -141,6 +138,7 @@ http://cpro29096.publiccloud.com.br:8082/navega/api/TContasGerenciais/AcompanheI
 |Chave|Tipo|Descrição|Requerido|Observações|
 |--|--|--|--|--|
 |idAcompanhe|Int|Identificador para a conta selecionada| S | Corresponde ao **IDAcompanhe** presente na [listagem de contas](#acompanhamento-de-contas) |
+|nivelsaldo|String|Identificador para o nivel de saldo| N | Possível informar *'gerente'* para dados de gerentes e *'unidade'* para dados das Unidades. Caso um valor não seja informado irá retornar dados das Unidades com default |
 
 ---
 
