@@ -308,9 +308,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introdução
+      </label>
+    
     <a href="./" title="Introdução" class="md-nav__link md-nav__link--active">
       Introdução
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacao" title="Autenticação" class="md-nav__link">
+    Autenticação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacao-de-portas" title="Relação de portas" class="md-nav__link">
+    Relação de portas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verbos" title="Verbos" class="md-nav__link">
+    Verbos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers-requeridos" title="Headers Requeridos" class="md-nav__link">
+    Headers Requeridos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -407,6 +457,18 @@
   <li class="md-nav__item">
     <a href="../notificacoes/" title="Notificações" class="md-nav__link">
       Notificações
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../orcamento/" title="Orçamento" class="md-nav__link">
+      Orçamento
     </a>
   </li>
 
@@ -570,6 +632,43 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacao" title="Autenticação" class="md-nav__link">
+    Autenticação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacao-de-portas" title="Relação de portas" class="md-nav__link">
+    Relação de portas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verbos" title="Verbos" class="md-nav__link">
+    Verbos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers-requeridos" title="Headers Requeridos" class="md-nav__link">
+    Headers Requeridos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -584,6 +683,7 @@
                 
                 
                 <h1 id="sobre-a-api">Sobre a API</h1>
+<h2 id="autenticacao">Autenticação</h2>
 <p>A API da Navega Sistemas é de uso restrito. Para ter acesso ao seus recursos é necessário se autenticar. Para isso envie no header de cada requisição uma identificação de usuário no formato de Basic Auth.</p>
 <blockquote>
 <p>Exemplo em JavaScript</p>
@@ -596,12 +696,77 @@
 
 <p>(<em>É importante mencionar que os dados que serão retornados serão os relacionados a instituição do usuário logado.</em>)</p>
 <hr />
-<p><strong>Relação de portas</strong></p>
-<blockquote>
-<p>8081 &gt; Porta do servidor de testes</p>
-<p>8082 &gt; Porta do servidor principal para mobile
-</p>
-</blockquote>
+<h2 id="relacao-de-portas">Relação de portas</h2>
+<p>A API Navega usa algumas diferentes portas para diferentes servidores.</p>
+<table>
+<thead>
+<tr>
+<th>Porta</th>
+<th>Servidor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8080</td>
+<td>Deploy desktop</td>
+</tr>
+<tr>
+<td>8081</td>
+<td>Testes</td>
+</tr>
+<tr>
+<td>8082</td>
+<td>Deploy mobile</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verbos">Verbos</h2>
+<p>A API utiliza verbos restful. Todos os endpoints retornam status code <code>200</code> em caso de sucesso.</p>
+<table>
+<thead>
+<tr>
+<th>Verbo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>Seleciona um ou mais itens.</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>Cria um novo item.</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td>Edita um item.</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Deleta um item.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="headers-requeridos">Headers Requeridos</h2>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Content-type</code>*</td>
+<td><code>application/json</code></td>
+</tr>
+<tr>
+<td><code>Authorization</code>*</td>
+<td>Seu token de acesso <code>Basic Auth</code></td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
