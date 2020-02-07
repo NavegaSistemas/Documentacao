@@ -1,5 +1,6 @@
 # Sobre a API
 
+## Autenticação
 
 A API da Navega Sistemas é de uso restrito. Para ter acesso ao seus recursos é necessário se autenticar. Para isso envie no header de cada requisição uma identificação de usuário no formato de Basic Auth.
 
@@ -15,8 +16,30 @@ A API da Navega Sistemas é de uso restrito. Para ter acesso ao seus recursos é
 
 ---
 
-**Relação de portas**
-> 8081 > Porta do servidor de testes
-> 
-> 8082 > Porta do servidor principal para mobile
-> 
+## Relação de portas
+
+A API Navega usa algumas diferentes portas para diferentes servidores.
+
+|Porta|Servidor|
+|--|--|
+|8080|Deploy desktop|
+|8081|Testes|
+|8082|Deploy mobile|
+
+## Verbos
+
+A API utiliza verbos restful. Todos os endpoints retornam status code ``200`` em caso de sucesso.
+
+|Verbo|Descrição|
+|--|--|
+|``GET``|Seleciona um ou mais itens.|
+|``PUT``|Cria um novo item.|
+|``POST``|Edita um item.|
+|``DELETE``|Deleta um item.|
+
+## Headers Requeridos
+
+|Header|Valor|
+|--|--|
+|``Content-type``*|``application/json``|
+|``Authorization``*|Seu token de acesso ``Basic Auth``|

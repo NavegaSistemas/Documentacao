@@ -36,6 +36,7 @@ nav:
       - Metas: Navega/API/metas.md
       - Níveis de Saldo: Navega/API/niveis_saldo.md
       - Notificações: Navega/API/notificacoes.md
+      - Orçamento: Navega/API/orcamento.md
       - Usuários: Navega/API/usuarios.md
   - CoopSenha:
     - API: 
