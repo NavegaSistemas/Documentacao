@@ -5,17 +5,17 @@ site_dir: site
 copyright: Copyright &copy; 2019, <a href="http://navegaconsultoria.com.br/">Navega Consultoria</a>.
 dev_addr: ‘0.0.0.0:8000
 theme:
-  name: 'material'
-  logo: 'images/icon.png'
-  favicon: 'images/icon.png'
+  name: "material"
+  logo: "images/icon.png"
+  favicon: "images/icon.png"
   palette:
-    primary: 'blue'
-  language: 'pt'
+    primary: "blue"
+  language: "pt"
 
 extra:
   social:
-    - type: 'github'
-      link: 'http://navegaconsultoria.com.br/'
+    - type: "github"
+      link: "http://navegaconsultoria.com.br/"
 
 plugins:
   - search
@@ -24,25 +24,27 @@ extra_css:
   - assets/css/extra.css
 
 nav:
-  - Home: 'index.md'
+  - Home: "index.md"
   - Navega:
-    - API: 
-      - Introdução: Navega/API/introducao.md
-      - Agendas de Visitas: Navega/API/agendas_visitas.md
-      - Associados: Navega/API/associados.md
-      - Atendimento: Navega/API/atendimento.md
-      - Contas Gerenciais: Navega/API/contas_gerenciais.md
-      - Fotos de associados: Navega/API/fotos_associados.md
-      - Metas: Navega/API/metas.md
-      - Níveis de Saldo: Navega/API/niveis_saldo.md
-      - Notificações: Navega/API/notificacoes.md
-      - Orçamento: Navega/API/orcamento.md
-      - Usuários: Navega/API/usuarios.md
+      - Documentação:
+          - Casos de uso: Navega/documentacao/casos_de_uso.md
+      - API:
+          - Introdução: Navega/API/introducao.md
+          - Agendas de Visitas: Navega/API/agendas_visitas.md
+          - Associados: Navega/API/associados.md
+          - Atendimento: Navega/API/atendimento.md
+          - Contas Gerenciais: Navega/API/contas_gerenciais.md
+          - Fotos de associados: Navega/API/fotos_associados.md
+          - Metas: Navega/API/metas.md
+          - Níveis de Saldo: Navega/API/niveis_saldo.md
+          - Notificações: Navega/API/notificacoes.md
+          - Orçamento: Navega/API/orcamento.md
+          - Usuários: Navega/API/usuarios.md
   - CoopSenha:
-    - API: 
-      - Introdução: CoopSenha/API/introducao.md
-      - Ajuda: CoopSenha/API/ajuda.md
-      - Cadastro/Usuário: CoopSenha/API/cadastro_usuario.md
-      - Feedback: CoopSenha/API/feedback.md
-      - Unidades: CoopSenha/API/unidades.md
-      - Senhas de atendimento: CoopSenha/API/senhas_atendimento.md
+      - API:
+          - Introdução: CoopSenha/API/introducao.md
+          - Ajuda: CoopSenha/API/ajuda.md
+          - Cadastro/Usuário: CoopSenha/API/cadastro_usuario.md
+          - Feedback: CoopSenha/API/feedback.md
+          - Unidades: CoopSenha/API/unidades.md
+          - Senhas de atendimento: CoopSenha/API/senhas_atendimento.md

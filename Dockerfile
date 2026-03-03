@@ -1,5 +1,4 @@
-ARG BASE_IMAGE=alpine
-FROM python:$BASE_IMAGE
+FROM python:3.6.9-alpine
 
 # Set up workspace and install mkdocs and dependencies.
 COPY requirements.txt /opt/app/requirements.txt
