@@ -25,6 +25,9 @@ extra_css:
 
 nav:
   - Home: "index.md"
+  - Server:
+    - Variáveis de ambiente: Server/env.md
+  
   - Navega:
       - Documentação:
           - Casos de uso: Navega/documentacao/casos_de_uso.md
